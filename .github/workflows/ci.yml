@@ -11,7 +11,7 @@ jobs:
         with:
           app_id: ${{ secrets.SHOP_APP_ID }}
           app_password: ${{ secrets.SHOP_APP_PASSWORD }}
-          store: ${{ secrets.SHOP_STORE }}
+          store: loumana.myshopify.com
           password: ${{ secrets.SHOP_PASSWORD }}
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
           product_handle: ${{ secrets.SHOP_PRODUCT_HANDLE }}
