@@ -1,17 +1,17 @@
-<div class="twcss-relative twcss-min-h-screen">
+<div class="twcss-relative twcss-min-h-screen twcss-overflow-hidden">
     <img src="{{'ElipseOpen.svg' | asset_url}}" alt="" class="twcss-absolute twcss-top-0 twcss-right-[20%] twcss-w-3/12 twcss-h-40">
-    <img src="{{'ElipseLeft.svg' | asset_url}}" alt="" class="twcss-absolute twcss-left-0 twcss-top-1/4 twcss-w-auto twcss-h-auto">
+    <img src="{{'ElipseLeft.svg' | asset_url}}" alt="" class="twcss-absolute twcss-left-0 twcss-top-1/4 twcss-w-[150px] twcss-h-[450px]">
     <img src="{{'ElipseRight.svg' | asset_url}}" alt="" class="twcss-absolute twcss-right-0 twcss-bottom-0">
 <div class="twcss-flex twcss-items-center twcss-max-w-[var(--page-width)] twcss-m-auto twcss-min-h-screen">
 
-    <div class="twcss-z-10 twcss-max-w-2xl twcss-font-noto" >
-        <p class="twcss-font-light twcss-text-subline twcss-uppercase twcss-mb-3">
+    <div class="twcss-z-10 twcss-max-w-3xl twcss-font-noto" >
+        <p class="twcss-font-light twcss-text-subline twcss-uppercase twcss-mb-3 twcss-font-noto"">
             {{ section.settings.subline }}
         </p>
-        <h1 class="twcss-font-extrabold twcss-uppercase twcss-text-heading twcss-leading-none twcss-mb-5">
+        <h1 class="twcss-font-extrabold twcss-uppercase twcss-text-heading twcss-leading-none twcss-mb-5 twcss-font-noto"">
             {{ section.settings.headline }}
         </h1>
-        <div class="twcss-font-light twcss-text-text">
+        <div class="twcss-font-light twcss-text-text twcss-font-noto"">
             {{ section.settings.textarea }}
         </div>
         <a href="{{ sections.settings.btnURL }}" class="mainButton">Mehr dazu</a>

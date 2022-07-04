@@ -1,0 +1,72 @@
+<div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-justify-between twcss-mt-24">
+    <div class="twcss-max-w-2xl">
+        <h1 class="twcss-font-noto twcss-mb-7 twcss-text-2xl">
+            {{ section.settings.heading }}
+        </h1>
+        <div class="twcss-font-noto twcss-text-text twcss-font-light">
+            {{ section.settings.textarea }}
+        </div>
+    </div>
+    <div class="twcss-flex twcss-flex-row">
+        <div class="elipse" style="background-color: {{ section.settings.colorOne }};"><span></span></div>
+        <div class="elipse" style="background-color: {{ section.settings.colorTwo }};"><span></span></div>
+        <div class="elipse" style="background-color: {{ section.settings.colorThree }};"><span></span></div>
+    </div>
+</div>
+
+<div>
+    <video src="{{section.settings.video}}"></video>
+</div>
+
+{% schema %}
+{
+   "name": "Loumana Video",
+   "tag": "section",
+   "settings": [
+       {
+        "type": "text",
+        "id": "heading",
+        "label": "Überschrift",
+        "default": "Lorem Ipsum",
+        "placeholder": "Lorem Ipsum"
+       },
+      {
+        "type": "textarea",
+        "id": "textarea",
+        "label": "Fließtext",
+        "default": "Lorem ipsum",
+        "placeholder": "Lorem ipsum"
+      },
+     {
+        "type": "color",
+        "id": "colorOne",
+        "label": "Kreisfarbe #1"
+     },
+     {
+        "type": "color",
+        "id": "colorTwo",
+        "label": "Kreisfarbe #2"
+     },
+     {
+        "type": "color",
+        "id": "colorThree",
+        "label": "Kreisfarbe #3"
+     },
+    {
+        "type": "video_url",
+        "id": "video",
+        "accept": [
+            "youtube",
+            "vimeo"
+        ],
+        "label": "Video"
+    }
+   ],
+  "presets": [
+    {
+        "category": "video",
+        "name": "Loumana Video"
+    }
+  ]
+}
+{% endschema %}
