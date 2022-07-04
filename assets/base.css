@@ -2239,8 +2239,10 @@ input[type='checkbox'] {
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  position: relative;
-  background-color: rgb(var(--color-background));
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
 }
 
 .header-wrapper--border-bottom {

@@ -25,6 +25,12 @@ module.exports = {
     color: {
       black: '#000000',
     },
+    fontSize: {
+      subline: ['20px', '20px'],
+      heading: ['60px', '62px'],
+      text: ['16px', '16px'],
+      button: ['14px', '14px'],
+    },
   },
   plugins: [],
 };
