@@ -6,22 +6,68 @@
         "subline": "Subline",
         "headline": "LOREM IPSUM DOLOR SIT",
         "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas facilisis malesuada a. Magna nisl nulla consequat, est facilisis ultrices et neque.",
-        "btnURL": ""
+        "btnURL": "",
+        "heroImage": "shopify:\/\/shop_images\/Group_3.png"
       }
     },
-    "1656969174920f9220": {
+    "1657528330256349d9": {
+      "type": "loumana-usp",
+      "settings": {
+        "iconOne": "shopify:\/\/shop_images\/nachhaltig_1.png",
+        "textOne": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas.",
+        "iconTwo": "shopify:\/\/shop_images\/Layer_2.png",
+        "textTwo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas",
+        "iconThree": "shopify:\/\/shop_images\/vegan_1.png",
+        "textThree": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas"
+      }
+    },
+    "1657531561544bbc81": {
       "type": "loumana-video",
       "settings": {
-        "heading": "Lorem Ipsum",
-        "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas facilisis malesuada a. Magna nisl nulla consequat, est facilisis ultrices et neque.",
-        "colorOne": "#ed0000",
-        "colorTwo": "#0de654",
-        "colorThree": "#4c00ff"
+      }
+    },
+    "1657541631731b0619": {
+      "type": "loumana-landing-products",
+      "blocks": {
+        "ea44e442-032c-4a99-9a7a-81531a09124c": {
+          "type": "product",
+          "settings": {
+            "product": "loumana-sensual",
+            "direction": "twcss-flex-row",
+            "background": "bg1"
+          }
+        },
+        "a0eda3c1-7cc2-4bd4-856d-66bd27ae0d44": {
+          "type": "product",
+          "settings": {
+            "product": "loumana-energy",
+            "direction": "twcss-flex-row-reverse",
+            "background": "bg1"
+          }
+        },
+        "8bc08b6d-d146-42a3-90e4-f8ee0943d79d": {
+          "type": "product",
+          "settings": {
+            "product": "loumana-tropical",
+            "direction": "twcss-flex-row",
+            "background": "bg1"
+          }
+        }
+      },
+      "block_order": [
+        "ea44e442-032c-4a99-9a7a-81531a09124c",
+        "a0eda3c1-7cc2-4bd4-856d-66bd27ae0d44",
+        "8bc08b6d-d146-42a3-90e4-f8ee0943d79d"
+      ],
+      "settings": {
+        "featuredProductsHeading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
     }
   },
   "order": [
     "1656963255e0d5b30a",
-    "1656969174920f9220"
+    "1657528330256349d9",
+    "1657531561544bbc81",
+    "1657541631731b0619"
   ]
 }

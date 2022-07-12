@@ -1,0 +1,115 @@
+<div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28" >
+    <h2 class="twcss-text-center twcss-max-w-md twcss-font-extrabold twcss-font-noto twcss-leading-tight">
+        {{ section.settings.featuredProductsHeading }}
+    </h2>
+
+    {%- for block in section.blocks -%}
+        <div class="twcss-flex {{ block.settings.direction }} twcss-justify-between twcss-w-full">
+            <div class="twcss-flex twcss-flex-col">
+                <span class="twcss-font-noto twcss-font-light twcss-text-sm">{{ block.settings.product.price | money_with_currency }}</span>
+                {{ block.settings.product.title }}
+                {{ block.settings.product.description }}
+            </div>
+            <div class="{{block.settings.background}}">
+                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-xl">
+            </div>
+        </div>
+    {%- endfor -%}
+
+
+</div>
+
+
+<style>
+    .bg1{
+        background-image:url({{ 'featuredBG1.png' | asset_url }});
+        background-position: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .bg2{
+        background-image:url({{ 'FeaturedBG2.png' | asset_url }});
+        background-position: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .bg3{
+        background-image:url({{ 'featuredBG3.png' | asset_url }});
+        background-position: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+</style>
+
+{% schema %}
+{
+   "name": "Loumana Featured Products",
+   "tag": "section",
+   "settings": [
+    {
+        "type": "text",
+        "id": "featuredProductsHeading",
+        "label": "Überschrift für featured Products",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }   
+   ],
+   "blocks": [
+        {
+            "name" : "Featured Product",
+            "type" : "product",
+            "settings": [
+               {
+                "type": "product",
+                "id": "product",
+                "label": "Produkt"
+               },
+              {
+                "type": "select",
+                "id": "direction",
+                "label": "Produkt links- oder rechtsbündig",
+                "options": [
+                    {
+                        "value": "twcss-flex-row",
+                        "label": "Rechtsbündig"
+                    },
+                    {
+                        "value": "twcss-flex-row-reverse",
+                        "label": "Linksbündig"
+                    }
+                ] 
+              },
+              {
+                "type": "select",
+                "id": "background",
+                "label": "Produkthintergrund",
+                "options": [
+                    {
+                        "value": "bg1",
+                        "label": "Hintergrund 1"
+                    },
+                    {
+                        "value": "bg2",
+                        "label": "Hintergrund 2"
+                    },
+                    {
+                        "value": "bg3",
+                        "label": "Hintergrund 3"
+                    }
+                ] 
+              }
+            ]
+        }
+   ],
+  "presets": [
+    {
+        "name": "Loumana Featured Products"
+    }
+  ]
+}
+{% endschema %}
+
