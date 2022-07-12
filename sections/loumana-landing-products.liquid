@@ -14,7 +14,6 @@
                 </h3>
                 <p class="twcss-font-light twcss-text-text twcss-leading-5">{{ block.settings.product.description }}</p>
                 <div class="learnmore twcss-flex twcss-flex-row twcss-items-center">
-                    <a class="mainButton " href="">{{ block.settings.product.selected_or_first_available_variant.id }}</a>
                     <form action="/cart/add" method="post">
                         <input type="hidden" value="{{ block.settings.product.selected_or_first_available_variant.id}}" name="id" />
                         <input type="submit" class="mainButton twcss-mr-4" name="add" value="In den Warenkorb">

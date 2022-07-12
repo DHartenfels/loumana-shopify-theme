@@ -122,6 +122,37 @@
     },
     "16576376408ad38897": {
       "type": "loumana-contact",
+      "blocks": {
+        "b5279f7c-e4dd-4c9d-bfae-df420d610697": {
+          "type": "image",
+          "settings": {
+            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
+            "url": "shopify:\/\/pages\/contact",
+            "linkText": "Support"
+          }
+        },
+        "b268b85c-eb2a-4f15-825f-5294204ba0cb": {
+          "type": "image",
+          "settings": {
+            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
+            "url": "shopify:\/\/collections\/all",
+            "linkText": "Produkte"
+          }
+        },
+        "a772de1e-c4f1-46fd-941f-249f9b46b56e": {
+          "type": "image",
+          "settings": {
+            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
+            "url": "shopify:\/\/pages\/contact",
+            "linkText": "Unsere Mission"
+          }
+        }
+      },
+      "block_order": [
+        "b5279f7c-e4dd-4c9d-bfae-df420d610697",
+        "b268b85c-eb2a-4f15-825f-5294204ba0cb",
+        "a772de1e-c4f1-46fd-941f-249f9b46b56e"
+      ],
       "settings": {
         "heading": "Wir sind für euch da",
         "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas facilisis malesuada a. Magna nisl nulla.",

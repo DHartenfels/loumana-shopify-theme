@@ -686,12 +686,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
 }
 
+.twcss-mb-28 {
+  margin-bottom: 7rem;
+}
+
+.twcss-mb-8 {
+  margin-bottom: 2rem;
+}
+
+.twcss-ml-2 {
+  margin-left: 0.5rem;
+}
+
+.twcss-ml-1 {
+  margin-left: 0.25rem;
+}
+
 .twcss-block {
   display: block;
 }
 
 .twcss-flex {
   display: flex;
+}
+
+.twcss-grid {
+  display: grid;
 }
 
 .twcss-h-40 {
@@ -758,6 +778,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 359px;
 }
 
+.twcss-max-w-3xl {
+  max-width: 48rem;
+}
+
+.twcss-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.twcss-grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
 .twcss-flex-row {
   flex-direction: row;
 }
@@ -768,6 +800,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .twcss-flex-col {
   flex-direction: column;
+}
+
+.twcss-content-between {
+  align-content: space-between;
+}
+
+.twcss-content-around {
+  align-content: space-around;
+}
+
+.twcss-items-end {
+  align-items: flex-end;
 }
 
 .twcss-items-center {
@@ -786,12 +830,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.twcss-gap-4 {
+  gap: 1rem;
+}
+
 .twcss-overflow-hidden {
   overflow: hidden;
 }
 
 .twcss-rounded-3xl {
   border-radius: 1.5rem;
+}
+
+.twcss-rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .twcss-bg-\[\#ACC5C7\] {
@@ -875,4 +927,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.twcss-shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
