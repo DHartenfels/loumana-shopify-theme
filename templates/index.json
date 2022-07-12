@@ -34,7 +34,8 @@
           "settings": {
             "product": "loumana-tropical",
             "direction": "twcss-flex-row",
-            "background": "bg3"
+            "background": "bg1",
+            "colorPicker": "#fff4d1"
           }
         },
         "a0eda3c1-7cc2-4bd4-856d-66bd27ae0d44": {
@@ -42,7 +43,8 @@
           "settings": {
             "product": "loumana-energy",
             "direction": "twcss-flex-row-reverse",
-            "background": "bg2"
+            "background": "bg2",
+            "colorPicker": "#f0e5d9"
           }
         },
         "ea44e442-032c-4a99-9a7a-81531a09124c": {
@@ -50,7 +52,8 @@
           "settings": {
             "product": "loumana-sensual",
             "direction": "twcss-flex-row",
-            "background": "bg1"
+            "background": "bg3",
+            "colorPicker": "#fac2b8"
           }
         }
       },
@@ -62,12 +65,77 @@
       "settings": {
         "featuredProductsHeading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
+    },
+    "1657633652744f70ec": {
+      "type": "loumana-fullColorBG",
+      "blocks": {
+        "cb0dfe80-9e45-4436-91d1-8f851143b1a5": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        },
+        "49cfe8b4-6a05-4f1d-84c2-3620bfcaa07a": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        },
+        "b3e99bc5-afa7-470b-8044-ec83f0ea912c": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        },
+        "9903fd95-3bd0-4222-ade2-3e43891e0c6d": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        },
+        "cff3e035-ed14-48bf-b941-b5b90492d250": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        },
+        "d9017653-46f1-47e7-86bf-800e3cec6e34": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        }
+      },
+      "block_order": [
+        "cb0dfe80-9e45-4436-91d1-8f851143b1a5",
+        "49cfe8b4-6a05-4f1d-84c2-3620bfcaa07a",
+        "b3e99bc5-afa7-470b-8044-ec83f0ea912c",
+        "9903fd95-3bd0-4222-ade2-3e43891e0c6d",
+        "cff3e035-ed14-48bf-b941-b5b90492d250",
+        "d9017653-46f1-47e7-86bf-800e3cec6e34"
+      ],
+      "settings": {
+        "heading": "Nachhaltigkeit",
+        "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit cursus lobortis quis posuere blandit vitae cras a. Ac, fermentum, tincidunt urna placerat nec, eleifend sollicitudin ac. Purus nulla consequat dictum tempus fermentum, varius mauris, auctor enim. Suspendisse scelerisque ac netus quis magna vel.",
+        "url": ""
+      }
+    },
+    "16576376408ad38897": {
+      "type": "loumana-contact",
+      "settings": {
+        "heading": "Wir sind für euch da",
+        "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas facilisis malesuada a. Magna nisl nulla.",
+        "phone": "+49 123 456 789 0",
+        "mail": "info@loumana.de"
+      }
     }
   },
   "order": [
     "1656963255e0d5b30a",
     "1657528330256349d9",
     "1657531561544bbc81",
-    "1657541631731b0619"
+    "1657541631731b0619",
+    "1657633652744f70ec",
+    "16576376408ad38897"
   ]
 }
