@@ -1,5 +1,5 @@
-<div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28" >
-    <h2 class="twcss-text-center twcss-max-w-md twcss-font-extrabold twcss-font-noto twcss-leading-tight">
+<div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28">
+    <h2 class="twcss-text-center twcss-max-w-md twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10">
         {{ section.settings.featuredProductsHeading }}
     </h2>
 
@@ -10,8 +10,8 @@
                 {{ block.settings.product.title }}
                 {{ block.settings.product.description }}
             </div>
-            <div class="{{block.settings.background}}">
-                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-xl">
+            <div class="{{block.settings.background}} twcss-w-[600px] twcss-h-[600px] twcss-flex twcss-justify-center twcss-items-center">
+                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-2xl">
             </div>
         </div>
     {%- endfor -%}
@@ -47,69 +47,64 @@
 </style>
 
 {% schema %}
+
 {
-   "name": "Loumana Featured Products",
-   "tag": "section",
-   "settings": [
-    {
-        "type": "text",
-        "id": "featuredProductsHeading",
-        "label": "Überschrift für featured Products",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }   
-   ],
-   "blocks": [
+    "name": "Loumana Featured Products",
+    "tag": "section",
+    "settings": [
         {
-            "name" : "Featured Product",
-            "type" : "product",
+            "type": "text",
+            "id": "featuredProductsHeading",
+            "label": "Überschrift für featured Products",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Featured Product",
+            "type": "product",
             "settings": [
-               {
-                "type": "product",
-                "id": "product",
-                "label": "Produkt"
-               },
-              {
-                "type": "select",
-                "id": "direction",
-                "label": "Produkt links- oder rechtsbündig",
-                "options": [
-                    {
-                        "value": "twcss-flex-row",
-                        "label": "Rechtsbündig"
-                    },
-                    {
-                        "value": "twcss-flex-row-reverse",
-                        "label": "Linksbündig"
-                    }
-                ] 
-              },
-              {
-                "type": "select",
-                "id": "background",
-                "label": "Produkthintergrund",
-                "options": [
-                    {
-                        "value": "bg1",
-                        "label": "Hintergrund 1"
-                    },
-                    {
-                        "value": "bg2",
-                        "label": "Hintergrund 2"
-                    },
-                    {
-                        "value": "bg3",
-                        "label": "Hintergrund 3"
-                    }
-                ] 
-              }
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Produkt"
+                }, {
+                    "type": "select",
+                    "id": "direction",
+                    "label": "Produkt links- oder rechtsbündig",
+                    "options": [
+                        {
+                            "value": "twcss-flex-row",
+                            "label": "Rechtsbündig"
+                        }, {
+                            "value": "twcss-flex-row-reverse",
+                            "label": "Linksbündig"
+                        }
+                    ]
+                }, {
+                    "type": "select",
+                    "id": "background",
+                    "label": "Produkthintergrund",
+                    "options": [
+                        {
+                            "value": "bg1",
+                            "label": "Hintergrund 1"
+                        }, {
+                            "value": "bg2",
+                            "label": "Hintergrund 2"
+                        }, {
+                            "value": "bg3",
+                            "label": "Hintergrund 3"
+                        }
+                    ]
+                }
             ]
         }
-   ],
-  "presets": [
-    {
-        "name": "Loumana Featured Products"
-    }
-  ]
+    ],
+    "presets": [
+        {
+            "name": "Loumana Featured Products"
+        }
+    ]
 }
 {% endschema %}
-

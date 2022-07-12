@@ -618,6 +618,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 7rem;
 }
 
+.twcss-mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .twcss-block {
   display: block;
 }
@@ -632,6 +636,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .twcss-h-\[450px\] {
   height: 450px;
+}
+
+.twcss-h-\[600px\] {
+  height: 600px;
 }
 
 .twcss-min-h-screen {
@@ -656,6 +664,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .twcss-w-full {
   width: 100%;
+}
+
+.twcss-w-\[600px\] {
+  width: 600px;
 }
 
 .twcss-max-w-\[var\(--page-width\)\] {
