@@ -1,22 +1,33 @@
-<div class="twcss-max-w-[var(--page-width)] twcss-m-auto">
-    <div class="twcss-max-w-md">
+<div class="twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex twcss-flex-row twcss-justify-between">
+    <div class="twcss-max-w-md twcss-flex twcss-flex-col twcss-content-around">
         <h3 class="twcss-font-noto twcss-font-extrabold twcss-mb-3">{{ section.settings.heading }}</h3>
-        <p class="twcss-font-noto twcss-font-light twcss-text-text"> {{ section.settings.textarea }}</p>
+        <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-mb-8">
+            {{ section.settings.textarea }}</p>
 
-        <p class="twcss-font-noto">Kontakt</p>
-        <p class="twcss-font-noto">
+        <p class="twcss-font-noto twcss-text-text twcss-font-semibold twcss-leading-5">Kontakt</p>
+        <p class="twcss-font-noto twcss-text-text twcss-font-light">
             Telefon:
-            <a href="{{ section.settings.phone }}"> {{ section.settings.phone }}</a>
+            <a href="{{ section.settings.phone }}">
+                {{ section.settings.phone }}</a>
         </p>
 
-        <p class="twcss-font-noto">
+        <p class="twcss-font-noto twcss-text-text twcss-font-light">
             E-Mail:
             <a href="{{ section.settings.mail }}">{{ section.settings.mail }}</a>
         </p>
     </div>
 
-    <div>
-        <div></div>
+    <div class=" twcss-grid twcss-gap-4 twcss-grid-cols-3 twcss-grid-rows-1 twcss-max-w-3xl twcss-items-end">
+        {% for block in section.blocks %}
+            <div class="twcss-flex twcss-flex-col">
+                <img alt="{{ block.settings.linkText }}" src="{{ block.settings.cardImage | image_url }}" width="249" height="226" loading="lazy" class="twcss-rounded-xl twcss-shadow-sm twcss-mb-2"/>
+                <a href="{{ block.settings.url }}" class="twcss-text-[12px] twcss-font-light twcss-font-noto twcss-flex twcss-flex-row">
+                    {{ block.settings.linkText }}
+                    <img src="{{ 'Arrow.svg' | asset_url }}" alt="Arrow Right" loading="lazy" width="auto" height="auto" class="twcss-ml-1">
+                </a>
+            </div>
+        {% endfor %}
+
     </div>
 </div>
 
@@ -47,6 +58,29 @@
         "label": "E-Mail Adresse"
     }
   ],
+    "blocks": [
+        {
+            "name": "Linkkarte",
+            "type": "image",
+           "settings": [
+           {
+            "type": "image_picker",
+            "id": "cardImage",
+            "label": "Kartenbild"
+           },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Linkziel"
+          },
+         {
+            "type": "text",
+            "id": "linkText",
+            "label": "Linktext"
+         }
+           ]
+        }
+    ],
  "presets": [
     {
         
