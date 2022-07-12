@@ -9,13 +9,16 @@
     align-items: center;
     padding: 8px 28px;
     gap: 10px;
-    width: 139px;
+    width: auto;
     height: 35px;
     border: 1px solid #acc5c7;
     border-radius: 30px;
     box-sizing: border-box;
     justify-content: center;
     margin: 30px 0;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
   }
 
   .mainButton:hover {
@@ -25,11 +28,51 @@
     align-items: center;
     padding: 8px 28px;
     gap: 10px;
-    width: 139px;
+    width: auto;
     height: 35px;
     background: #acc5c7;
     border: 1px solid #acc5c7;
     border-radius: 30px;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
+  }
+
+  .mainButtonInverted {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 28px;
+    gap: 10px;
+    width: auto;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
+    color: #fff;
+  }
+
+  .mainButton:hover {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 28px;
+    gap: 10px;
+    width: auto;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
+    color: #acc5c7;
   }
 
   .elipse {

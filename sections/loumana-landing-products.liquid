@@ -1,17 +1,36 @@
+<script defer src="//unpkg.com/alpinejs"></script>
+
 <div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28">
     <h2 class="twcss-text-center twcss-max-w-md twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10">
         {{ section.settings.featuredProductsHeading }}
     </h2>
 
     {%- for block in section.blocks -%}
-        <div class="twcss-flex {{ block.settings.direction }} twcss-justify-between twcss-w-full">
-            <div class="twcss-flex twcss-flex-col">
-                <span class="twcss-font-noto twcss-font-light twcss-text-sm">{{ block.settings.product.price | money_with_currency }}</span>
-                {{ block.settings.product.title }}
-                {{ block.settings.product.description }}
+        <div class="twcss-flex {{ block.settings.direction }} twcss-justify-between twcss-w-full twcss-items-center">
+            <div class="twcss-flex twcss-flex-col twcss-max-w-md">
+                <span class="twcss-font-noto twcss-font-light twcss-text-[12px] twcss-mb-2">{{ block.settings.product.price | money_with_currency }}</span>
+                <h3 class="twcss-font-semibold twcss-font-noto twcss-text-title twcss-mb-2">
+                    {{ block.settings.product.title }}
+                </h3>
+                <p class="twcss-font-light twcss-text-text twcss-leading-5">{{ block.settings.product.description }}</p>
+                <div class="learnmore twcss-flex twcss-flex-row twcss-items-center">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" value="{{ block.settings.product.selected_or_first_available_variant.id}}" name="id" />
+                        <button type="submit" class="mainButton twcss-mr-4" name="add"> In den Warenkorb </button>
+                    </form>
+                    
+
+
+                    <a href="{{ block.settings.product.url }}" class="twcss-text-[12px]">
+                        Mehr
+                    </a>
+                </div>
+
             </div>
-            <div class="{{block.settings.background}} twcss-w-[600px] twcss-h-[600px] twcss-flex twcss-justify-center twcss-items-center">
-                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-2xl">
+            <div class="{{block.settings.background}} twcss-w-[600px] twcss-h-[600px] twcss-flex twcss-justify-center twcss-items-center twcss-relative">
+                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-xl" height="auto" width="auto">
+                <div class="elipse twcss-absolute twcss-bottom-1 twcss-right-28" style="background-color: {{ block.settings.colorPicker }} ">
+                    &nbsp;</div>
             </div>
         </div>
     {%- endfor -%}
@@ -97,7 +116,12 @@
                             "label": "Hintergrund 3"
                         }
                     ]
-                }
+                },
+               {
+                "type": "color",
+                "id": "colorPicker",
+                "label": "Farbe für den Kreis rechts neben dem Bild"
+               }
             ]
         }
     ],

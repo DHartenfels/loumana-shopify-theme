@@ -30,6 +30,7 @@ module.exports = {
       heading: ['60px', '62px'],
       text: ['16px', '16px'],
       button: ['14px', '14px'],
+      title: ['20px', '20px'],
     },
   },
   plugins: [],

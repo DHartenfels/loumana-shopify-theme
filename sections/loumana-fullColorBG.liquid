@@ -1,0 +1,69 @@
+<div class="twcss-w-full twcss-bg-[#ACC5C7] twcss-py-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-rounded-3xl">
+
+    <div class="twcss-flex twcss-flex-col twcss-max-w-lg twcss-text-center twcss-items-center twcss-justify-center">
+        <h2 class="twcss-text-white twcss-font-noto twcss-text-[32px] twcss-mb-5 twcss-font-extrabold twcss-leading-6">
+            {{ section.settings.heading }}
+        </h2>
+    
+        <p class="twcss-text-white twcss-font-noto twcss-text-text twcss-font-light twcss-leading-5">
+            {{ section.settings.textarea }}
+        </p>
+    
+        <div class=" twcss-flex twcss-flex-row twcss-justify-between twcss-mt-3">
+            {% for block in section.blocks %}
+                <img alt="" src="{{ block.settings.icon | img_url: 'master'}}" width="66" height="65" loading="lazy" class="twcss-mx-2">
+            {% endfor %}
+        </div>
+    
+        <a class="mainButtonInverted twcss-uppercase" href="">
+            Mehr erfahren
+        </a>
+    </div>
+
+</div>
+
+
+{% schema %}
+{
+   "name": "Loumana FullBG",
+   "tag": "section",
+  "settings": [
+ {
+    "type": "text",
+    "id": "heading",
+    "label": "Überschrift",
+    "default": "Lorem Ipsum",
+    "placeholder": "Nachhaltigkeit"
+ },
+{
+    "type": "textarea",
+    "id": "textarea",
+    "label": "Fließtext"
+},
+{
+    "type": "url",
+    "id": "url",
+    "label": "Linkziel"
+}
+     
+  ],
+  "blocks": [{
+        "name": "Icon",
+        "type": "image", 
+        "settings": [
+           {
+            "type": "image_picker",
+            "id": "icon",
+            "label" : "Icon"
+           }
+        ]
+    }
+  ],
+ "presets": [
+    {
+        
+        "name":"Loumana Vollflächiger BG"
+    }
+ ]
+}
+{% endschema %}
