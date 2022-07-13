@@ -1,0 +1,145 @@
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+
+<style>
+    .cardswiper {
+        width: 562px;
+        height: 665px;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }s
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+</style>
+
+<div class="twcss-max-w-[var(--page-width)] twcss-m-auto">
+    <h3 class="twcss-font-extrabold twcss-font-noto twcss-text-[34px] twcss-max-w-lg twcss-mb-12">
+        Lerne die verschiedenen Gesichter von Loumana kennen.</h3>
+    <div class=" twcss-flex twcss-flex-row twcss-justify-between twcss-items-center">
+        <div class="twcss-w-1/2">
+            <div class="cardswiper mySwiper twcss-ml-0 twcss-mr-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide twcss-rounded-md">
+                        <img src="{{ section.settings.memberImageOne | img_url: 'master' }}" alt="{{ section.settings.memeberImageOne.alt }}" width="auto" height="auto" loading="lazy"></div>
+                    <div class="swiper-slide twcss-rounded-md">
+                        <img src="{{ section.settings.memberImageTwo | img_url: 'master' }}" alt="{{ section.settings.memeberImageTwo.alt }}" width="auto" height="auto" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="twcss-h-full twcss-w-1/2 twcss-flex twcss-flex-col twcss-justify-center ">
+            <div class="swiper isText">
+                <div class="swiper-wrapper twcss-max-w-md">
+                    <div class="swiper-slide">
+                        <div class="twcss-h-full twcss-w-full twcss-flex twcss-flex-col twcss-items-start">
+                            <h3 class="twcss-font-noto twcss-font-extrabold twccs-text-[24px] twcss-max-w-xs">
+                                {{ section.settings.personOneName }}
+                            </h3>
+
+                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-sm">
+                                {{ section.settings.personOneText }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="twcss-h-full twcss-w-full twcss-flex twcss-flex-col twcss-items-start">
+                            <h3 class="twcss-font-noto twcss-font-extrabold twccs-text-[24px] twcss-max-w-xs">
+                                {{ section.settings.personTwoName }}
+                            </h3>
+
+                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-sm">
+                                {{ section.settings.personTwoText }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="twcss-flex twcss-flex-row twcss-z-50 ">
+                <img src="{{ 'arrowleft.svg' | asset_url }}" alt="" width="40" height="40" loading="normal" id="arrowleft"/>
+                <img src="{{ 'arrowright.svg' | asset_url }}" alt="" width="40" height="40" loading="normal" id="arrowright"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        loop: true,
+        navigation: {
+          nextEl: "#arrowright",
+          prevEl: "#arrowleft",
+        },
+    });
+
+    var textswiper = new Swiper(".isText", {
+        loop: true
+    });
+
+    swiper.controller.control = textswiper;
+</script>
+
+{% schema %}
+{
+   "name": "Loumana Team Slider",
+ "settings": [
+   {
+    "type": "image_picker",
+    "id": "memberImageOne",
+    "label": "Bild des ersten Teammitglieds"
+   },
+  {
+    "type": "text",
+    "id": "personOneName",
+    "label": "Name Person #1"
+  },
+ {
+    "type": "textarea",
+    "id": "personOneText",
+    "label": "Beschreibung Person #1"
+ },
+   {
+    "type": "image_picker",
+    "id": "memberImageTwo",
+    "label": "Bild des zweiten Teammitglieds"
+   },
+   {
+    "type": "text",
+    "id": "personTwoName",
+    "label": "Name Person #2"
+  },
+  {
+    "type": "textarea",
+    "id": "personTwoText",
+    "label": "Beschreibung Person #2"
+ }
+  
+
+ ],
+"presets": [
+    {
+        "category": "Slider",
+        "name":"Loumana Team Slider"
+    }
+]
+}
+{% endschema %}

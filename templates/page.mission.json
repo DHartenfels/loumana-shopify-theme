@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1657704421911b5451": {
+      "type": "loumana-fiftyfiftyHero",
+      "settings": {
+        "subHeading": "Unsere Mission",
+        "heading": "Lorem Ipsum",
+        "imageHero": "shopify:\/\/shop_images\/Frame_41.png"
+      }
+    },
+    "16577044257f267ecf": {
+      "type": "loumana-usp",
+      "settings": {
+        "direction": "row"
+      }
+    },
+    "1657704432b430f22a": {
+      "type": "team-slider",
+      "settings": {
+        "memberImageOne": "shopify:\/\/shop_images\/Frame_62.png",
+        "personOneName": "Pascal Brodersen –  Founder & CEO",
+        "personOneText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna pellentesque magna aliquam fermentum sapien eros, viverra iaculis suspendisse. Risus, consectetur nibh mattis ut diam. Nec id rhoncus nam proin ac lorem quam pharetra a.",
+        "memberImageTwo": "shopify:\/\/shop_images\/unsplash_IF9TK5Uy-KI.png",
+        "personTwoName": "Lorem Ipsum",
+        "personTwoText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna pellentesque magna aliquam fermentum sapien eros, viverra iaculis suspendisse. Risus, consectetur nibh mattis ut diam. Nec id rhoncus nam proin ac lorem quam pharetra a."
+      }
+    },
+    "1657725113804e721e": {
+      "type": "loumana-scroll-snap",
+      "settings": {
+        "productOne": "loumana-sensual",
+        "productTwo": "loumana-energy",
+        "productThree": "loumana-tropical"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1657704421911b5451",
+    "16577044257f267ecf",
+    "1657704432b430f22a",
+    "1657725113804e721e"
+  ]
+}

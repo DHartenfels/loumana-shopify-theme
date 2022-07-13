@@ -1,0 +1,55 @@
+<style>
+    .header-wrapper { position: relative!important;}
+</style>
+
+<div class="twcss-flex twcss-flex-row twcss-max-w-full twcss-content-between">
+    <div class="twcss-relative  twcss-flex twcss-flex-col twcss-justify-center  twcss-w-1/2">
+        <div class="twcss-flex twcss-flex-col twcss-justify-center twcss-ml-8">
+            <p class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline">
+                {{ section.settings.subHeading }}
+            </p>
+            <h1 class=" twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px]">
+                {{ section.settings.heading }}
+            </h1>
+            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseRight.svg' | asset_url }}" width="290" height="382" loading="eager" class=" twcss-absolute -twcss-right-24 twcss-bottom-0 twcss-z-40">
+            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseLeft.svg' | asset_url }}" width="150" height="200" loading="eager" class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-40">
+        </div>
+    </div>
+
+    <div class="twcss-w-1/2 twcss-z-50">
+        <img alt="{{ section.settings.imageHero.alt }}" src="{{ section.settings.imageHero | img_url: 'master' }}" width="658" height="534" loading="eager" class="twcss-ml-auto twcss-mr-0"/>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Loumana Fifty Fifty Hero",
+     "settings": [
+       {
+        "type": "text",
+        "id": "subHeading",
+        "label": "Subheading",
+        "default": "Unsere Mission",    
+        "placeholder": "Unsere Mission"
+       },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Überschrift",
+        "default": "Lorem Ipsum",
+        "placeholder": "Überschrift"
+      },
+     {
+        "type": "image_picker",
+        "id": "imageHero",
+        "label": "Hero Image"
+     }
+    ],
+    "presets": [
+        {
+            "name":"Loumana Fifty Fifty Hero"
+        }
+    ]
+}
+{% endschema %}
