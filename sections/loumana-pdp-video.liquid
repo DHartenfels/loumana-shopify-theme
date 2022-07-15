@@ -1,0 +1,42 @@
+<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-m-auto twcss-mt-28 twcss-justify-between">
+    <div class="twcss-w-[50%] twcss-flex twcss-content-center ">
+        <div>
+            <h2 class="twcss-font-noto twcss-font-extrabold twcss-text-[34px] twcss-max-w-lg twcss-mb-3">
+                {{ section.settings.headline }}
+            </h2>
+            <p class=" twcss-text-text twcss-font-noto twcss-font-light twcss-max-w-md">
+                {{ section.settings.textarea }}
+            </p>
+        </div>
+    </div>
+    <div class="twcss-w-[50%]">
+        <video src="{{ 'Loumana_V1.mp4' | asset_url }}" class=" twcss-w-full twcss-h-full twcss-rounded-lg" controls playsinline></video>
+    </div>
+</div>
+
+
+{% schema %}
+{
+   "name": "Loumana PDP Video",
+  "settings": [
+    {
+        "type": "text",
+        "id": "headline",
+        "label": "Überschrift",
+        "default": "Lorem Ipsum"
+    },
+    {
+        "type": "textarea",
+        "id": "textarea",
+        "label": "Fließtext neben dem Video",
+        "default": "Lorem Ipsum"
+    }
+  ],
+ "presets": [
+    {
+        "category": "video",
+        "name":"Loumana PDP Video"
+    }
+ ]
+}
+{% endschema %}

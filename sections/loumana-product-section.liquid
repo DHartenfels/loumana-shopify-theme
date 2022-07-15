@@ -1,0 +1,144 @@
+<style>
+    .header-wrapper{
+        position: relative;
+    }
+</style>
+
+<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-m-auto">
+    <div class="twcss-w-[50%] twcss-flex twcss-flex-col">
+        {% for image in product.images %}
+            <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager">
+        {% endfor %}
+    </div>
+
+
+    <div class="twcss-w-[50%] twcss-relative">
+        <div class=" twcss-sticky twcss-top-0">
+
+
+            <h1 class=" twcss-font-noto twcss-font-extrabold twcss-max-w-sm twcss-uppercase">{{ product.title }}</h1>
+            <span class="twcss-font-inco twcss-font-light twcss-text-subline">
+                {{ product.price | money }}
+            </span>
+
+            <div class="twcss-flex twcss-flex-col twcss-mt-9">
+                <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
+                    <img src="{{ 'truck.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Versand in 2-3 Werktagen
+                    </span>
+                </div>
+                <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
+                    <img src="{{ 'rotate-left.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Kostenloser Rückversand
+                    </span>
+                </div>
+                <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-5">
+                    <img src="{{ 'credit-card.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Einfache Bezahlung über PayPal oder Klarna
+                    </span>
+                </div>
+                <div>
+                    <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-max-w-md">
+                        {{ product.description }}
+                    </p>
+                </div>
+
+                <div class="twcss-mt-12">
+                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 1</button>
+                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+
+                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 2</button>
+                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+
+                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 3</button>
+                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+
+                    <style>
+                    /* Style the buttons that are used to open and close the accordion panel */
+                    .accordion {
+                    cursor: pointer;
+                    padding: 10px 0;
+                    width: 100%;
+                    text-align: left;
+                    outline: none;
+                    transition: 0.4s;
+                    border-top: 1px solid #ACC5C7;
+                    }
+
+                    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+                    /* Style the accordion panel. Note: hidden by default */
+                </style>
+
+                    <style>
+                    .panel {
+                        padding: 0 18px;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        margin-bottom: 10px;
+                    }
+
+                    .accordion:after {
+                        content: '\02795'; /* Unicode character for "plus" sign (+) */
+                        font-size: 13px;
+                        color: #777;
+                        float: right;
+                        margin-left: 5px;
+                    }
+
+                    .active:after {
+                        content: "\02795";
+                        transition: transform 0.2s ease-in;
+                        transform: rotate(45deg); /* Unicode character for "minus" sign (-) */
+                    }
+                </style>
+
+                    <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+                    
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                            } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+   "name": "Loumana ProductForm",
+  "settings": [
+    
+  ],
+ "presets": [
+    {
+        "category": "product",
+        "name":"Loumana ProductForm"
+    }
+ ]
+}
+{% endschema %}

@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         heading: 'var(--font-heading-family)',
         noto: ['"Noto Sans"', 'sans-serif'],
+        inco: ['Inconsolata, monospace'],
       },
     },
     color: {

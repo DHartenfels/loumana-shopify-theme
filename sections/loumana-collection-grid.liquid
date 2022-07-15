@@ -1,0 +1,52 @@
+<style>
+    {%- for product in collection.products -%}
+        .product-{{ product.id }}:hover{
+            background-color: {{ product.metafields.custom.background_color }};
+        }
+    {%- endfor -%}
+</style>
+
+<div class="twcss-relative">
+
+
+<div class="twcss-w-full twcss-h-[60vh] twcss-bg-center twcss-bg-cover twcss-bg-no-repeat twcss-block" style="background-image: url({{ collection.featured_image | image_url }})"><span</span></div>
+
+<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-justify-between twcss-m-auto twcss-w-full twcss-mt-8 twcss-border-t twcss-border-[#D9D9D9] twcss-items-stretch twcss-relative">
+    <div class="twcss-flex twcss-flex-col twcss-max-w-[33%] twcss-mt-9 twcss-relative twcss-h-full">
+        <h1 class="twcss-font-noto twcss-font-extrabold twcss-text-[48px] twcss-mb-3"> {{ collection.title }} </h1>
+        <p class=" twcss-font-noto twcss-font-light twcss-text-text"> {{ collection.description }} </p>
+        
+    </div>
+    <div class="twcss-grid twcss-grid-cols-3">
+        {%- for product in collection.products -%}
+          <div class="twcss-border twcss-border-[#D9D9D9] twcss-border-t-0 twcss-flex twcss-flex-col product-{{ product.id }} border-counter twcss-justify-between twcss-w-[314px]">
+            <div class="twcss-flex twcss-items-center twcss-justify-center twcss-px-16 twcss-py-16">
+                
+                <img src="{{product.featured_image | image_url }}" loading="lazy" width="140" height="140" alt="">
+            </div>
+            
+            <div class="twcss-flex flex-row twcss-justify-between twcss-p-6">
+                <span class="twcss-text-text twcss-font-light">{{ product.title }}</span>  <span class="twcss-text-text twcss-font-light">{{ product.price | money }}</span>
+            </div>    
+        
+        </div>  
+        {%- endfor -%}
+    </div>
+</div>
+<img src="{{ 'Collection-List-Bottom.svg' | asset_url }}" width="145" height="444" loading="lazy" class="twcss-absolute twcss-bottom-0 -twcss-left-3.5" alt="">
+</div>
+
+{% schema %}
+{
+   "name": "Loumana Collection List",
+  "settings": [
+    
+  ],
+   "presets": [
+    {
+        "category": "collection",
+        "name":"Loumana Collection List"
+    }
+   ]
+}
+{% endschema %}

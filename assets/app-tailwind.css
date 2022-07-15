@@ -82,4 +82,8 @@
     border-radius: 100px;
     margin: 0 15px;
   }
+  .border-counter:nth-child(3n + 2) {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
 }
