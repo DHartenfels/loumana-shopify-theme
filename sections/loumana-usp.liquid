@@ -1,21 +1,39 @@
-<div class="twcss-flex twcss-max-w-[var(--page-width)] flex-row twcss-justify-between twcss-m-auto twcss-mt-24">
+<div class="lg:twcss-flex lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg flex-row lg:twcss-justify-between twcss-m-auto lg:twcss-mt-24 twcss-mt-24">
     {% for block in section.blocks %}
-    <div class="twcss-flex twcss-flex-{{ section.settings.direction }} twcss-w-1/3 {%- if section.settings.direction == 'col' -%}
-        twcss-items-left 
-    {%- else -%}
+    <div class="twcss-flex twcss-items-center twcss-mb-5 lg:twcss-flex-{{ section.settings.direction }} lg:twcss-w-1/3  animate__animated usp{% if section.settings.direction == 'col' %}
+         lg:twcss-items-left 
+    {% else %}
         twcss-items-center 
-    {%- endif -%} twcss-max-w-[359px] twcss-text-text">
-        <img src="{{ block.settings.iconOne | img_url: 'medium' }}" alt="Erster Loumana USP" width="114" height="114" loading="lazy" class="twcss-mr-3 twcss-mb-7"/>
+    {%  endif  %} lg:twcss-max-w-[359px] lg:twcss-text-text">
+        <img src="{{ block.settings.iconOne | img_url: 'medium' }}" alt="Erster Loumana USP" width="auto" height="auto" loading="lazy" class="twcss-mr-3 twcss-w-[60px] twcss-h-[60px]"/>
         {% if block.settings.heading != "" %}
-            <h3 class=" twcss-font-extrabold twcss-font-noto twcss-text-[34px]"> {{ block.settings.heading }} </h3>
+            <h3 class=" lg:twcss-font-extrabold twcss-font-noto lg:twcss-text-[34px]"> {{ block.settings.heading }} </h3>
         {% endif %}
-        <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-mt-2">
+        <p class="twcss-font-noto twcss-font-light lg:twcss-text-text twcss-mt-2 twcss-leading-6 twcss-ml-4">
             {{ block.settings.textOne }}
         </p>
     </div>
         
     {% endfor %}
 </div>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('animate__backInLeft');
+    }
+  });
+});
+var usps= document.getElementsByClassName('usp');
+Array.from(usps).forEach((usp) => {
+  observer.observe(usp);
+})
+
+</script>
 
 
 {% schema %}

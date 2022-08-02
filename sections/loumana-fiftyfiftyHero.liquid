@@ -2,22 +2,22 @@
     .header-wrapper { position: relative!important;}
 </style>
 
-<div class="twcss-flex twcss-flex-row twcss-max-w-full twcss-content-between">
-    <div class="twcss-relative  twcss-flex twcss-flex-col twcss-justify-center  twcss-w-1/2">
-        <div class="twcss-flex twcss-flex-col twcss-justify-center twcss-ml-8">
-            <p class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline">
+<div class="twcss-flex twcss-flex-col lg:twcss-flex-row lg:twcss-max-w-full twcss-content-between twcss-overflow-hidden">
+    <div class="twcss-relative  lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center  lg:twcss-w-1/2 twcss-order-2 lg:twcss-order-1">
+        <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center lg:twcss-ml-8 twcss-z-50 twcss-p-5">
+            <p class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline twcss-font-inco twcss-relative">
                 {{ section.settings.subHeading }}
             </p>
-            <h1 class=" twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px]">
+            <h1 class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px] twcss-relative">
                 {{ section.settings.heading }}
             </h1>
-            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseRight.svg' | asset_url }}" width="290" height="382" loading="eager" class=" twcss-absolute -twcss-right-24 twcss-bottom-0 twcss-z-40">
-            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseLeft.svg' | asset_url }}" width="150" height="200" loading="eager" class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-40">
+            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseRight.svg' | asset_url }}" width="auto" height="auto" loading="eager" class=" twcss-absolute -lg:twcss-right-24 twcss-right-0 twcss-bottom-0 twcss-z-30 twcss-w-60 twcss-h-full lg:twcss-h-auto">
+            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseLeft.svg' | asset_url }}" width="150" height="200" loading="eager" class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-30 twcss-w-32 twcss-h-96">
         </div>
     </div>
 
-    <div class="twcss-w-1/2 twcss-z-50">
-        <img alt="{{ section.settings.imageHero.alt }}" src="{{ section.settings.imageHero | img_url: 'master' }}" width="658" height="534" loading="eager" class="twcss-ml-auto twcss-mr-0"/>
+    <div class="lg:twcss-w-1/2 twcss-z-50 twcss-order-1 lg:twcss-order-2">
+        <img alt="{{ section.settings.imageHero.alt }}" src="{{ section.settings.imageHero | img_url: 'master' }}" width="658" height="534" loading="eager" class="twcss-ml-auto lg:twcss-mr-0"/>
     </div>
 </div>
 

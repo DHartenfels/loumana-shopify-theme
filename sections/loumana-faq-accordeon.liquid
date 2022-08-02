@@ -1,0 +1,165 @@
+<div class="twcss-pt-20 twcss-border-t">
+
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">Lorem</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Lorem</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Lorem</button>
+    </div>
+
+    <div class="tabcontent" id="London">
+
+        <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Section 1</button>
+        <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Section 2</button>
+        <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Section 3</button>
+        <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+            <p>Lorem ipsum...</p>
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Paris">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="tabcontent" id="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+</div>
+<style>
+    * {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  width: 30%;
+  height: 300px;
+}
+
+.tablinks:after{
+  content: ''!important;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border-bottom: 1px solid #ACC5C7;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+    /* Style the accordion panel. Note: hidden by default */
+
+    .panel {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-bottom: 10px;
+    }
+
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\02795";
+        transition: transform 0.2s ease-in;
+        transform: rotate(45deg); /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
+
+<script>
+    function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+openCity(event, 'London')
+</script>
+
+{% schema %}
+{
+   "name": "FAQ Accordeon",
+  "settings": [
+    
+  ],
+ "presets": [
+    {
+        "name":" FAQ Accordeon"
+    }
+ ]
+}
+{% endschema %}

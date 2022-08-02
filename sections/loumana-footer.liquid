@@ -1,33 +1,82 @@
 <div class="twcss-bg-[#ACC5C7] twcss-w-full twcss-min-h-[329px]">
-    <div class="twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex twcss-flex-row twcss-justify-between twcss-px-8 twcss-py-10">
-        <div class=" max-w-[25%]">
-            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white"> Kontakt </h4>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-text twcss-text-white">
-                Telefon: +49123456789 <br>
+    <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-px-8 twcss-py-10">
+        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+                Kontakt
+            </h4>
+            <p class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+                Telefon: +49123456789
+                <br>
                 E-Mail: info@loumana.de
             </p>
         </div>
-        <div class=" max-w-[25%]">
-            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white"> Entdecken </h4>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-text twcss-text-white">
+        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+                Entdecken
+            </h4>
+            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
                 Produkte<br>
                 Über Uns
             </p>
         </div>
-        <div class=" max-w-[25%]">
-            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white"> Allgemeines </h4>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-text twcss-text-white">
+        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+                Allgemeines
+            </h4>
+            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
                 Impressum<br>
-                Datenschutz <br>
-                Lieferung & Rücksendungen <br>
-                Allgemeine Geschäftsbedignungen <br>
+                Datenschutz
+                <br>
+                Lieferung & Rücksendungen
+                <br>
+                Allgemeine Geschäftsbedignungen
+                <br>
                 Hilfe & FAQ
             </p>
         </div>
-        <div class=" max-w-[25%]"></div>
+        <div class="lg:twcss-max-w-[25%]">
+            <h4 class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+                Newsletter
+            </h4>
+            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, cum egestas facilisis malesuada a. Magna nisl nulla.
+            </p>
+
+            {% form 'customer' %}
+                {{ form.errors | default_errors }}
+                {% if form.posted_successfully? %}
+                    <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+                {% else %}
+                    <input name="contact[tags]" type="hidden" value="newsletter">
+                    <div class=" twcss-flex twcss-flex-row twcss-bg-white twcss-rounded-[20px] twcss-px-5 twcss-py-3 twcss-justify-between twcss-mt-5">
+                        <input type="email" name="contact[email]" id="Email" value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" placeholder="E-Mail Adresse" autocorrect="off" autocapitalize="off">
+                        <button id="Subscribe" name="commit" type="submit">
+                            <span>
+                                <img src="{{ 'ArrowLearnMore.svg' | asset_url }}" alt=""/>
+                            </span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endform %}
+        </div>
+    </div>
+    <div class="twcss-border-t twcss-border-t-white twcss-flex twcss-flex-col ">
+        <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto lg:twcss-m-0 twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-px-8 twcss-py-10"">
+            <div class="twcss-ml-0 twcss-mr-auto  twcss-flex twcss-flex-row ">
+                <img alt="" class="twcss-mr-5" src="{{'facebook-f.svg' | asset_url }}">
+                <img alt="" class="twcss-mr-5" src="{{'instagram.svg' | asset_url }}">
+                <img alt="" class="twcss-mr-5" src="{{'pinterest.svg' | asset_url }}">
+                <img alt="" class="twcss-mr-5" src="{{'youtube.svg' | asset_url }}">
+
+            </div>
+            <div class="twcss-mt-10 lg:twcss-mt-0">
+                <p class=" twcss-font-noto twcss-font-light twcss-text-[12px] twcss-text-white ">© 2022 Loumana GmbH – Alle Rechte vorbehalten</p>
+            </div>
+        </div>
+
+
     </div>
 </div>
-
 
 
 {% schema %}

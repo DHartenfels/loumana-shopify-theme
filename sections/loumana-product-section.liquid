@@ -4,24 +4,40 @@
     }
 </style>
 
-<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-m-auto">
-    <div class="twcss-w-[50%] twcss-flex twcss-flex-col">
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<div class="swiper mySwiper lg:twcss-hidden">
+  <div class="swiper-wrapper">
+    {% for image in product.images %}
+    <div class="swiper-slide"><img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager"></div>
+      {% endfor %}
+  </div>
+</div> 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<div class="lg:twcss-flex lg:twcss-flex-row lg:twcss-max-w-[var(--page-width)] lg:twcss-m-auto">
+    <div class="lg:twcss-w-[50%] lg:twcss-flex lg:twcss-flex-col twcss-hidden">
         {% for image in product.images %}
-            <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager">
+            <div class="twcss-min-h-screen twcss-flex twcss-justify-center">
+              <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager" class="twcss-w-full twcss-h-auto">
+            </div>
         {% endfor %}
     </div>
 
 
-    <div class="twcss-w-[50%] twcss-relative">
-        <div class=" twcss-sticky twcss-top-0">
-
-
-            <h1 class=" twcss-font-noto twcss-font-extrabold twcss-max-w-sm twcss-uppercase">{{ product.title }}</h1>
-            <span class="twcss-font-inco twcss-font-light twcss-text-subline">
+    <div class="lg:twcss-w-[50%] lg:twcss-relative twcss-flex twcss-flex-col lg:twcss-justify-start">
+        <div class=" lg:twcss-sticky lg:twcss-top-0 twcss-flex twcss-flex-col  twcss-max-w-lg lg:twcss-max-w-xl twcss-mx-auto">
+            <h1 class=" twcss-font-noto twcss-font-extrabold twcss-max-w-md twcss-uppercase twcss-text-[48px] twcss-mb-5 lg:twcss-max-w-xl">{{ product.title }}</h1>
+            <span class="twcss-font-inco twcss-font-light twcss-text-subline twcss-mb-10">
                 {{ product.price | money }}
             </span>
 
-            <div class="twcss-flex twcss-flex-col twcss-mt-9">
+            <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-mt-9">
                 <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
                     <img src="{{ 'truck.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
                     <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
@@ -40,27 +56,96 @@
                         Einfache Bezahlung über PayPal oder Klarna
                     </span>
                 </div>
-                <div>
-                    <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-max-w-md">
+                <div class="twcss-font-noto lg:twcss-font-light lg:twcss-text-text lg:twcss-max-w-3xl twcss-mt-10">
+                    <p class="twcss-font-noto twcss-font-light twcss-text-[14px] lg:twcss-text-text lg:twcss-max-w-3xl">
                         {{ product.description }}
                     </p>
-                </div>
+                
 
-                <div class="twcss-mt-12">
-                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 1</button>
-                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
-                        <p>Lorem ipsum...</p>
+                <div class="quick-add twcss-flex twcss-flex-col twcss-justify-between">
+                    {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
+                    
+                      <product-form>
+                        {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                        <div class="twcss-flex twcss-justify-center">
+                        <quantity-input class="quantity twcss-m-auto twcss-mr-5 lg:twcss-ml-0" style="min-height: 35px;  max-height: 40px;">
+                            <button class="quantity__button no-js-hidden" name="minus" type="button" style="min-height: 35px;  max-height: 40px;">
+                              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                              {% render 'icon-minus' %}
+                            </button>
+                            <input class="quantity__input input_quantity"
+                              type="number"
+                              name="updates[]"
+                              value="1"
+                              min="1"
+                              style="max-height: 40px;"
+                              aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}"
+                              id="Drawer-quantity-{{ product.index | plus: 1 }}"
+                              data-index="{{ product.index | plus: 1 }}"
+                            >
+                            <button class="quantity__button no-js-hidden" name="plus" type="button" style="min-height: 35px;  max-height: 40px;">
+                              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                              {% render 'icon-plus' %}
+                            </button>
+                          </quantity-input>
+                          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" >
+                          <input type="hidden" name="quantity" id="quantity" value="1" >
+                          <button
+                            id="{{ product_form_id }}-submit"
+                            type="submit"
+                            name="add"
+                            class="quick-add__submit mainButton lg:twcss-mr-4 twcss-max-w-none hover:twcss-max-w-none"
+                            aria-haspopup="dialog"
+                            aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                            aria-live="polite"
+                            data-sold-out-message="true"
+                            {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                          >
+                            <span>
+                              {%- if product.selected_or_first_available_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                              {%- else -%}
+                                {{ 'products.product.sold_out' | t }}
+                              {%- endif -%}
+                            </span>
+                            <span class="sold-out-message hidden">
+                              {{ 'products.product.sold_out' | t }}
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                          {{ form | payment_button }}
+                        {%- endform -%}
+                      </product-form>
+                  </div>
+
+                  <script>
+                    document.getElementsByClassName('input_quantity')[0].addEventListener('change', (e) => {
+                        document.getElementById('quantity').value = document.getElementsByClassName('input_quantity')[0].value
+                    })
+                  </script>
+               
+
+
+
+
+
+                <div class="lg:twcss-mt-12">
+                    <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
+                    <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                      {{ product.metafields.custom.anwendung }}
                     </div>
 
-                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 2</button>
-                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
-                        <p>Lorem ipsum...</p>
+                    <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Anwedung</button>
+                    <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                      {{ product.metafields.custom.anwendung }}
+                    
                     </div>
 
-                    <button class="accordion twcss-font-noto twcss-font-light twcss-text-text">Section 3</button>
-                    <div class="panel twcss-font-noto twcss-font-light twcss-text-text">
-                        <p>Lorem ipsum...</p>
-                    </div>
 
                     <style>
                     /* Style the buttons that are used to open and close the accordion panel */
@@ -122,10 +207,16 @@
 
 
                 </div>
+
+            </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {});
+</script>
 
 
 {% schema %}

@@ -1,15 +1,15 @@
-<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-m-auto twcss-mt-28 twcss-justify-between">
-    <div class="twcss-w-[50%] twcss-flex twcss-content-center ">
+<div class="twcss-flex lg:twcss-flex-row twcss-flex-col lg:twcss-max-w-[var(--page-width)] twcss-mt-28 twcss-justify-between twcss-max-w-lg twcss-mx-auto twcss-mb-11">
+    <div class="lg:twcss-w-[50%] twcss-flex twcss-content-center twcss-justify-center twcss-items-center twcss-order-2 lg:twcss-order-1">
         <div>
-            <h2 class="twcss-font-noto twcss-font-extrabold twcss-text-[34px] twcss-max-w-lg twcss-mb-3">
+            <h2 class="twcss-font-noto twcss-font-extrabold twcss-text-[34px] lg:twcss-max-w-lg twcss-mb-3">
                 {{ section.settings.headline }}
             </h2>
-            <p class=" twcss-text-text twcss-font-noto twcss-font-light twcss-max-w-md">
+            <p class=" twcss-text-text twcss-font-noto twcss-font-light lg:twcss-max-w-md">
                 {{ section.settings.textarea }}
             </p>
         </div>
     </div>
-    <div class="twcss-w-[50%]">
+    <div class="lg:twcss-w-[50%] twcss-order-1 lg:twcss-order-2 twcss-mb-5">
         <video src="{{ 'Loumana_V1.mp4' | asset_url }}" class=" twcss-w-full twcss-h-full twcss-rounded-lg" controls playsinline></video>
     </div>
 </div>

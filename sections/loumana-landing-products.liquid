@@ -1,41 +1,127 @@
-<script defer src="//unpkg.com/alpinejs"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
-<div class="twcss-flex twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28">
-    <h2 class="twcss-text-center twcss-max-w-md twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10">
+<div class="twcss-flex lg:twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28 twcss-max-w-lg">
+    <h2 class="twcss-text-center lg:twcss-max-w-2xl twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10 twcss-text-[34px]">
         {{ section.settings.featuredProductsHeading }}
     </h2>
 
     {%- for block in section.blocks -%}
-        <div class="twcss-flex {{ block.settings.direction }} twcss-justify-between twcss-w-full twcss-items-center">
-            <div class="twcss-flex twcss-flex-col twcss-max-w-md">
-                <span class="twcss-font-noto twcss-font-light twcss-text-[12px] twcss-mb-2">{{ block.settings.product.price | money_with_currency }}</span>
-                <h3 class="twcss-font-semibold twcss-font-noto twcss-text-title twcss-mb-2">
+        <div class="pSection twcss-flex lg:{{block.settings.direction}} twcss-flex-col lg:twcss-justify-between lg:twcss-w-full lg:twcss-items-center">
+            <div class="lg:twcss-flex lg:twcss-max-w-lg lg:twcss-flex-col twcss-order-2 lg:twcss-order-1 lg:twcss-w-2xl">
+                <span class="twcss-font-noto twcss-font-light twcss-text-[12px] twcss-mb-2 lg:twcss-max-w-md">{{ block.settings.product.price | money_with_currency }}</span>
+                <h3 class="twcss-font-semibold twcss-font-noto twcss-text-title twcss-mb-5 lg:twcss-max-w-md">
                     {{ block.settings.product.title }}
                 </h3>
-                <p class="twcss-font-light twcss-text-text twcss-leading-5">{{ block.settings.product.description }}</p>
+                <p class="twcss-font-light twcss-text-text stwcss-leading-7 twcss-font-noto lg:twcss-max-w-xl">{{ block.settings.product.description }}</p>
                 <div class="learnmore twcss-flex twcss-flex-row twcss-items-center">
-                    <form action="/cart/add" method="post">
-                        <input type="hidden" value="{{ block.settings.product.selected_or_first_available_variant.id}}" name="id" />
-                        <input type="submit" class="mainButton twcss-mr-4" name="add" value="In den Warenkorb">
-                    </form>
+                    <div class="quick-add">
+                        {%- assign product_form_id = 'quick-add-' | append: section.id | append: block.settings.product.id -%}
+                        {%- if block.settings.product.variants.size == 1 -%}
+                          <product-form>
+                            {%- form 'product', block.settings.product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                              <input type="hidden" name="id" value="{{ block.settings.product.selected_or_first_available_variant.id }}" >
+                              <button
+                                id="{{ product_form_id }}-submit"
+                                type="submit"
+                                name="add"
+                                class="quick-add__submit mainButton lg:twcss-mr-4"
+                                aria-haspopup="dialog"
+                                aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ block.settings.product.id }}"
+                                aria-live="polite"
+                                data-sold-out-message="true"
+                                {% if block.settings.product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                              >
+                                <span>
+                                  {%- if block.settings.product.selected_or_first_available_variant.available -%}
+                                    {{ 'products.product.add_to_cart' | t }}
+                                  {%- else -%}
+                                    {{ 'products.product.sold_out' | t }}
+                                  {%- endif -%}
+                                </span>
+                                <span class="sold-out-message hidden">
+                                  {{ 'products.product.sold_out' | t }}
+                                </span>
+                                <div class="loading-overlay__spinner hidden">
+                                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </button>
+                            {%- endform -%}
+                          </product-form>
+                        {%- else -%}
+                          <modal-opener data-modal="#QuickAdd-{{ block.settings.product.id }}">
+                            <button
+                              id="{{ product_form_id }}-submit"
+                              type="submit"
+                              name="add"
+                              class="quick-add__submit button button--full-width button--secondary"
+                              aria-haspopup="dialog"
+                              aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ block.settings.product.id }}"
+                              data-product-url="{{ block.settings.product.url }}"
+                            >
+                              {{ 'products.product.choose_options' | t }}
+                              <div class="loading-overlay__spinner hidden">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                              </div>
+                            </button>
+                          </modal-opener>
+                          <quick-add-modal id="QuickAdd-{{ block.settings.product.id }}" class="quick-add-modal">
+                            <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: block.settings.product.title | escape }}" aria-modal="true" class="quick-add-modal__content global-settings-popup" tabindex="-1">
+                              <button id="ModalClose-{{ block.settings.product.id }}" type="button" class="quick-add-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+                              <div id="QuickAddInfo-{{ block.settings.product.id }}" class="quick-add-modal__content-info">
+                              </div>
+                            </div>
+                          </quick-add-modal>
+                        {%- endif -%}
+                      </div>
                     
 
 
-                    <a href="{{ block.settings.product.url }}" class="twcss-text-[12px]">
-                        Mehr
+                    <a href="{{ block.settings.product.url }}" class="lg:twcss-text-[12px] twcss-ml-4 twcss-flex twcss-flex-row twcss-items-center twcss-justify-center">
+                        Mehr <img src="{{'ArrowLearnMore.svg' | asset_url}}" alt="">
                     </a>
                 </div>
 
             </div>
-            <div class="{{block.settings.background}} twcss-w-[600px] twcss-h-[600px] twcss-flex twcss-justify-center twcss-items-center twcss-relative">
-                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="lazy" class="twcss-max-w-xl" height="auto" width="auto">
-                <div class="elipse twcss-absolute twcss-bottom-1 twcss-right-28" style="background-color: {{ block.settings.colorPicker }} ">
-                    &nbsp;</div>
+            <div class="lg:twcss-max-w-lg">    
+            <div class="{{block.settings.background}} twcss-min-w-full lg:twcss-min-w-0 lg:twcss-w-[358px] lg:twcss-h-[400px] twcss-w-[292px] twcss-h-[328px] twcss-order-1 lg:twcss-order-2 twcss-flex twcss-justify-center twcss-items-center twcss-flex-col twcss-relative twcss-mb-10">
+              <div class="twcss-relative twcss-w-full twcss-h-[120%] pContent">
+                <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="eager" class="twcss-w-5/6 twcss-h-5/6 twcss-my-auto twcss-mb-0 twcss-mt-auto lg:twcss-w-auto lg:twcss-h-5/6 twcss-aspect-square" height="250" width="250" >
+                <div class="elipse twcss-absolute twcss-bottom-10 twcss-right-10" style="background-color: {{ block.settings.colorPicker }} ">
+                  &nbsp;</div>
+                </div>
             </div>
+          </div>
         </div>
     {%- endfor -%}
 
+<script>
+  gsap.to(".pContent", {
+  yPercent: 15,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".pSection",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true
+  }, 
+});
 
+gsap.to(".pImage", {
+  yPercent: 50,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".pSection",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true
+  }, 
+});
+</script>
 </div>
 
 

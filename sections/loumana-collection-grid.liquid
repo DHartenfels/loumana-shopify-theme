@@ -7,33 +7,114 @@
 </style>
 
 <div class="twcss-relative">
-
-
-<div class="twcss-w-full twcss-h-[60vh] twcss-bg-center twcss-bg-cover twcss-bg-no-repeat twcss-block" style="background-image: url({{ collection.featured_image | image_url }})"><span</span></div>
-
-<div class="twcss-flex twcss-flex-row twcss-max-w-[var(--page-width)] twcss-justify-between twcss-m-auto twcss-w-full twcss-mt-8 twcss-border-t twcss-border-[#D9D9D9] twcss-items-stretch twcss-relative">
-    <div class="twcss-flex twcss-flex-col twcss-max-w-[33%] twcss-mt-9 twcss-relative twcss-h-full">
-        <h1 class="twcss-font-noto twcss-font-extrabold twcss-text-[48px] twcss-mb-3"> {{ collection.title }} </h1>
-        <p class=" twcss-font-noto twcss-font-light twcss-text-text"> {{ collection.description }} </p>
-        
+    <img src="{{ 'Collection-List-Bottom.svg' | asset_url }}" width="145" height="444" loading="lazy" class="twcss-absolute lg:twcss-bottom-0  lg:twcss-left-0 twcss-right-0  twcss-hidden lg:twcss-block" alt="">
+    <div class="twcss-w-full twcss-h-[40vh] lg:twcss-h-[60vh] twcss-bg-center twcss-bg-cover twcss-bg-no-repeat twcss-block" style="background-image: url({{ collection.featured_image | image_url }})">
+        <span></span>
     </div>
-    <div class="twcss-grid twcss-grid-cols-3">
-        {%- for product in collection.products -%}
-          <div class="twcss-border twcss-border-[#D9D9D9] twcss-border-t-0 twcss-flex twcss-flex-col product-{{ product.id }} border-counter twcss-justify-between twcss-w-[314px]">
-            <div class="twcss-flex twcss-items-center twcss-justify-center twcss-px-16 twcss-py-16">
-                
-                <img src="{{product.featured_image | image_url }}" loading="lazy" width="140" height="140" alt="">
-            </div>
-            
-            <div class="twcss-flex flex-row twcss-justify-between twcss-p-6">
-                <span class="twcss-text-text twcss-font-light">{{ product.title }}</span>  <span class="twcss-text-text twcss-font-light">{{ product.price | money }}</span>
-            </div>    
-        
-        </div>  
-        {%- endfor -%}
+
+    <div class="lg:twcss-flex lg:twcss-flex-row lg:twcss-justify-between lg:twcss-py-20  lg:twcss-w-full lg:twcss-mt-8 lg:twcss-border-t lg:twcss-border-[#D9D9D9] lg:twcss-items-stretch twcss-relative">
+        <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-max-w-[33%] lg:twcss-mt-9 lg:twcss-relative lg:twcss-h-full twcss-relative ">
+            <img src="{{ 'Group 7.svg' | asset_url }}" width="auto" height="auto" loading="lazy" class="twcss-absolute twcss-bottom-0  twcss-right-0  twcss-block lg:twcss-hidden" alt="">
+            <h1 class="twcss-font-noto twcss-font-extrabold lg:twcss-text-[48px] twcss-text-[36px] twcss-mb-3 twcss-uppercase twcss-p-5 lg:group-hover:twcss-text-white">
+                {{ collection.title }}
+            </h1>
+            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] lg:twcss-text-text twcss-mb-20 twcss-p-5 lg:group-hover:twcss-text-white">
+                {{ collection.description }}
+            </p>
+
+        </div>
+        <div class="twcss-grid lg:twcss-grid-cols-[repeat(3,1fr)] twcss-grid-cols-1 lg:twcss-max-w-none twcss-max-w-lg twcss-m-auto">
+            {%- for product in collection.products -%}
+                <div class=" twcss-mt-7 lg:twcss-mt-0 lg:twcss-border twcss-border-[#D9D9D9] twcss-border-b lg:twcss-border-t-0 lg:twcss-flex lg:twcss-flex-col product-{{ product.id }} border-counter lg:twcss-justify-between lg:twcss-w-[314px] twcss-relative twcss-group lg:twcss-min-h-[400px]">
+                    <div class="lg:group-hover:twcss-top-0 lg:twcss-absolute lg:twcss-p-10 lg:twccs-w-full lg:twccs-p-5 lg:twcss-bottom-0 twcss-flex flex-row twcss-justify-between twcss-w-full twcss-pb-5">
+                        <span class="twcss-text-text twcss-font-light twcss-font-inco">{{ product.title }}</span>
+                        <span class=" twcss-text-center twcss-text-text lg:twcss-font-light twcss-font-inco">{{ product.price | money }}</span>
+                    </div>
+
+                    <div class="twcss-flex twcss-items-center twcss-justify-center lg:twcss-px-16 lg:twcss-py-16 twcss-mt-8">
+
+                        <img src="{{product.featured_image | image_url }}" loading="lazy" width="auto" height="auto" alt="" class="twcss-w-auto twcss-h-72 twcss-mt-10 twcss-block group-hover:twcss-hidden">
+                        <img class="twcss-hidden group-hover:twcss-block twcss-w-auto twcss-h-72 twcss-mt-10" src="{{ product.images.last | img_url: 'master'}}" alt="{{ product.images.last.alt | escape }} width="auto" height="auto" ">
+                    </div>
+
+                    <div class="learnmore twcss-flex twcss-flex-row twcss-justify-between lg:twcss-hidden lg:group-hover:twcss-flex lg:twcss-px-10">
+                        <div class="quick-add">
+                            {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
+                            {%- if product.variants.size == 1 -%}
+                              <product-form>
+                                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" >
+                                  <button
+                                    id="{{ product_form_id }}-submit"
+                                    type="submit"
+                                    name="add"
+                                    class="quick-add__submit lg:mainButtonCollection mainButtonInverted lg:twcss-mr-4"
+                                    aria-haspopup="dialog"
+                                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                                    aria-live="polite"
+                                    data-sold-out-message="true"
+                                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                                  >
+                                    <span>
+                                      {%- if product.selected_or_first_available_variant.available -%}
+                                        {{ 'products.product.add_to_cart' | t }}
+                                      {%- else -%}
+                                        {{ 'products.product.sold_out' | t }}
+                                      {%- endif -%}
+                                    </span>
+                                    <span class="sold-out-message hidden">
+                                      {{ 'products.product.sold_out' | t }}
+                                    </span>
+                                    <div class="loading-overlay__spinner hidden">
+                                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                      </svg>
+                                    </div>
+                                  </button>
+                                {%- endform -%}
+                              </product-form>
+                            {%- else -%}
+                              <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+                                <button
+                                  id="{{ product_form_id }}-submit"
+                                  type="submit"
+                                  name="add"
+                                  class="quick-add__submit button button--full-width button--secondary"
+                                  aria-haspopup="dialog"
+                                  aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                                  data-product-url="{{ product.url }}"
+                                >
+                                  {{ 'products.product.choose_options' | t }}
+                                  <div class="loading-overlay__spinner hidden">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                  </div>
+                                </button>
+                              </modal-opener>
+                              <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
+                                <div role="dialog" aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}" aria-modal="true" class="quick-add-modal__content global-settings-popup" tabindex="-1">
+                                  <button id="ModalClose-{{ product.id }}" type="button" class="quick-add-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+                                  <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info">
+                                  </div>
+                                </div>
+                              </quick-add-modal>
+                            {%- endif -%}
+                          </div>
+                        
+    
+    
+                        <a href="{{ product.url }}" class="lg:twcss-text-[12px] twcss-ml-4 twcss-flex twcss-flex-row twcss-items-center twcss-font-light twcss-font-noto twcss-justify-center twcss-text-white twcss-z-50">
+                            Mehr erfahren <img src="{{'ArrowWhite.svg' | asset_url}}" alt=""> 
+                        </a>
+                    </div>
+
+
+                </div>
+            {%- endfor -%}
+        </div>
     </div>
-</div>
-<img src="{{ 'Collection-List-Bottom.svg' | asset_url }}" width="145" height="444" loading="lazy" class="twcss-absolute twcss-bottom-0 -twcss-left-3.5" alt="">
+
 </div>
 
 {% schema %}

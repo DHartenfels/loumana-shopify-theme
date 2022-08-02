@@ -1,21 +1,21 @@
 <div class="twcss-w-full twcss-bg-[#ACC5C7] twcss-py-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-rounded-3xl twcss-mb-28">
 
-    <div class="twcss-flex twcss-flex-col twcss-max-w-lg twcss-text-center twcss-items-center twcss-justify-center">
-        <h2 class="twcss-text-white twcss-font-noto twcss-text-[32px] twcss-mb-5 twcss-font-extrabold twcss-leading-6">
+    <div class="twcss-flex twcss-flex-col lg:twcss-max-w-4xl twcss-max-w-lg twcss-text-center twcss-items-center twcss-justify-center ">
+        <h2 class="twcss-text-white twcss-font-noto twcss-text-[32px] twcss-mb-5 twcss-font-extrabold">
             {{ section.settings.heading }}
         </h2>
-    
-        <p class="twcss-text-white twcss-font-noto twcss-text-text twcss-font-light twcss-leading-5">
+
+        <p class="twcss-text-white twcss-font-noto twcss-text-text twcss-font-light twcss-leading-7 twcss-mt-5">
             {{ section.settings.textarea }}
         </p>
-    
-        <div class=" twcss-flex twcss-flex-row twcss-justify-between twcss-mt-3">
+
+        <div class="twcss-flex twcss-flex-row twcss-justify-between twcss-mt-5 twcss-flex-wrap">
             {% for block in section.blocks %}
                 <img alt="" src="{{ block.settings.icon | img_url: 'master'}}" width="66" height="65" loading="lazy" class="twcss-mx-2">
             {% endfor %}
         </div>
-    
-        <a class="mainButtonInverted twcss-uppercase" href="">
+
+        <a class="mainButtonInverted twcss-uppercase" href="{{ section.settings.url }}">
             Mehr erfahren
         </a>
     </div>
@@ -42,7 +42,7 @@
 },
 {
     "type": "url",
-    "id": "url",
+    "id": "url",    
     "label": "Linkziel"
 }
      
