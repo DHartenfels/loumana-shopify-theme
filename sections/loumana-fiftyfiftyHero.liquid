@@ -5,9 +5,9 @@
 <div class="twcss-flex twcss-flex-col lg:twcss-flex-row lg:twcss-max-w-full twcss-content-between twcss-overflow-hidden">
     <div class="twcss-relative  lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center  lg:twcss-w-1/2 twcss-order-2 lg:twcss-order-1">
         <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center lg:twcss-ml-8 twcss-z-50 twcss-p-5">
-            <p class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline twcss-font-inco twcss-relative">
+            <div class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline twcss-font-inco twcss-relative">
                 {{ section.settings.subHeading }}
-            </p>
+            </div>
             <h1 class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px] twcss-relative">
                 {{ section.settings.heading }}
             </h1>
@@ -34,11 +34,9 @@
         "placeholder": "Unsere Mission"
        },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "heading",
-        "label": "Überschrift",
-        "default": "Lorem Ipsum",
-        "placeholder": "Überschrift"
+        "label": "Überschrift"
       },
      {
         "type": "image_picker",
