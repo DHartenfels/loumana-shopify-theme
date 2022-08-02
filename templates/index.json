@@ -79,7 +79,7 @@
             "product": "loumana-tropical",
             "direction": "twcss-flex-row",
             "background": "bg3",
-            "colorPicker": ""
+            "colorPicker": "#fff4d1"
           }
         }
       },
