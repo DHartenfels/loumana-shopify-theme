@@ -1,0 +1,254 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "16584270582e660eb0": {
+      "type": "image-banner",
+      "blocks": {
+        "1658427058ddfe8beb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Endlich wieder besser duschen.",
+            "heading_size": "h0"
+          }
+        },
+        "1658427058ddfe8beb-1": {
+          "type": "text",
+          "settings": {
+            "text": "Dank des innovativen TrueFlow Showerhead wird das Wasser beim duschen automatisch gereinigt und gespart. Ein gewinn für dich und dein Portmonnaie",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "1658427058ddfe8beb-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Zum Angebot",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1658427058ddfe8beb-0",
+        "1658427058ddfe8beb-1",
+        "1658427058ddfe8beb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/black-and-white-photo-of-a-persons-arms-in-a-bath.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "16584273407376bef4": {
+      "type": "image-with-text",
+      "blocks": {
+        "1658427340d4ea9564-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "TrueFlow Showhead mit eingebauter Filterung",
+            "heading_size": "h0"
+          }
+        },
+        "1658427340d4ea9564-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die Steine in der Kammer tragen zur Reinigung des Wassers bei, da das Wasser durch die Steine fließt, bevor es oben herauskommt.  Dieses gereinigte Wasser ist gut für die Haut und hilft ihr, sich zu verjüngen.<\/p><p><\/p><p>Wasser aus extrem kleinen Löchern, ermöglichen Ihnen ein komfortables Bad, beseitigen die Müdigkeit von einem langen Arbeitstag und machen deine Duscherfahrung weich und zart!<br\/><\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "1658427340d4ea9564-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt kaufen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1658427340d4ea9564-0",
+        "1658427340d4ea9564-1",
+        "1658427340d4ea9564-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WhatsApp_Image_2022-07-21_at_11.32.53.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16584277410b997f24": {
+      "type": "image-with-text",
+      "blocks": {
+        "1658427741334443d2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spare bis zu 30% Wasser beim Duschen",
+            "heading_size": "h0"
+          }
+        },
+        "1658427741334443d2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TrueFlow Showerhead spart bis zu 30 % Wasser. Sie können jetzt mehr Wasser sparen, während Sie mit normalem Wasserdruck duschen. Schließe den Flow Showerhead einfach an einen beliebigen Badezimmerschlauch an und genieße dein Duscherlebnis wie nie zuvor. <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "1658427741334443d2-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt kaufen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1658427741334443d2-0",
+        "1658427741334443d2-1",
+        "1658427741334443d2-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/water-in-hand.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1658429388ab8268df": {
+      "type": "usps",
+      "blocks": {
+        "fc27069f-c1c6-41c2-861c-da285e38d210": {
+          "type": "image_picker",
+          "settings": {
+            "uspsText": "Bis zu 30% Wasser sparen",
+            "uspImage": "shopify:\/\/shop_images\/6171391cca026f54f28a8c58_euro-icon-black.png"
+          }
+        },
+        "56dbbc03-057d-43e3-a734-3db6303f21d9": {
+          "type": "image_picker",
+          "settings": {
+            "uspsText": "Kostenloser Versand"
+          }
+        },
+        "0af0693b-5416-4072-adfe-e5282d10ffb2": {
+          "type": "image_picker",
+          "settings": {
+            "uspsText": "Sichere Zahlung"
+          }
+        }
+      },
+      "block_order": [
+        "fc27069f-c1c6-41c2-861c-da285e38d210",
+        "56dbbc03-057d-43e3-a734-3db6303f21d9",
+        "0af0693b-5416-4072-adfe-e5282d10ffb2"
+      ],
+      "settings": {
+        "bgCol": "#005f85"
+      }
+    },
+    "16584299748d0a0c7b": {
+      "type": "featured-product",
+      "blocks": {
+        "1658429974b363f03a-0": {
+          "type": "text",
+          "settings": {
+            "text": "FLOW Showerhead",
+            "text_style": "uppercase"
+          }
+        },
+        "1658429974b363f03a-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "1658429974b363f03a-2": {
+          "type": "text",
+          "settings": {
+            "text": "Spart Wasser und ermöglicht ein sanftes Duscherlebnis",
+            "text_style": "subtitle"
+          }
+        },
+        "1658429974b363f03a-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "1658429974b363f03a-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "1658429974b363f03a-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "1658429974b363f03a-0",
+        "1658429974b363f03a-1",
+        "1658429974b363f03a-2",
+        "1658429974b363f03a-3",
+        "1658429974b363f03a-4",
+        "1658429974b363f03a-6"
+      ],
+      "settings": {
+        "product": "three-speed-transparent-pressurized-negative-ion-handheld-showerhead-filter-water-purifying-shower-nozzle",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1658430289f0b59b70": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16584270582e660eb0",
+    "16584273407376bef4",
+    "16584277410b997f24",
+    "1658429388ab8268df",
+    "16584299748d0a0c7b",
+    "1658430289f0b59b70"
+  ]
+}

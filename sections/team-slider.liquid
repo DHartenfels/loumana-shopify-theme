@@ -23,49 +23,49 @@
 
 </style>
 
-<div class="twcss-max-w-[var(--page-width)] twcss-m-auto">
+<div class="lg:twcss-max-w-[var(--page-width)]  twcss-max-w-lg twcss-m-auto twcss-overflow-hidden twcss-border-t twcss-border-[#ACC5C7] twcss-pt-20 mt-20">
     <h3 class="twcss-font-extrabold twcss-font-noto twcss-text-[34px] twcss-max-w-lg twcss-mb-12">
         Lerne die verschiedenen Gesichter von Loumana kennen.</h3>
-    <div class=" twcss-flex twcss-flex-row twcss-justify-between twcss-items-center">
-        <div class="twcss-w-1/2">
-            <div class="cardswiper mySwiper twcss-ml-0 twcss-mr-auto">
-                <div class="swiper-wrapper">
+    <div class="twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-items-center">
+        <div class="twcss-max-w-lg">
+            <div class="cardswiper mySwiper twcss-ml-0 twcss-mr-auto twcss-max-w-lg lg:twcss-max-w-2xl lg:twcss-max-h-screen twcss-max-h-[400px]">
+                <div class="swiper-wrapper twcss-max-w-lg twcss-max-h-[400px] lg:twcss-max-h-screen">
+                    <div class="swiper-slide twcss-rounded-md twcss-max-h-[400px] lg:twcss-max-h-screen">
+                        <img src="{{ section.settings.memberImageOne | img_url: 'master' }}" alt="{{ section.settings.memeberImageOne.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl"></div>
                     <div class="swiper-slide twcss-rounded-md">
-                        <img src="{{ section.settings.memberImageOne | img_url: 'master' }}" alt="{{ section.settings.memeberImageOne.alt }}" width="auto" height="auto" loading="lazy"></div>
-                    <div class="swiper-slide twcss-rounded-md">
-                        <img src="{{ section.settings.memberImageTwo | img_url: 'master' }}" alt="{{ section.settings.memeberImageTwo.alt }}" width="auto" height="auto" loading="lazy"></div>
+                        <img src="{{ section.settings.memberImageTwo | img_url: 'master' }}" alt="{{ section.settings.memeberImageTwo.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl"></div>
                 </div>
             </div>
         </div>
 
-        <div class="twcss-h-full twcss-w-1/2 twcss-flex twcss-flex-col twcss-justify-center ">
-            <div class="swiper isText">
-                <div class="swiper-wrapper twcss-max-w-md">
-                    <div class="swiper-slide">
+        <div class="twcss-h-full lg:twcss-w-1/2 twcss-flex twcss-flex-col twcss-justify-center ">
+            <div class="swiper isText twcss-max-w-lg lg:twcss-ml-0">
+                <div class="swiper-wrapper lg:twcss-max-w-md twcss-max-w-lg">
+                    <div class="swiper-slide twcss-max-w-lg">
                         <div class="twcss-h-full twcss-w-full twcss-flex twcss-flex-col twcss-items-start">
-                            <h3 class="twcss-font-noto twcss-font-extrabold twccs-text-[24px] twcss-max-w-xs">
+                            <h3 class="twcss-font-noto twcss-font-extrabold twcss-text-[24px] twcss-max-w-md">
                                 {{ section.settings.personOneName }}
                             </h3>
 
-                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-sm">
+                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-md">
                                 {{ section.settings.personOneText }}
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="twcss-h-full twcss-w-full twcss-flex twcss-flex-col twcss-items-start">
-                            <h3 class="twcss-font-noto twcss-font-extrabold twccs-text-[24px] twcss-max-w-xs">
+                            <h3 class="twcss-font-noto twcss-font-extrabold twcss-text-[24px] twcss-max-w-md">
                                 {{ section.settings.personTwoName }}
                             </h3>
 
-                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-sm">
+                            <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-py-4 twcss-max-w-md">
                                 {{ section.settings.personTwoText }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="twcss-flex twcss-flex-row twcss-z-50 ">
+            <div class="twcss-flex twcss-flex-row twcss-z-50 twcss-mt-10 twcss-mb-10">
                 <img src="{{ 'arrowleft.svg' | asset_url }}" alt="" width="40" height="40" loading="normal" id="arrowleft"/>
                 <img src="{{ 'arrowright.svg' | asset_url }}" alt="" width="40" height="40" loading="normal" id="arrowright"/>
             </div>

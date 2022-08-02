@@ -8,45 +8,71 @@
         "padding_bottom": 28
       }
     },
-    "1657704421911b5451": {
+    "16587781665032831e": {
       "type": "loumana-fiftyfiftyHero",
       "settings": {
         "subHeading": "Unsere Mission",
-        "heading": "Lorem Ipsum",
+        "heading": "NATURE FIRST,  NATURE SECOND, NATURE ALWAYs.",
         "imageHero": "shopify:\/\/shop_images\/Frame_41.png"
       }
     },
-    "16577044257f267ecf": {
+    "1658778178964a0ae4": {
       "type": "loumana-usp",
+      "blocks": {
+        "3098bc55-f545-4303-b338-bdcb80d2d0ff": {
+          "type": "text",
+          "settings": {
+            "heading": "Nachhaltig",
+            "textOne": "Bei unseren Verpackungen setzen wir auf erneuerbare Ressourcen.  Wir setzen auf Papier, statt Plastik."
+          }
+        },
+        "ddb17284-2368-4ab3-9190-f44f1ffb40f1": {
+          "type": "text",
+          "settings": {
+            "heading": "Plastikfrei",
+            "textOne": "Wir verzichten auf Mikroplastik in all unseren Produkten und versenden alle Produkte klimaneutral."
+          }
+        },
+        "10250ba1-8d48-4205-bf45-443e65954890": {
+          "type": "text",
+          "settings": {
+            "heading": "Vegan",
+            "textOne": "Tierwohl ist uns wichtig. Daher verzichten wir auf Tierversuche und tierische Inhaltsstoffe."
+          }
+        }
+      },
+      "block_order": [
+        "3098bc55-f545-4303-b338-bdcb80d2d0ff",
+        "ddb17284-2368-4ab3-9190-f44f1ffb40f1",
+        "10250ba1-8d48-4205-bf45-443e65954890"
+      ],
       "settings": {
         "direction": "row"
       }
     },
-    "1657704432b430f22a": {
+    "1658778232118bc74a": {
       "type": "team-slider",
       "settings": {
         "memberImageOne": "shopify:\/\/shop_images\/Frame_62.png",
-        "personOneName": "Pascal Brodersen –  Founder & CEO",
-        "personOneText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna pellentesque magna aliquam fermentum sapien eros, viverra iaculis suspendisse. Risus, consectetur nibh mattis ut diam. Nec id rhoncus nam proin ac lorem quam pharetra a.",
+        "personOneName": "Pascal Brodersen - Founder & CEO",
+        "personOneText": "Ich bin quasi schon seit ich denken kann im Einzelhandel tätig. Mit dieser Erfahrung wollte ich schon immer ein Produkt erschaffen, das nicht nur qualitativ gut ist, sondern auch etwas Gutes für die Umwelt tut. Als ich Loumana gegründet habe war mein erstes Ziel: Pflege ohne Plastik. \nAus diesem Ziel ist nun ein “waschechtes” Unternehmen geworden mit tollen natürlichen Produkten.\nIch bin gespannt, wohin die Reise noch geht und freue mich über jeden, der uns auf unserem Weg begleitet!",
         "memberImageTwo": "shopify:\/\/shop_images\/unsplash_IF9TK5Uy-KI.png",
-        "personTwoName": "Lorem Ipsum",
-        "personTwoText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna pellentesque magna aliquam fermentum sapien eros, viverra iaculis suspendisse. Risus, consectetur nibh mattis ut diam. Nec id rhoncus nam proin ac lorem quam pharetra a."
+        "personTwoName": "",
+        "personTwoText": ""
       }
     },
-    "1657725113804e721e": {
-      "type": "loumana-scroll-snap",
+    "165877866276276167": {
+      "type": "our-favorites",
       "settings": {
-        "productOne": "loumana-sensual",
-        "productTwo": "loumana-energy",
-        "productThree": "loumana-tropical"
+        "textOne": ""
       }
     }
   },
   "order": [
     "main",
-    "1657704421911b5451",
-    "16577044257f267ecf",
-    "1657704432b430f22a",
-    "1657725113804e721e"
+    "16587781665032831e",
+    "1658778178964a0ae4",
+    "1658778232118bc74a",
+    "165877866276276167"
   ]
 }

@@ -16,7 +16,9 @@
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay"class="cart-drawer__overlay"></div>
-    <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
+    <div class="drawer__inner twcss-absolute twcss-right-0" role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
+      <img src="{{'cartDrawerleft.svg'| asset_url }}" alt="" class=" twcss-absolute twcss-left-0 twcss-top-1/3">
+      <img src="{{'cartDrawerRight.svg'| asset_url }}" alt="" class=" twcss-absolute twcss-right-0 twcss-top-1/3">
        {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
@@ -53,6 +55,37 @@
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
+
+            <div id="gbCartBar_Text"></div>
+
+            <progress id="cartProgressBar" max="6000" value="{{ cart.total_price }}"></progress>
+              <script> 
+                var gbCartBarAmount = {{ cart.total_price }};
+                var gbCartBar = document.getElementById('gbCartBar_Text');
+                
+                function updateBar(amount, bar) {
+                  if(amount == 0){
+                  bar.innerHTML = `Nur noch € 60,00 bis zum kostenlosen Versand!` 
+                  }
+                  else if (amount < 6000) {
+                    let newAmount = amount.toString();
+                      if (newAmount.length <= 3){
+                        var amountSliced = newAmount.slice(0,1)+ ','+ newAmount.slice(1)
+                      } else {
+                        var amountSliced = newAmount.slice(0,2)+ ','+ newAmount.slice(2)
+                      }
+                    
+                    bar.innerHTML = `Nur noch € ${amountSliced} bis zum kostenlosen Versand!` 
+                  }
+                  else{
+                    bar.innerHTML = 'Kostenloser Versand freigeschaltet!'
+                  }
+                }
+                updateBar(gbCartBarAmount, gbCartBar);
+                
+                
+                </script>
+
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">
@@ -67,7 +100,7 @@
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
                       <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
-                        <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
+                        <td class="cart-item__media twcss-border twcss-border-[#D9D9D9] twcss-rounded-md" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                             <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
@@ -220,8 +253,8 @@
                               </button>
                             </quantity-input>
 
-                            <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                              <button class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                            <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" class="twcss-min-h-0">
+                              <button class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}" class="twcss-min-h-0">
                                 {% render 'icon-remove' %}
                               </button>
                             </cart-remove-button>
@@ -310,8 +343,8 @@
             </button>
           </noscript>
 
-          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
-            {{ 'sections.cart.checkout' | t }}
+          <button type="submit" id="CartDrawer-Checkout" class="mainButton hover:twcss-max-w-none twcss-max-w-none" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
+            Zum Checkout - {{ cart.total_price | money }}
           </button>
         </div>
       </div>
@@ -340,3 +373,21 @@
   });
 </script>
 
+
+
+
+<script>
+  var cartForm = document.getElementById('cart');
+  var progressBar = document.getElementById('gbProgressBar')
+
+  cartForm.addEventListener('change', () => {
+
+    setTimeout(() => {fetch('/cart.js/')
+    .then(response => response.json())
+    .then(data => {
+      progressBar.value = data.total_price
+      updateBar(data.total_price, gbCartBar)
+    })
+    },1000);
+  })
+</script>

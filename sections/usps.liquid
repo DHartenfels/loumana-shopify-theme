@@ -1,0 +1,101 @@
+<div class="info-section" style="background-color: {{ section.settings.bgCol }}">
+    <hr class="info-holder-border">
+    <div class="info-holder">
+        {% for block in section.blocks %}
+
+            <div class="info-card">
+                <div class="info-card-svg">
+                    {{ block.settings.uspImage | img_tag}}
+                </div>
+                <p class="info-card-text">
+                    {{ block.settings.uspsText}}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+    <hr class="info-holder-border">
+</div>
+
+
+<style>
+.info-section{
+}
+
+.info-holder{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info-card{
+  display: flex;
+  align-items: center;
+  max-width: 30%;
+  min-width: 30%;
+  flex-wrap:wrap;
+}
+
+.info-card-text{
+  /* margin: 0 20px 0 0; */
+  color:#fff;
+}
+
+.info-card-svg{
+  width:40px;
+  height:40px;
+  display: flex;
+  margin: 0 10px;
+}
+
+.info-holder-border{
+  margin: 20px 0;
+}
+</style>
+
+
+{% schema %}
+
+{
+    "name": "USP Kommunikation",
+    "settings": [
+     {
+      "type": "color",
+      "id": "bgCol",
+      "label": "Hintergrundfarbe",
+      "default": "#fff"
+     }
+    ],
+    "blocks": [
+        {
+            "name": "USP",
+           "type": "image_picker",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "uspsText",
+                    "label": "USP TEXT"
+                }, {
+                    "type": "image_picker",
+                    "id": "uspImage",
+                    "label": "USP Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "USP Kommunikation"
+        }
+    ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
