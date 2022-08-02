@@ -22,6 +22,7 @@
         "3098bc55-f545-4303-b338-bdcb80d2d0ff": {
           "type": "text",
           "settings": {
+            "iconOne": "shopify:\/\/shop_images\/nachhaltig_1.png",
             "heading": "Nachhaltig",
             "textOne": "Bei unseren Verpackungen setzen wir auf erneuerbare Ressourcen.  Wir setzen auf Papier, statt Plastik."
           }
@@ -29,6 +30,7 @@
         "ddb17284-2368-4ab3-9190-f44f1ffb40f1": {
           "type": "text",
           "settings": {
+            "iconOne": "shopify:\/\/shop_images\/Layer_2.png",
             "heading": "Plastikfrei",
             "textOne": "Wir verzichten auf Mikroplastik in all unseren Produkten und versenden alle Produkte klimaneutral."
           }
@@ -36,6 +38,7 @@
         "10250ba1-8d48-4205-bf45-443e65954890": {
           "type": "text",
           "settings": {
+            "iconOne": "shopify:\/\/shop_images\/vegan_1.png",
             "heading": "Vegan",
             "textOne": "Tierwohl ist uns wichtig. Daher verzichten wir auf Tierversuche und tierische Inhaltsstoffe."
           }
