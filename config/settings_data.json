@@ -15,7 +15,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1330,
+    "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -96,6 +96,10 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
+    "cart_type": "drawer",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/TRUEFLOW_Logo.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -107,10 +111,10 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/20210817-Lumana_Logo-1_1_1_2x_8af897c5-9d2a-476b-81ad-ad699510ddea.png",
-          "logo_width": 160,
+          "logo_width": 170,
           "logo_position": "middle-left",
           "menu": "main-menu",
-          "menu_type_desktop": "mega",
+          "menu_type_desktop": "dropdown",
           "show_line_separator": false,
           "enable_sticky_header": false,
           "margin_bottom": 0,
@@ -164,6 +168,7 @@
       "main-password-header": {
         "type": "main-password-header",
         "settings": {
+          "logo": "{{ shop.brand.logo }}",
           "logo_max_width": 100,
           "color_scheme": "background-1"
         }
@@ -172,6 +177,12 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "loumana-footer": {
+        "type": "loumana-footer",
+        "settings": {
+          "menuOne": ""
         }
       }
     },
@@ -277,6 +288,9 @@
       "predictive_search_show_vendor": false,
       "predictive_search_show_price": false,
       "currency_code_enabled": true,
+      "cart_type": "notification",
+      "show_vendor": false,
+      "show_cart_note": false,
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -300,12 +314,15 @@
           "type": "header",
           "settings": {
             "color_scheme": "background-1",
+            "logo": "{{ shop.brand.logo }}",
             "logo_width": 90,
             "logo_position": "middle-left",
             "menu": "main-menu",
             "show_line_separator": true,
             "enable_sticky_header": true,
-            "margin_bottom": 0
+            "margin_bottom": 0,
+            "padding_top": 20,
+            "padding_bottom": 20
           }
         },
         "footer": {
@@ -354,6 +371,7 @@
         "main-password-header": {
           "type": "main-password-header",
           "settings": {
+            "logo": "{{ shop.brand.logo }}",
             "logo_max_width": 100,
             "color_scheme": "background-1"
           }

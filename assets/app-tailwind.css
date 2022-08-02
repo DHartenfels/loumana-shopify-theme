@@ -19,6 +19,7 @@
     font-size: 14px;
     line-height: 19px;
     max-width: 198px;
+    font-weight: 600;
   }
 
   .mainButton:hover {
@@ -36,6 +37,7 @@
     font-size: 14px;
     line-height: 19px;
     max-width: 198px;
+    font-weight: 600;
   }
 
   .mainButtonInverted {
@@ -57,7 +59,7 @@
     color: #fff;
   }
 
-  .mainButton:hover {
+  .mainButtonInverted:hover {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -75,9 +77,51 @@
     color: #acc5c7;
   }
 
+
+  .mainButtonCollection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px;
+    gap: 10px;
+    width: auto;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Inconsolata';
+  }
+
+  .mainButtonInverted:hover {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px;
+    gap: 10px;
+    width: auto;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 198px;
+    color: #acc5c7;
+    text-transform: uppercase;
+    font-family: 'Inconsolata';
+  }
+
   .elipse {
-    width: 116px;
-    height: 116px;
+    width: 64px;
+    height: 64px;
     transform: matrix(1, 0, 0, -1, 0, 0);
     border-radius: 100px;
     margin: 0 15px;
@@ -87,3 +131,20 @@
     border-right: 0 !important;
   }
 }
+
+
+.hideCollection{display:none!important}
+
+#cartProgressBar{
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+progress::-webkit-progress-bar {background-color: rgba(255,255,255,0.5); width: 100%; border-radius: 13px;}
+progress {background-color: rgba(255,255,255,0.5);}
+
+/* value: */
+progress::-webkit-progress-value {background-color: #ACC5C7 !important;border-radius: 13px;}
+progress::-moz-progress-bar {background-color: #ACC5C7 !important;border-radius: 13px;}
+progress {color: #ACC5C7;}

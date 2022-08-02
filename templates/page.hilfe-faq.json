@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1658779336392639dc": {
+      "type": "faq-header",
+      "settings": {
+        "subheading": "Hilfe\/Faq",
+        "heading": "Fragen zu uns oder unseren produkten?",
+        "btnheading": "Du findest deine Frage nicht auf der Liste? Schreibe uns gerne eine Nachricht.",
+        "btnURl": ""
+      }
+    },
+    "1658779344113580b9": {
+      "type": "loumana-faq-accordeon",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658779336392639dc",
+    "1658779344113580b9"
+  ]
+}
