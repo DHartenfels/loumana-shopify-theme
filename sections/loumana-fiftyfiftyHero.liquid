@@ -11,6 +11,9 @@
             <h1 class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px] twcss-relative">
                 {{ section.settings.heading }}
             </h1>
+            <p class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[48px] twcss-relative">
+                {{ section.settings.text }}
+            </p>
             <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseRight.svg' | asset_url }}" width="auto" height="auto" loading="eager" class=" twcss-absolute -lg:twcss-right-24 twcss-right-0 twcss-bottom-0 twcss-z-30 twcss-w-60 twcss-h-full lg:twcss-h-auto">
             <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseLeft.svg' | asset_url }}" width="150" height="200" loading="eager" class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-30 twcss-w-32 twcss-h-96">
         </div>
@@ -37,6 +40,11 @@
         "type": "richtext",
         "id": "heading",
         "label": "Überschrift"
+      },
+       {
+        "type": "richtext",
+        "id": "text",
+        "label": "Unterüberschrift"
       },
      {
         "type": "image_picker",
