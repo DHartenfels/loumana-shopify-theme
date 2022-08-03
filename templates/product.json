@@ -137,16 +137,19 @@
         "cba8af64-b4ec-4101-adab-ba6ef31b2393": {
           "type": "image",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/vegan.png"
           }
         },
         "1ff38b74-bec4-4c27-b897-da5f663b2024": {
           "type": "image",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/co2-neutral.png"
           }
         },
         "e95b3b72-6d62-4a11-afeb-5ae70e3b572a": {
           "type": "image",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
           }
         }
       },
