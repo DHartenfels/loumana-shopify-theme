@@ -68,6 +68,9 @@
 .containerOverflow{
   overflow:scroll;
   height:40vh;
+  scroll-snap-points-y: repeat(40vh);
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
 }
 .favoritecontainer{
     margin: 10rem auto;
@@ -77,8 +80,7 @@
   height: 40vh;
   display: flex;
   flex-direction: row;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: center;
+
  }
 
 .leftSide{
