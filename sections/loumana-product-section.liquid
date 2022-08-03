@@ -27,7 +27,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 <div class="lg:twcss-flex lg:twcss-flex-row lg:twcss-max-w-[var(--page-width)] lg:twcss-m-auto">
     <div class="lg:twcss-w-[50%] lg:twcss-flex lg:twcss-flex-col twcss-hidden">
         {% for image in product.images %}
-            <div class="twcss-min-h-screen">
+            <div class="">
               <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager" class="twcss-w-full twcss-h-auto">
             </div>
         {% endfor %}
