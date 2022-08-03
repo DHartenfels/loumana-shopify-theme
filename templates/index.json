@@ -59,7 +59,7 @@
           "type": "product",
           "settings": {
             "product": "loumana-sensual",
-            "direction": "twcss-flex-row",
+            "direction": "twcss-flex-row-reverse",
             "background": "bg1",
             "colorPicker": "#fac2b8"
           }
@@ -68,7 +68,7 @@
           "type": "product",
           "settings": {
             "product": "loumana-energy",
-            "direction": "twcss-flex-row-reverse",
+            "direction": "twcss-flex-row",
             "background": "bg2",
             "colorPicker": "#f0e5d9"
           }
@@ -77,7 +77,7 @@
           "type": "product",
           "settings": {
             "product": "loumana-tropical",
-            "direction": "twcss-flex-row",
+            "direction": "twcss-flex-row-reverse",
             "background": "bg3",
             "colorPicker": "#fff4d1"
           }
