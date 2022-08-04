@@ -1,16 +1,16 @@
 <div class="lg:twcss-flex lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg flex-row lg:twcss-justify-between twcss-m-auto lg:twcss-mt-24 twcss-mt-24">
     {% for block in section.blocks %}
-    <div class="twcss-flex twcss-items-center twcss-flex-col twcss-mb-10 lg:twcss-flex-{{ section.settings.direction }} lg:twcss-w-1/3  animate__animated usp{% if section.settings.direction == 'col' %}
+    <div class="twcss-flex twcss-items-center {% if block.settings.heading != "" %} twcss-flex-col {% else%} twcss-flex-row {% endif %} twcss-mb-10 lg:twcss-flex-{{ section.settings.direction }} lg:twcss-w-1/3  animate__animated usp{% if section.settings.direction == 'col' %}
          lg:twcss-items-left 
     {% else %}
         twcss-items-center 
     {%  endif  %} lg:twcss-max-w-[359px] lg:twcss-text-text">
         <img src="{{ block.settings.iconOne | img_url: 'master' }}" alt="Erster Loumana USP" width="auto" height="auto" loading="lazy" class="twcss-mb-5
         {% if block.settings.heading != "" %}
-          twcss-w-[120px] twcss-h-[120px] twcss-ml-0 twcss-mr-auto
+          twcss-w-[120px] twcss-h-[120px] twcss-ml-0 twcss-mr-auto 
         {% else%}
 
-        twcss-w-[60px] twcss-h-[60px]
+        twcss-w-[60px] twcss-h-[60px] twcss-mr-5
 
         {% endif %}
 

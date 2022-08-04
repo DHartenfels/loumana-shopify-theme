@@ -741,6 +741,10 @@ video {
   margin: 0px !important;
 }
 
+.twcss-m-auto {
+  margin: auto !important;
+}
+
 .twcss-mx-2 {
   margin-left: 0.5rem !important;
   margin-right: 0.5rem !important;
@@ -916,6 +920,30 @@ video {
   margin-bottom: 1.25rem !important;
 }
 
+.twcss-mt-24 {
+  margin-top: 6rem !important;
+}
+
+.twcss-mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+.twcss-mb-5 {
+  margin-bottom: 1.25rem !important;
+}
+
+.twcss-ml-0 {
+  margin-left: 0px !important;
+}
+
+.twcss-mr-auto {
+  margin-right: auto !important;
+}
+
+.twcss-mt-2 {
+  margin-top: 0.5rem !important;
+}
+
 .twcss-block {
   display: block !important;
 }
@@ -1000,6 +1028,14 @@ video {
   height: 100% !important;
 }
 
+.twcss-h-\[120px\] {
+  height: 120px !important;
+}
+
+.twcss-h-\[60px\] {
+  height: 60px !important;
+}
+
 .twcss-max-h-\[400px\] {
   max-height: 400px !important;
 }
@@ -1074,6 +1110,14 @@ video {
 
 .twcss-w-full {
   width: 100% !important;
+}
+
+.twcss-w-\[120px\] {
+  width: 120px !important;
+}
+
+.twcss-w-\[60px\] {
+  width: 60px !important;
 }
 
 .twcss-min-w-full {
@@ -1412,6 +1456,10 @@ video {
   line-height: 16px !important;
 }
 
+.twcss-text-\[24px\] {
+  font-size: 24px !important;
+}
+
 .twcss-font-light {
   font-weight: 300 !important;
 }
@@ -1671,6 +1719,14 @@ progress {
     margin-top: 0px !important;
   }
 
+  .lg\:twcss-mt-24 {
+    margin-top: 6rem !important;
+  }
+
+  .lg\:twcss-mr-auto {
+    margin-right: auto !important;
+  }
+
   .lg\:twcss-block {
     display: block !important;
   }
@@ -1787,6 +1843,10 @@ progress {
     width: 50% !important;
   }
 
+  .lg\:twcss-w-1\/3 {
+    width: 33.333333% !important;
+  }
+
   .lg\:twcss-min-w-0 {
     min-width: 0px !important;
   }
@@ -1849,6 +1909,14 @@ progress {
 
   .lg\:twcss-max-w-3xl {
     max-width: 48rem !important;
+  }
+
+  .lg\:twcss-max-w-\[var\(--page-width\)\] {
+    max-width: var(--page-width) !important;
+  }
+
+  .lg\:twcss-max-w-\[359px\] {
+    max-width: 359px !important;
   }
 
   .lg\:twcss-grid-cols-\[repeat\(3\2c 1fr\)\] {
@@ -1977,6 +2045,15 @@ progress {
   .lg\:twcss-text-heading {
     font-size: 60px !important;
     line-height: 62px !important;
+  }
+
+  .lg\:twcss-text-\[34px\] {
+    font-size: 34px !important;
+  }
+
+  .lg\:twcss-text-text {
+    font-size: 16px !important;
+    line-height: 16px !important;
   }
 
   .lg\:twcss-text-\[34px\] {
