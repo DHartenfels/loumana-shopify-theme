@@ -17,13 +17,14 @@
         </p>
     </div>
 
-    <div class=" twcss-grid lg:twcss-gap-4 twcss-grid-cols-1 twcss-grid-rows-3 lg:twcss-grid-cols-3 lg:twcss-grid-rows-1 lg:twcss-max-w-3xl lg:twcss-items-end twcss-mb-7">
+    <div class=" twcss-grid lg:twcss-gap-4 twcss-grid-cols-1 twcss-grid-rows-3 lg:twcss-grid-cols-3 lg:twcss-grid-rows-1 lg:twcss-max-w-none lg:twcss-items-end twcss-mb-7">
         {% for block in section.blocks %}
             <div class="lg:twcss-flex lg:twcss-flex-col twcss-mb-7">
                 <img alt="{{ block.settings.linkText }}" src="{{ block.settings.cardImage | image_url }}" width="auto" height="auto" loading="lazy" class=" twcss-aspect-video lg:twcss-aspect-square twcss-rounded-xl twcss-shadow-sm twcss-mb-4"/>
                 <a href="{{ block.settings.url }}" class="twcss-text-[12px] twcss-font-light twcss-font-noto twcss-flex twcss-flex-row">
                     {{ block.settings.linkText }}
                     <img src="{{ 'Arrow.svg' | asset_url }}" alt="Arrow Right" loading="lazy" width="auto" height="auto" class="twcss-ml-1">
+                    <div class="twcss-hidden lg:twcss-flex-row-reverse"></div>
                 </a>
             </div>
         {% endfor %}

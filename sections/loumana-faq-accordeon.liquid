@@ -2,9 +2,9 @@
 
 
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">Unsere Produkte </button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Über Loumana </button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Bestellung & Versand </button>
+        <button class="tablinks twcss-font-noto twcss-font-extrabold" onclick="openCity(event, 'London')">Unsere Produkte </button>
+        <button class="tablinks twcss-font-noto twcss-font-extrabold" onclick="openCity(event, 'Paris')">Über Loumana </button>
+        <button class="tablinks twcss-font-noto twcss-font-extrabold" onclick="openCity(event, 'Tokyo')">Bestellung & Versand </button>
     </div>
 
     <div class="tabcontent" id="London">
@@ -83,6 +83,7 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .accordion:after {
@@ -122,6 +123,17 @@
   width: 70%;
   border-left: none;
   height: 300px;
+}
+
+@media screen and (max-width:749px) {
+    .tab {
+        width: 100%;
+        height: auto;
+    }
+
+    .tabcontent {
+        width: 100%;
+    }
 }
 </style>
 

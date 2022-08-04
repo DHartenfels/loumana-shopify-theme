@@ -1,7 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
-<div class="twcss-flex lg:twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28 twcss-mb-10 twcss-max-w-lg">
+<div class="twcss-flex lg:twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex-col twcss-items-center twcss-mt-28 twcss-mb-16 twcss-max-w-lg">
     <h2 class="twcss-text-center lg:twcss-max-w-2xl twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10 twcss-text-[34px]">
         {{ section.settings.featuredProductsHeading }}
     </h2>
@@ -88,7 +88,7 @@
 
             </div>
             <div class="lg:twcss-max-w-lg">    
-            <div class="{{block.settings.background}} twcss-min-w-full lg:twcss-min-w-0 lg:twcss-w-[358px] lg:twcss-h-[400px] twcss-w-[292px] twcss-h-[328px] twcss-order-1 lg:twcss-order-2 twcss-flex twcss-justify-center twcss-items-center twcss-flex-col twcss-relative twcss-mb-10">
+            <div class="{{block.settings.background}} twcss-min-w-full lg:twcss-min-w-0 lg:twcss-w-[358px] lg:twcss-h-[400px] twcss-w-[292px] twcss-h-[328px] twcss-order-1 lg:twcss-order-2 twcss-flex twcss-justify-center twcss-items-center twcss-flex-col twcss-relative twcss-mb-10 lg:twcss-pr-7">
               <div class="twcss-relative twcss-w-full twcss-h-[120%] pContent">
                 <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="eager" class="twcss-w-5/6 twcss-h-5/6 twcss-my-auto twcss-mb-0 twcss-mt-auto lg:twcss-w-auto lg:twcss-h-auto twcss-aspect-square" height="250" width="250" >
                 <div class="elipse twcss-absolute twcss-right-10" style="background-color: {{ block.settings.colorPicker }}; bottom:40px">

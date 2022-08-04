@@ -13,7 +13,7 @@
           With Grapefruit comes great responsibility.
           Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei.
         </p>
-        <a class="mainButton">
+        <a class="mainButton" href="/products/festes-shampoo-pampelmousse">
           Mehr dazu
         </a>
       </div>
@@ -27,14 +27,14 @@
     <div class="leftSide">
       <div>
         <h2 class="twcss-font-extrabold twcss-font-noto twcss-text-[20px]">
-          Fester Conditioner: Wid Rose
+          Fester Conditioner: Wild Rose
         </h2>
         <p class="twcss-font-light twcss-font-noto twcss-text-[16px]">
           Rosen sind rot, Veilchen sind blau,
           ich schütze dein Haar, das weiß ich genau.
           Mein Rosenduft macht dein Haarpflegeprogramm zu einem intensiven Erlebnis!    
         </p>
-        <a class="mainButton">
+        <a class="mainButton" href="/products/fester-conditioner-wild-rose">
           Mehr dazu
         </a>
       </div>
@@ -54,7 +54,7 @@
           Sauer macht nicht nur lustig, sondern auch wach! Mit meinem belebenden Charakter bin ich genau richtig, um deinem 
           müden Körper den richtigen Kick zu geben
         </p>
-        <a class="mainButton">
+        <a class="mainButton" href="/products/loumana-energy">
           Mehr dazu
         </a>
       </div>
@@ -111,6 +111,19 @@
     z-index: 2;
   }
   
+
+  @media screen and (max-width: 749px) {
+    .stickyContent{
+      flex-direction: column;
+    }
+    .leftSide{
+      padding: 0;
+      order: 2;
+    }
+    .rightSide{
+      padding: 20px;
+    }
+  }
 
 </style>
 

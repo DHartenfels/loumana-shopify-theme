@@ -124,6 +124,11 @@
       "settings": {
       }
     },
+    "1659628253c27a51a6": {
+      "type": "loumana-sticky-atc",
+      "settings": {
+      }
+    },
     "1658773263e589a807": {
       "type": "loumana-pdp-video",
       "settings": {
@@ -191,6 +196,7 @@
   "order": [
     "main",
     "1658771829ddd58c8a",
+    "1659628253c27a51a6",
     "1658773263e589a807",
     "1658773272ec1e67e5",
     "product-recommendations",
