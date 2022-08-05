@@ -122,7 +122,7 @@
       "settings": {
         "heading": "Nachhaltigkeit",
         "textarea": "Nachhaltigkeit stellen wir in den absoluten Mittelpunkt. Nicht nur auf unserer Webseite, sondern auch in unser Handeln. Unsere Produkte sind natürlichen Ursprungs und sollen somit auch ihren Beitrag leisten, der Natur keinen Schaden zuzufügen. Bonus: Für jedes verkaufte Produkt fördern wir die Anpflanzung von Bäumen, um den CO2-Gehalt deines Bade-\/Waschgangs auszugleichen.",
-        "url": ""
+        "url": "shopify:\/\/pages\/faq"
       }
     },
     "16587676356fc31b0a": {
@@ -139,7 +139,7 @@
         "dae18e2c-69b2-4dc9-8960-9f23c719b826": {
           "type": "image",
           "settings": {
-            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4.png",
+            "cardImage": "shopify:\/\/shop_images\/products.png",
             "url": "shopify:\/\/collections\/all",
             "linkText": "Produkte"
           }
@@ -147,8 +147,8 @@
         "fdb9db1a-700d-4ada-a05a-882981ea6e63": {
           "type": "image",
           "settings": {
-            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
-            "url": "",
+            "cardImage": "shopify:\/\/shop_images\/mission.png",
+            "url": "shopify:\/\/pages\/mission",
             "linkText": "Unsere Mission"
           }
         }

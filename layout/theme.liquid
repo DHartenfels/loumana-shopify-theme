@@ -200,6 +200,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -283,5 +284,21 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+    $(document).ready(function() {
+      console.log('ready');
+      $(window).on('resize scroll', function() {
+        if  ($('.nonstickyAtC').is(":visible")) {
+            $("#stickyATC").hide();
+        }
+        else {
+          $("#stickyATC").show();
+        }
+
+      });
+        
+    });
+    </script>
   </body>
 </html>
