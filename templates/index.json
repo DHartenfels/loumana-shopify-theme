@@ -128,20 +128,20 @@
     "16587676356fc31b0a": {
       "type": "loumana-contact",
       "blocks": {
-        "3b38d28e-93f9-4bad-b22c-3783432ac71e": {
-          "type": "image",
-          "settings": {
-            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
-            "url": "shopify:\/\/pages\/faq",
-            "linkText": "Support"
-          }
-        },
         "dae18e2c-69b2-4dc9-8960-9f23c719b826": {
           "type": "image",
           "settings": {
             "cardImage": "shopify:\/\/shop_images\/products.png",
             "url": "shopify:\/\/collections\/all",
             "linkText": "Produkte"
+          }
+        },
+        "3b38d28e-93f9-4bad-b22c-3783432ac71e": {
+          "type": "image",
+          "settings": {
+            "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
+            "url": "shopify:\/\/pages\/faq",
+            "linkText": "FAQ"
           }
         },
         "fdb9db1a-700d-4ada-a05a-882981ea6e63": {
@@ -154,8 +154,8 @@
         }
       },
       "block_order": [
-        "3b38d28e-93f9-4bad-b22c-3783432ac71e",
         "dae18e2c-69b2-4dc9-8960-9f23c719b826",
+        "3b38d28e-93f9-4bad-b22c-3783432ac71e",
         "fdb9db1a-700d-4ada-a05a-882981ea6e63"
       ],
       "settings": {
