@@ -89,6 +89,7 @@
         "share": {
           "type": "share",
           "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -109,7 +110,13 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "enable_video_looping": false
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1658771829ddd58c8a": {
@@ -125,8 +132,8 @@
     "1658773263e589a807": {
       "type": "loumana-pdp-video",
       "settings": {
-        "headline": "Volle Wanne gut: Unsere LOUMANA Badekugeln.",
-        "textarea": "Wasserhahn auf, Kugel rein, Welt aus. Ob als Belohnung nach einem langen Tag oder einfach nur als Treatment für dich: Unsere Badekugeln geben dir das, was du brauchst:\nGut für die Haut, gut für die Sinne."
+        "headline": "Volle Wanne gut: Unsere LOUMANA Shampoo.",
+        "textarea": "Wasserhahn auf, Shampoo rein, Welt aus. Ob als Belohnung nach einem langen Tag oder einfach nur als Treatment für dich: Unsere Shampoos geben dir das, was du brauchst:\nGut für die Haare, gut für die Sinne."
       }
     },
     "1658773272ec1e67e5": {
