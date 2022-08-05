@@ -55,32 +55,20 @@
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
-
-            <div id="gbCartBar_Text">Kostenloser Versand in:</div>
+            
+            <div id="gbCartBar_Text">{% if cart.total_price < 3500 %}
+              Kostenloser Versand in:  {{3500 | minus: cart.total_price | money }}
+              {% else %}
+                Kostenloser Versand freigeschaltet
+            {% endif %}
+          </div>
 
             <progress id="cartProgressBar" max="3500" value="{{ cart.total_price }}"></progress>
               <script> 
                 var gbCartBarAmount = {{ cart.total_price }};
                 var gbCartBar = document.getElementById('gbCartBar_Text');
                 
-                function updateBar(amount, bar) {
-                  if(amount == 0){
-                  bar.innerHTML = `Nur noch € 35,00 bis zum kostenlosen Versand!` 
-                  }
-                  else if (amount < 3500) {
-                    let newAmount = amount.toString();
-                      if (newAmount.length <= 3){
-                        var amountSliced = newAmount.slice(0,1)+ ','+ newAmount.slice(1)
-                      } else {
-                        var amountSliced = newAmount.slice(0,2)+ ','+ newAmount.slice(2)
-                      }
-                    
-                    bar.innerHTML = `Nur noch € ${amountSliced} bis zum kostenlosen Versand!` 
-                  }
-                  else{
-                    bar.innerHTML = 'Kostenloser Versand freigeschaltet!'
-                  }
-                }
+                
                 updateBar(gbCartBarAmount, gbCartBar);
                 
                 
