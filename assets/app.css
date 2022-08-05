@@ -1530,6 +1530,18 @@ video {
   margin-bottom: 2.5rem !important;
 }
 
+.twcss-mt-5 {
+  margin-top: 1.25rem !important;
+}
+
+.twcss-mt-10 {
+  margin-top: 2.5rem !important;
+}
+
+.twcss-mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
 .twcss-block {
   display: block !important;
 }
@@ -2483,6 +2495,14 @@ video {
   font-family: Inconsolata, monospace !important;
 }
 
+.twcss-font-noto {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+.twcss-font-inco {
+  font-family: Inconsolata, monospace !important;
+}
+
 .twcss-text-text {
   font-size: 16px !important;
   line-height: 2rem !important;
@@ -2733,44 +2753,14 @@ video {
   line-height: 2rem !important;
 }
 
-.twcss-font-light {
-  font-weight: 300 !important;
+.twcss-text-subline {
+  font-size: 20px !important;
+  line-height: 20px !important;
 }
 
-.twcss-font-extrabold {
-  font-weight: 800 !important;
-}
-
-.twcss-font-semibold {
-  font-weight: 600 !important;
-}
-
-.twcss-font-extrabold {
-  font-weight: 800 !important;
-}
-
-.twcss-font-light {
-  font-weight: 300 !important;
-}
-
-.twcss-font-extrabold {
-  font-weight: 800 !important;
-}
-
-.twcss-font-light {
-  font-weight: 300 !important;
-}
-
-.twcss-font-extrabold {
-  font-weight: 800 !important;
-}
-
-.twcss-font-light {
-  font-weight: 300 !important;
-}
-
-.twcss-font-extrabold {
-  font-weight: 800 !important;
+.twcss-text-text {
+  font-size: 16px !important;
+  line-height: 2rem !important;
 }
 
 .twcss-font-light {
@@ -2785,6 +2775,46 @@ video {
   font-weight: 600 !important;
 }
 
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-semibold {
+  font-weight: 600 !important;
+}
+
 .twcss-font-light {
   font-weight: 300 !important;
 }
@@ -2831,6 +2861,14 @@ video {
 
 .twcss-font-extrabold {
   font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
+}
+
+.twcss-font-semibold {
+  font-weight: 600 !important;
 }
 
 .twcss-font-light {
@@ -4131,6 +4169,10 @@ progress {
 
   .lg\:twcss-leading-\[83px\] {
     line-height: 83px !important;
+  }
+
+  .lg\:twcss-leading-\[88px\] {
+    line-height: 88px !important;
   }
 
   .lg\:twcss-text-white {
