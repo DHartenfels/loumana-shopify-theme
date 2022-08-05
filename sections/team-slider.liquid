@@ -32,9 +32,9 @@
             <div class="cardswiper mySwiper twcss-ml-0 twcss-mr-auto twcss-max-w-lg lg:twcss-max-w-2xl lg:twcss-max-h-screen twcss-max-h-[400px]">
                 <div class="swiper-wrapper twcss-max-w-lg twcss-max-h-[400px] lg:twcss-max-h-screen">
                     <div class="swiper-slide twcss-rounded-md twcss-max-h-[400px] lg:twcss-max-h-screen">
-                        <img src="{{ section.settings.memberImageOne | img_url: 'master' }}" alt="{{ section.settings.memeberImageOne.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl"></div>
+                        <img src="{{ section.settings.memberImageOne | img_url: 'master' }}" alt="{{ section.settings.memeberImageOne.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl twcss-rounded-xl"></div>
                     <div class="swiper-slide twcss-rounded-md">
-                        <img src="{{ section.settings.memberImageTwo | img_url: 'master' }}" alt="{{ section.settings.memeberImageTwo.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl"></div>
+                        <img src="{{ section.settings.memberImageTwo | img_url: 'master' }}" alt="{{ section.settings.memeberImageTwo.alt }}" width="auto" height="auto" loading="lazy" class="twcss-max-w-lg lg:twcss-max-w-2xl twcss-rounded-xl"></div>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
     var swiper = new Swiper(".mySwiper", {
         effect: "cards",
         grabCursor: true,
-        loop: true,
+        loop: false,
         navigation: {
           nextEl: "#arrowright",
           prevEl: "#arrowleft",
@@ -93,7 +93,7 @@
     });
 
     var textswiper = new Swiper(".isText", {
-        loop: true
+        loop: false
     });
 
     swiper.controller.control = textswiper;

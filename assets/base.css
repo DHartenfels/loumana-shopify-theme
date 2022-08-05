@@ -2268,6 +2268,10 @@ input[type='checkbox'] {
     grid-template-columns: 1fr auto;
   }
 
+  .header {
+    padding-left: 0px!important;
+  }
+
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
     grid-template-columns: auto 2 1fr;

@@ -5,7 +5,7 @@
 <div class="twcss-flex lg:twcss-flex-row twcss-flex-col twcss-items-center twcss-max-w-[var(--page-width)] twcss-m-auto twcss-min-h-screen lg:twcss-justify-between twcss-justify-around twcss-mt-10" >
 
     <div class="lg:twcss-z-10 lg:twcss-max-w-4xl twcss-font-noto twcss-order-2 lg:twcss-order-1 twcss-ml-6 lg:twcss-ml-0 twcss-mt-11" >
-        <p class="twcss-font-light twcss-text-subline twcss-uppercase twcss-mb-3 twcss-font-inco" >
+        <p class="twcss-font-light twcss-text-subline twcss-uppercase twcss-mb-3 twcss-font-inco twcss-pl-[2px]" >
             {{ section.settings.subline }}
         </p>
         <h1 class="twcss-font-extrabold twcss-uppercase lg:twcss-text-heading twcss-text-[34px] twcss-leading-none twcss-mb-5 twcss-font-noto">
@@ -26,7 +26,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('hero-image').classList.remove('twcss-hidden');
-        document.getElementById('hero-image').classList.add('animate__animated', 'animate__backInUp');
+        document.getElementById('hero-image').classList.add('animate__animated', 'animate__fadeIn');
     });
 </script>
 
