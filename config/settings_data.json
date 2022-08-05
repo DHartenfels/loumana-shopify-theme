@@ -99,10 +99,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "checkout_logo_image": "shopify:\/\/shop_images\/20210817-Lumana_Logo-1_1_1_2x_8af897c5-9d2a-476b-81ad-ad699510ddea.png",
-    "checkout_logo_position": "center",
-    "checkout_accent_color": "#acc5c7",
-    "checkout_button_color": "#acc5c7",
+    "checkout_logo_image": "shopify:\/\/shop_images\/TRUEFLOW_Logo.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

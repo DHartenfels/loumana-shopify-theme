@@ -32,7 +32,10 @@
             <div class="twcss-mt-5">
               <h3 class="twcss-font-noto twcss-uppercase twcss-font-semibold twcss-text-subline twcss-mt-10 twcss-mb-10">{{recommendation.title}} </h3>
               <p class="twcss-font-noto twcss-font-light twcss-text-text"> {{recommendation.description}} </p>
-              <a href="{{recommendation.url}}" class="mainButton twcss-uppercase"> Mehr dazu </a>
+              <div class="twcss-flex twcss-flex-row twcss-justify-between twcss-align-center ">
+                <a href="{{recommendation.url}}" class="mainButton twcss-uppercase"> Mehr dazu </a> <span class="twcss-font-inco lg:twcss-leading-[83px]">{{ recommendation.price |  money }}</span>
+              </div>
+              
             </div>
           </div>
         {% endfor %}
