@@ -23,7 +23,7 @@
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations class="product-recommendations lg:twcss-max-w-[var(--page-width)]  twcss-m-auto section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+      <h2 class="product-recommendations__heading twcss-font-noto twcss-font-semibold {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
       <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down twcss-max-w-lg twcss-m-auto lg:twcss-max-w-[var(--page-width)]" role="list">
         {% for recommendation in recommendations.products %}
           <div class="twcss-w-full lg:twcss-w-[30%] twcss-inline-block lg:twcss-px-9">
