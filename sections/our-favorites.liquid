@@ -69,9 +69,13 @@
 </div>
 
 <style>
+  ::-webkit-scrollbar {
+    display: none;
+}
 .containerOverflow{
   overflow:scroll;
   height:80vh;
+  scrollbar-width: none;
   scroll-snap-points-y: repeat(80vh);
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
