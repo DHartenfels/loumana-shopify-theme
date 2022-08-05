@@ -7,13 +7,13 @@
     </h2>
 
     {%- for block in section.blocks -%}
-        <div class="pSection twcss-flex lg:{{block.settings.direction}} twcss-flex-col lg:twcss-justify-between lg:twcss-w-full lg:twcss-items-center">
-            <div class="lg:twcss-flex lg:twcss-max-w-lg lg:twcss-flex-col twcss-order-2 lg:twcss-order-1 lg:twcss-w-2xl">
+        <div class="pSection twcss-flex lg:{{block.settings.direction}} twcss-flex-col lg:twcss-justify-evenly lg:twcss-w-full lg:twcss-items-center" >
+            <div class="lg:twcss-flex lg:twcss-max-w-2xl lg:twcss-flex-col twcss-order-2 lg:twcss-order-1 lg:twcss-w-2xl">
                 <span class="twcss-font-noto twcss-font-light twcss-text-[12px] twcss-mb-2 lg:twcss-max-w-md">{{ block.settings.product.price | money_with_currency }}</span>
                 <h3 class="twcss-font-semibold twcss-font-noto twcss-text-title twcss-mb-5 lg:twcss-max-w-md">
                     {{ block.settings.product.title }}
                 </h3>
-                <p class="twcss-font-light twcss-text-text stwcss-leading-7 twcss-font-noto lg:twcss-max-w-xl">{{ block.settings.product.description }}</p>
+                <p class="twcss-font-light twcss-text-text twcss-leading-10 twcss-font-noto lg:twcss-max-w-2xl">{{ block.settings.product.description }}</p>
                 <div class="learnmore twcss-flex twcss-flex-row twcss-items-center">
                     <div class="quick-add">
                         {%- assign product_form_id = 'quick-add-' | append: section.id | append: block.settings.product.id -%}

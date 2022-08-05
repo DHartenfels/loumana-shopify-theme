@@ -20,6 +20,7 @@
     line-height: 19px;
     max-width: 198px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   .mainButton:hover {
@@ -38,6 +39,7 @@
     line-height: 19px;
     max-width: 198px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   .mainButtonInverted {
