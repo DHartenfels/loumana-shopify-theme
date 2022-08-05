@@ -132,7 +132,7 @@
           "type": "image",
           "settings": {
             "cardImage": "shopify:\/\/shop_images\/Loumana_CK__4_6157eb1e-cf35-43e2-8e49-445284d02d63.png",
-            "url": "",
+            "url": "shopify:\/\/pages\/faq",
             "linkText": "Support"
           }
         },
