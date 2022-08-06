@@ -1048,7 +1048,7 @@ video {
 }
 
 .twcss-max-w-lg {
-  max-width: 33rem !important;
+  max-width: 35rem !important;
 }
 
 .twcss-max-w-\[300px\] {
@@ -1719,7 +1719,7 @@ progress {
   }
 
   .lg\:twcss-max-w-lg {
-    max-width: 33rem !important;
+    max-width: 35rem !important;
   }
 
   .lg\:twcss-max-w-\[25\%\] {
