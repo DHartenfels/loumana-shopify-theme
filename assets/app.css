@@ -1054,28 +1054,12 @@ video {
   max-width: 200px !important;
 }
 
-.twcss-max-w-lg {
-  max-width: 32rem !important;
-}
-
 .twcss-max-w-\[300px\] {
   max-width: 300px !important;
 }
 
 .twcss-max-w-\[var\(--page-width\)\] {
   max-width: var(--page-width) !important;
-}
-
-.twcss-max-w-md {
-  max-width: 28rem !important;
-}
-
-.twcss-max-w-none {
-  max-width: none !important;
-}
-
-.twcss-max-w-2xl {
-  max-width: 42rem !important;
 }
 
 .twcss-grid-cols-1 {
@@ -1475,11 +1459,7 @@ progress {
   color: #ACC5C7;
 }
 
-.hover\:twcss-max-w-none:hover {
-  max-width: none !important;
-}
-
-@media (min-width: 1010px) {
+@media (min-width: 990px) {
   .lg\:mainButtonCollection:hover {
     box-sizing: border-box;
     display: flex;
@@ -1733,48 +1713,16 @@ progress {
     max-width: var(--page-width) !important;
   }
 
-  .lg\:twcss-max-w-xl {
-    max-width: 36rem !important;
-  }
-
   .lg\:twcss-max-w-\[33\%\] {
     max-width: 33% !important;
-  }
-
-  .lg\:twcss-max-w-none {
-    max-width: none !important;
-  }
-
-  .lg\:twcss-max-w-lg {
-    max-width: 32rem !important;
-  }
-
-  .lg\:twcss-max-w-full {
-    max-width: 100% !important;
   }
 
   .lg\:twcss-max-w-\[25\%\] {
     max-width: 25% !important;
   }
 
-  .lg\:twcss-max-w-4xl {
-    max-width: 56rem !important;
-  }
-
-  .lg\:twcss-max-w-2xl {
-    max-width: 42rem !important;
-  }
-
   .lg\:twcss-max-w-\[509px\] {
     max-width: 509px !important;
-  }
-
-  .lg\:twcss-max-w-md {
-    max-width: 28rem !important;
-  }
-
-  .lg\:twcss-max-w-3xl {
-    max-width: 48rem !important;
   }
 
   .lg\:twcss-max-w-\[359px\] {
