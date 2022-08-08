@@ -171,6 +171,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                     outline: none;
                     transition: 0.4s;
                     border-top: 1px solid #ACC5C7;
+                    transform: rotate(-45deg);
                     }
 
                     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -193,7 +194,8 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                         color: #777;
                         float: right;
                         margin-left: 5px;
-                        transform: rotate(-45deg);
+                        transition: transform 0.2s ease-in;
+                        transform: rotate(-45deg); /* Unicode character for "minus" sign (-) */
                     }
 
                     .active:after {
