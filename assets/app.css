@@ -704,6 +704,10 @@ video {
   top: 33.333333% !important;
 }
 
+.twcss-right-10 {
+  right: 2.5rem !important;
+}
+
 .twcss-z-50 {
   z-index: 50 !important;
 }
@@ -728,12 +732,24 @@ video {
   order: 1 !important;
 }
 
+.twcss-order-2 {
+  order: 2 !important;
+}
+
+.twcss-order-1 {
+  order: 1 !important;
+}
+
 .twcss-m-auto {
   margin: auto !important;
 }
 
 .twcss-m-0 {
   margin: 0px !important;
+}
+
+.twcss-m-auto {
+  margin: auto !important;
 }
 
 .twcss-mx-2 {
@@ -749,6 +765,11 @@ video {
 .twcss-mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.twcss-my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 .twcss-mt-40 {
@@ -883,6 +904,42 @@ video {
   margin-bottom: 3rem !important;
 }
 
+.twcss-mt-28 {
+  margin-top: 7rem !important;
+}
+
+.twcss-mb-16 {
+  margin-bottom: 4rem !important;
+}
+
+.twcss-mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+.twcss-mb-\[5px\] {
+  margin-bottom: 5px !important;
+}
+
+.twcss-mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.twcss-mb-5 {
+  margin-bottom: 1.25rem !important;
+}
+
+.twcss-ml-4 {
+  margin-left: 1rem !important;
+}
+
+.twcss-mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.twcss-mt-auto {
+  margin-top: auto !important;
+}
+
 .twcss-block {
   display: block !important;
 }
@@ -957,6 +1014,18 @@ video {
 
 .twcss-h-\[60px\] {
   height: 60px !important;
+}
+
+.twcss-h-\[328px\] {
+  height: 328px !important;
+}
+
+.twcss-h-\[120\%\] {
+  height: 120% !important;
+}
+
+.twcss-h-5\/6 {
+  height: 83.333333% !important;
 }
 
 .twcss-max-h-\[70vh\] {
@@ -1035,6 +1104,18 @@ video {
   width: 60px !important;
 }
 
+.twcss-w-\[292px\] {
+  width: 292px !important;
+}
+
+.twcss-w-full {
+  width: 100% !important;
+}
+
+.twcss-w-5\/6 {
+  width: 83.333333% !important;
+}
+
 .twcss-min-w-full {
   min-width: 100% !important;
 }
@@ -1065,6 +1146,10 @@ video {
 
 .twcss-max-w-2xl {
   max-width: 42rem !important;
+}
+
+.twcss-max-w-lg {
+  max-width: 32rem !important;
 }
 
 .twcss-grid-cols-1 {
@@ -1367,12 +1452,42 @@ video {
   font-size: 20px !important;
 }
 
+.twcss-text-\[24px\] {
+  font-size: 24px !important;
+}
+
+.twcss-text-\[12px\] {
+  font-size: 12px !important;
+}
+
+.twcss-text-title {
+  font-size: 20px !important;
+  line-height: 20px !important;
+}
+
+.twcss-text-text {
+  font-size: 16px !important;
+  line-height: 2rem !important;
+}
+
 .twcss-font-light {
   font-weight: 300 !important;
 }
 
 .twcss-font-extrabold {
   font-weight: 800 !important;
+}
+
+.twcss-font-semibold {
+  font-weight: 600 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
 }
 
 .twcss-font-semibold {
@@ -1409,6 +1524,14 @@ video {
 
 .twcss-leading-\[91px\] {
   line-height: 91px !important;
+}
+
+.twcss-leading-tight {
+  line-height: 1.25 !important;
+}
+
+.twcss-leading-10 {
+  line-height: 2.5rem !important;
 }
 
 .twcss-text-black {
@@ -1562,6 +1685,14 @@ progress {
     order: 2 !important;
   }
 
+  .lg\:twcss-order-1 {
+    order: 1 !important;
+  }
+
+  .lg\:twcss-order-2 {
+    order: 2 !important;
+  }
+
   .lg\:twcss-m-auto {
     margin: auto !important;
   }
@@ -1604,6 +1735,10 @@ progress {
 
   .lg\:twcss-mt-24 {
     margin-top: 6rem !important;
+  }
+
+  .lg\:twcss-mr-4 {
+    margin-right: 1rem !important;
   }
 
   .lg\:twcss-block {
@@ -1660,6 +1795,14 @@ progress {
 
   .lg\:twcss-h-\[70vh\] {
     height: 70vh !important;
+  }
+
+  .lg\:twcss-h-\[400px\] {
+    height: 400px !important;
+  }
+
+  .lg\:twcss-h-auto {
+    height: auto !important;
   }
 
   .lg\:twcss-max-h-\[575px\] {
@@ -1722,6 +1865,18 @@ progress {
     width: 30% !important;
   }
 
+  .lg\:twcss-w-full {
+    width: 100% !important;
+  }
+
+  .lg\:twcss-w-\[358px\] {
+    width: 358px !important;
+  }
+
+  .lg\:twcss-w-auto {
+    width: auto !important;
+  }
+
   .lg\:twcss-min-w-0 {
     min-width: 0px !important;
   }
@@ -1776,6 +1931,22 @@ progress {
 
   .lg\:twcss-max-w-\[359px\] {
     max-width: 359px !important;
+  }
+
+  .lg\:twcss-max-w-\[var\(--page-width\)\] {
+    max-width: var(--page-width) !important;
+  }
+
+  .lg\:twcss-max-w-lg {
+    max-width: 32rem !important;
+  }
+
+  .lg\:twcss-max-w-md {
+    max-width: 28rem !important;
+  }
+
+  .lg\:twcss-max-w-2xl {
+    max-width: 42rem !important;
   }
 
   .lg\:twcss-grid-cols-\[repeat\(3\2c 1fr\)\] {
@@ -1920,6 +2091,10 @@ progress {
 
   .lg\:twcss-text-\[34px\] {
     font-size: 34px !important;
+  }
+
+  .lg\:twcss-text-\[12px\] {
+    font-size: 12px !important;
   }
 
   .lg\:twcss-font-light {
