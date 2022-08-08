@@ -1566,6 +1566,10 @@ video {
   margin-right: 1rem !important;
 }
 
+.twcss-mb-\[60px\] {
+  margin-bottom: 60px !important;
+}
+
 .twcss-block {
   display: block !important;
 }
@@ -2070,6 +2074,10 @@ video {
   max-width: none !important;
 }
 
+.twcss-max-w-lg {
+  max-width: 32rem !important;
+}
+
 .twcss-grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
@@ -2528,6 +2536,10 @@ video {
   font-family: Inconsolata, monospace !important;
 }
 
+.twcss-font-noto {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
 .twcss-text-text {
   font-size: 16px !important;
   line-height: 2rem !important;
@@ -2856,6 +2868,14 @@ video {
 
 .twcss-font-semibold {
   font-weight: 600 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
 }
 
 .twcss-font-extrabold {
@@ -4149,6 +4169,10 @@ progress {
 
   .lg\:twcss-max-w-none {
     max-width: none !important;
+  }
+
+  .lg\:twcss-max-w-\[var\(--page-width\)\] {
+    max-width: var(--page-width) !important;
   }
 
   .lg\:twcss-grid-cols-\[repeat\(3\2c 1fr\)\] {
