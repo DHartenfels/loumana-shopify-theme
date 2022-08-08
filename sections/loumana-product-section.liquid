@@ -17,7 +17,17 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 <div class="swiper mySwiper lg:twcss-hidden">
   <div class="swiper-wrapper">
     {% for image in product.images %}
-    <div class="swiper-slide"><img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager"></div>
+    <div class="swiper-slide twcss-relative">
+      
+      <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager" {% if product.metafields.custom.hasimagebg == true and forloop.first  %} class="twcss-max-w-[75%] twcss-m-auto" {% endif %}>  
+      {% if product.metafields.custom.hasimagebg == true and forloop.first  %} 
+      <img src="{{'ElipseOpen.svg' | asset_url}}" alt="" class="twcss-absolute twcss-top-0 -twcss-right-96 lg:twcss-right-[20%] lg:twcss-w-3/12 lg:twcss-h-40 -twcss-z-10" width="auto" height="auto" loading="eager">
+      <img src="{{'ElipseLeft.svg' | asset_url}}" alt="" class="twcss-absolute twcss-left-0 twcss-top-1/4 twcss-w-auto twcss-h-auto -twcss-z-10" width="auto" height="auto" loading="eager">
+      <img src="{{'ElipseRight.svg' | asset_url}}" alt="" class="twcss-absolute twcss-right-[-140px] twcss-bottom-0 -twcss-z-10 twcss-w-[251px] twcss-h-[330px]" width="auto" height="auto" loading="eager">
+      {% endif %}
+    
+    
+    </div>
       {% endfor %}
   </div>
 </div> 
