@@ -27,7 +27,7 @@
       <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down twcss-max-w-lg twcss-m-auto lg:twcss-max-w-[var(--page-width)]" role="list">
         {% for recommendation in recommendations.products %}
           <div class="twcss-w-full lg:twcss-w-[30%] twcss-inline-block lg:twcss-px-9">
-            <div class="twcss-w-full twcss-min-h-[208px] twcss-bg-contain twcss-bg-center twcss-bg-no-repeat twcss-rounded-[20px]" style="background-image: url({{ recommendation.featured_image  | img_url: 'master' }}) ;">
+            <div class="twcss-w-full twcss-min-h-[208px] twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-rounded-[20px]" style="background-image: url({{ recommendation.featured_image  | img_url: 'master' }}) ;">
             </div>
             <div class="twcss-mt-5">
               <h3 class="twcss-font-noto twcss-uppercase twcss-font-semibold twcss-text-subline twcss-mt-10 twcss-mb-10">{{recommendation.title}} </h3>
