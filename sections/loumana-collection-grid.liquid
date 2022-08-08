@@ -1,8 +1,13 @@
 <style>
     {%- for product in collection.products -%}
+    @media screen and (min-width:750px) {
+      
+   
         .product-{{ product.id }}:hover{
             background-color: {{ product.metafields.custom.background_color }};
         }
+
+      }
     {%- endfor -%}
 </style>
 
