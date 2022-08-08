@@ -864,6 +864,14 @@ video {
   bottom: 0px !important;
 }
 
+.twcss-top-0 {
+  top: 0px !important;
+}
+
+.twcss-left-0 {
+  left: 0px !important;
+}
+
 .twcss-z-50 {
   z-index: 50 !important;
 }
@@ -950,6 +958,14 @@ video {
 
 .-twcss-z-10 {
   z-index: -10 !important;
+}
+
+.twcss-z-10 {
+  z-index: 10 !important;
+}
+
+.twcss-z-\[10000\] {
+  z-index: 10000 !important;
 }
 
 .twcss-order-2 {
@@ -2154,6 +2170,10 @@ video {
   width: 251px !important;
 }
 
+.twcss-w-\[100vw\] {
+  width: 100vw !important;
+}
+
 .twcss-min-w-full {
   min-width: 100% !important;
 }
@@ -2459,6 +2479,10 @@ video {
   background-color: rgb(235 236 233 / var(--tw-bg-opacity)) !important;
 }
 
+.twcss-bg-transparent {
+  background-color: transparent !important;
+}
+
 .twcss-bg-cover {
   background-size: cover !important;
 }
@@ -2754,6 +2778,10 @@ video {
 
 .twcss-font-inco {
   font-family: Inconsolata, monospace !important;
+}
+
+.twcss-font-noto {
+  font-family: "Noto Sans", sans-serif !important;
 }
 
 .twcss-text-text {
@@ -3072,6 +3100,10 @@ video {
   font-size: 14px !important;
 }
 
+.twcss-text-\[24px\] {
+  font-size: 24px !important;
+}
+
 .twcss-font-light {
   font-weight: 300 !important;
 }
@@ -3118,6 +3150,14 @@ video {
 
 .twcss-font-semibold {
   font-weight: 600 !important;
+}
+
+.twcss-font-extrabold {
+  font-weight: 800 !important;
+}
+
+.twcss-font-light {
+  font-weight: 300 !important;
 }
 
 .twcss-font-extrabold {
@@ -3535,6 +3575,14 @@ progress {
 
   .lg\:twcss-top-5 {
     top: 1.25rem !important;
+  }
+
+  .lg\:twcss-left-0 {
+    left: 0px !important;
+  }
+
+  .lg\:twcss-right-0 {
+    right: 0px !important;
   }
 
   .lg\:twcss-z-0 {
