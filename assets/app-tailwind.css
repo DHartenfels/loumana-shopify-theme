@@ -84,7 +84,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 8px;
+    padding: 5px 10px;
     gap: 10px;
     width: auto;
     height: 35px;
@@ -95,7 +95,7 @@
     line-height: 19px;
     max-width: 198px;
     color: #acc5c7;
-    font-family: 'Inconsolata';
+    font-family: 'Noto Sans';
   }
 
 
@@ -103,7 +103,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 8px 8px;
+    padding: 5px 10px;
     gap: 10px;
     width: auto;
     height: 35px;
@@ -117,7 +117,7 @@
     max-width: 198px;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Inconsolata';
+    font-family: 'Noto Sans';
   }
   
   .elipse {
