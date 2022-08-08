@@ -89,11 +89,12 @@
             </div>
             <div class="lg:twcss-max-w-lg">    
             <div class="{{block.settings.background}} twcss-min-w-full lg:twcss-min-w-0 lg:twcss-w-[358px] lg:twcss-h-[400px] twcss-w-[292px] twcss-h-[328px] twcss-order-1 lg:twcss-order-2 twcss-flex twcss-justify-center twcss-items-center twcss-flex-col twcss-relative twcss-mb-10 lg:twcss-pr-7">
-              <div class="twcss-relative twcss-w-full twcss-h-[120%] pContent">
+              <a href="{{ block.settings.product.url }}">  <div class="twcss-relative twcss-w-full twcss-h-[120%] pContent">
                 <img src="{{ block.settings.product.featured_image | image_url }}" alt="{{ block.settings.product.title }}" loading="eager" class="twcss-w-5/6 twcss-h-5/6 twcss-my-auto twcss-mb-0 twcss-mt-auto lg:twcss-w-auto lg:twcss-h-auto twcss-aspect-square" height="250" width="250" >
                 <div class="elipse twcss-absolute twcss-right-10" style="background-color: {{ block.settings.colorPicker }}; bottom:40px">
                   &nbsp;</div>
                 </div>
+              </a>
             </div>
           </div>
         </div>
