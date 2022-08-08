@@ -25,6 +25,7 @@
         </div>
         <div class="twcss-grid lg:twcss-grid-cols-[repeat(3,1fr)] twcss-grid-cols-1 lg:twcss-max-w-none twcss-max-w-lg twcss-m-auto lg:twcss-ml-0 lg:twcss-mr-auto">
             {%- for product in collection.products -%}
+            <a href="{{ product.url }}" >
                 <div class=" twcss-mt-10 lg:twcss-mt-0 lg:twcss-border twcss-border-[#D9D9D9] twcss-border-b lg:twcss-border-t-0 lg:twcss-flex lg:twcss-flex-col product-{{ product.id }} border-counter lg:twcss-justify-between lg:twcss-w-[314px] twcss-relative twcss-group lg:twcss-min-h-[400px]">
                     <div class="lg:group-hover:twcss-top-0 lg:twcss-absolute lg:twcss-p-10 lg:twccs-w-full lg:twccs-p-5 lg:twcss-bottom-0 twcss-flex flex-row twcss-justify-between twcss-w-full twcss-pb-5">
                         <span class="lg:group-hover:twcss-text-white twcss-text-text twcss-font-light twcss-font-inco">{{ product.title }}</span>
@@ -33,7 +34,7 @@
 
                     <div class="twcss-flex twcss-items-center twcss-justify-center lg:twcss-px-16 lg:twcss-py-16 twcss-mt-8">
 
-                      <a href="{{ product.url }}" > <img src="{{product.featured_image | image_url }}" loading="lazy" width="auto" height="auto" alt="" class="twcss-w-auto twcss-h-72 twcss-mt-10 twcss-block"> </a>
+                      <img src="{{product.featured_image | image_url }}" loading="lazy" width="auto" height="auto" alt="" class="twcss-w-auto twcss-h-72 twcss-mt-10 twcss-block">
                         
                     </div>
 
@@ -111,6 +112,7 @@
 
 
                 </div>
+              </a>
             {%- endfor -%}
         </div>
     </div>
