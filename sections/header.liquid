@@ -146,7 +146,7 @@
                       <li class=" twcss-flex twcss-justify-end twcss-font-extrabold twcss-font-noto twcss-text-[24px]">
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                            <summary class="menu-drawer__menu-item list-menu__item twcss-font-[24px] twcss-uppercase link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
@@ -195,7 +195,7 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link twcss-font-[24px] twcss-uppercase link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape }}
                           </a>
                         {%- endif -%}
