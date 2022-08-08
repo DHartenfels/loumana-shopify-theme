@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1658777982cc67cac8": {
+      "type": "loumana-collectionBar",
+      "settings": {
+        "textOne": "Schnelle Lieferung",
+        "textTwo": "Vegan & Nachhaltig",
+        "textThree": "Plastikfrei"
+      }
+    },
+    "165877796876b98a5d": {
+      "type": "loumana-collection-grid",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1658777982cc67cac8",
+    "165877796876b98a5d"
+  ]
+}
