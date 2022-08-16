@@ -36,12 +36,21 @@
             "heading": "",
             "textOne": "Tierwohl ist uns wichtig. Daher verzichten wir auf Tierversuche und tierische Inhaltsstoffe."
           }
+        },
+        "d6d5d717-06b7-475c-9457-edc3383f4259": {
+          "type": "text",
+          "settings": {
+            "iconOne": "shopify:\/\/shop_images\/loumana-favicon.png",
+            "heading": "",
+            "textOne": "Hochwertige Pflege - feinstes Mandelöl - straffendes Meersalz"
+          }
         }
       },
       "block_order": [
         "8d8a2613-e926-47e1-a067-5e10322bea42",
         "f4fd17e6-6489-4f84-921c-c068638a5fe0",
-        "b4ad3729-381a-4a14-aef8-1d2871c0e5f7"
+        "b4ad3729-381a-4a14-aef8-1d2871c0e5f7",
+        "d6d5d717-06b7-475c-9457-edc3383f4259"
       ],
       "settings": {
         "direction": "row"
