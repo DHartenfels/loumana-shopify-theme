@@ -39,6 +39,7 @@
         },
         "d6d5d717-06b7-475c-9457-edc3383f4259": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/loumana-favicon.png",
             "heading": "",
