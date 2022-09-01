@@ -107,6 +107,19 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60": {
+            "type": "announcement",
+            "settings": {
+              "text": "Kostenloser Versand ab 35€!",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60"
+        ],
         "settings": {
         }
       },
