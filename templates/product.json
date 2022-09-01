@@ -28,6 +28,11 @@
           "settings": {
           }
         },
+        "judgeme_preview_badge_product_page_546b2245": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -89,11 +94,7 @@
         "share": {
           "type": "share",
           "settings": {
-          }
-        },
-        "judgeme_preview_badge_product_page_546b2245": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -115,12 +116,35 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "enable_video_looping": false
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1658771829ddd58c8a": {
       "type": "loumana-product-section",
       "settings": {
+      }
+    },
+    "judgeme_section_review_widget_bcf2": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "judgeme_review_widget_f6d5d523": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_f6d5d523"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "1659628253c27a51a6": {
@@ -190,28 +214,12 @@
       "settings": {
         "include_margins": false
       }
-    },
-    "judgeme_section_review_widget_bcf2": {
-      "type": "apps",
-      "blocks": {
-        "judgeme_review_widget_f6d5d523": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judgeme_review_widget_f6d5d523"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "judgeme_section_review_widget_bcf2",
     "1658771829ddd58c8a",
+    "judgeme_section_review_widget_bcf2",
     "1659628253c27a51a6",
     "1658773263e589a807",
     "1658773272ec1e67e5",
