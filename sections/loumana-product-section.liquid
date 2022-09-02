@@ -38,7 +38,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 <div class="lg:twcss-flex lg:twcss-flex-row lg:twcss-max-w-[var(--page-width)] lg:twcss-m-auto">
     <div class="lg:twcss-w-[50%] lg:twcss-flex lg:twcss-flex-col twcss-hidden twcss-relative">
         {% for image in product.images %}
-            <div class="twcss-mb-20 twcss-max-h-[70vh] twcss-w-auto twcss-flex twcss-justify-center twcss-items-center {% if product.metafields.custom.hasimagebg == true and forloop.first %} twcss-relative twcss-overflow-hidden {% endif %} {% if product.metafields.custom.hasimagebg == true and forloop.first %}" style="min-height: 70vh" {% endif %}>
+            <div class="twcss-mb-20 twcss-max-h-[70vh] twcss-w-auto twcss-flex twcss-justify-center twcss-items-center {% if product.metafields.custom.hasimagebg == true and forloop.first %} twcss-relative twcss-overflow-hidden {% endif %}" {% if product.metafields.custom.hasimagebg == true and forloop.first %} style="min-height: 70vh" {% endif %}>
               <img src="{{ image.src | image_url }}" width="auto" height="auto" loading="eager" class="twcss-w-auto {% if product.metafields.custom.hasimagebg == true and forloop.first %}  xl:twcss-h-[50vh] {% else %} twcss-h-auto {% endif %}" {% if product.metafields.custom.hasimagebg == true and forloop.first %} style="height: 50vh" {% endif %}>
               {% if product.metafields.custom.hasimagebg == true and forloop.first  %} 
               <img src="{{'ElipseOpen.svg' | asset_url}}" alt="" class="twcss-absolute twcss-top-0 -twcss-right-96 lg:twcss-right-[20%] lg:twcss-w-3/12 lg:twcss-h-40 -twcss-z-10" width="auto" height="auto" loading="eager">
