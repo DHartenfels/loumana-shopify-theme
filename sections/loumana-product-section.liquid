@@ -57,7 +57,9 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
             <span class="twcss-font-inco twcss-font-light twcss-text-subline twcss-mb-10">
                 {{ product.price | money }}
             </span>
-
+              {% if product.compare_at_price > product.price %}
+                <s> prodcut.compare_at_price </s>
+              {% endif %}
             <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-mt-9">
                 <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
                     <img src="{{ 'truck.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
