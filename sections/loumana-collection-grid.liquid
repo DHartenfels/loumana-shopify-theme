@@ -33,7 +33,7 @@
             <a href="{{ product.url }}">
                 <div class=" twcss-mt-10 lg:twcss-mt-0 lg:twcss-border twcss-border-[#D9D9D9] twcss-border-b lg:twcss-border-t-0 lg:twcss-flex lg:twcss-flex-col product-{{ product.id }} border-counter lg:twcss-justify-between lg:twcss-w-[314px] twcss-relative twcss-group lg:twcss-min-h-[400px]">
                     <div class="lg:group-hover:twcss-top-0 lg:twcss-absolute lg:twcss-p-10 lg:twccs-w-full lg:twccs-p-5 lg:twcss-bottom-0 twcss-flex flex-row twcss-justify-between twcss-w-full twcss-pb-5">
-                        <span class="lg:group-hover:twcss-text-white twcss-text-text twcss-font-light twcss-font-inco twcss-uppercase">{{ product.title }}</span>
+                        <span class="lg:group-hover:twcss-text-white twcss-text-text twcss-font-light twcss-font-inco twcss-uppercase twcss-w-[50%]">{{ product.title }}</span>
                         <span class=" twcss-text-center lg:group-hover:twcss-text-white twcss-text-text lg:twcss-font-light twcss-font-inco">{{ product.price | money }}               {% if product.compare_at_price > product.price %}
                <br> <s> {{ product.compare_at_price |money }} </s>
               {% endif %}</span>
