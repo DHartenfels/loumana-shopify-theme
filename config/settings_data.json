@@ -118,9 +118,8 @@
           },
           "b0a5a088-681d-46fa-8fde-861d878b24f0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "25. November Black Friday ; erhalte 25% mit dem Code: Blackweek",
+              "text": "Black Month : erhalte 25% auf deine Bestellung , mit dem Code : Blackmonth",
               "color_scheme": "accent-1",
               "link": ""
             }
