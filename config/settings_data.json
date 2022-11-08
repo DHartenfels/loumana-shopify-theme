@@ -112,13 +112,23 @@
             "type": "announcement",
             "settings": {
               "text": "Kostenloser Versand ab 35€!",
-              "color_scheme": "background-1",
+              "color_scheme": "accent-2",
+              "link": ""
+            }
+          },
+          "b0a5a088-681d-46fa-8fde-861d878b24f0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "25. November Black Friday ; erhalte 25% mit dem Code: Blackweek",
+              "color_scheme": "accent-1",
               "link": ""
             }
           }
         },
         "block_order": [
-          "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60"
+          "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60",
+          "b0a5a088-681d-46fa-8fde-861d878b24f0"
         ],
         "settings": {
         }
