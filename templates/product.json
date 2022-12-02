@@ -96,6 +96,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "aea14718-bf3c-40d3-a01a-3964c366fd01": {
+          "type": "rating",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -112,7 +117,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "aea14718-bf3c-40d3-a01a-3964c366fd01"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -123,6 +129,11 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "2b7505be-742e-4c8e-8eeb-e487f618a113": {
+      "type": "loumana-collection-grid",
+      "settings": {
       }
     },
     "1658771829ddd58c8a": {
@@ -154,6 +165,7 @@
     },
     "1658773263e589a807": {
       "type": "loumana-pdp-video",
+      "disabled": true,
       "settings": {
         "headline": "Volle Wanne gut: Unsere LOUMANA Badekugeln.",
         "textarea": "Wasserhahn auf, Kugel rein, Welt aus. Ob als Belohnung nach einem langen Tag oder einfach nur als Treatment für dich: Unsere Badekugeln geben dir das, was du brauchst:\nGut für die Haut, gut für die Sinne."
@@ -218,6 +230,7 @@
   },
   "order": [
     "main",
+    "2b7505be-742e-4c8e-8eeb-e487f618a113",
     "1658771829ddd58c8a",
     "judgeme_section_review_widget_bcf2",
     "1659628253c27a51a6",
