@@ -54,7 +54,8 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     <div class="lg:twcss-w-[50%] lg:twcss-relative twcss-flex twcss-flex-col lg:twcss-justify-start">
         <div class=" lg:twcss-sticky lg:twcss-top-5  twcss-flex twcss-flex-col  twcss-max-w-[36rem] lg:twcss-max-w-none twcss-mx-auto">
             <h1 class=" twcss-font-noto twcss-font-extrabold twcss-max-w-md twcss-uppercase lg:twcss-text-[48px] twcss-text-[34px] twcss-mb-5 twcss-mt-5 lg:twcss-mt-0 lg:twcss-max-w-xl">{{ product.title }}</h1>
-            <span class="twcss-font-inco twcss-font-light twcss-text-subline twcss-mb-10">
+          {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}  
+          <span class="twcss-font-inco twcss-font-light twcss-text-subline twcss-mb-10">
                 {{ product.price | money }}
 
               {% if product.compare_at_price > product.price %}
