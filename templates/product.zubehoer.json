@@ -133,6 +133,7 @@
     },
     "2b7505be-742e-4c8e-8eeb-e487f618a113": {
       "type": "loumana-collection-grid",
+      "disabled": true,
       "settings": {
       }
     },
