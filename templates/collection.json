@@ -1,5 +1,15 @@
 {
   "sections": {
+    "165877796876b98a5d": {
+      "type": "loumana-collection-grid",
+      "settings": {
+      }
+    },
+    "e88dfb19-6e67-4ee7-90f8-7ab120fa235d": {
+      "type": "loumana-collection-grid",
+      "settings": {
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -35,17 +45,13 @@
         "textTwo": "Vegan & Nachhaltig",
         "textThree": "Plastikfrei"
       }
-    },
-    "165877796876b98a5d": {
-      "type": "loumana-collection-grid",
-      "settings": {
-      }
     }
   },
   "order": [
+    "165877796876b98a5d",
+    "e88dfb19-6e67-4ee7-90f8-7ab120fa235d",
     "banner",
     "product-grid",
-    "1658777982cc67cac8",
-    "165877796876b98a5d"
+    "1658777982cc67cac8"
   ]
 }
