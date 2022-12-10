@@ -2,12 +2,12 @@
   "sections": {
     "165877796876b98a5d": {
       "type": "loumana-collection-grid",
-      "disabled": true,
       "settings": {
       }
     },
     "e88dfb19-6e67-4ee7-90f8-7ab120fa235d": {
       "type": "loumana-collection-grid",
+      "disabled": true,
       "settings": {
       }
     },
