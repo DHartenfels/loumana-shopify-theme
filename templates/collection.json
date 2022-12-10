@@ -2,6 +2,7 @@
   "sections": {
     "165877796876b98a5d": {
       "type": "loumana-collection-grid",
+      "disabled": true,
       "settings": {
       }
     },
