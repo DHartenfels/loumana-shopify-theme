@@ -124,11 +124,20 @@
               "color_scheme": "accent-1",
               "link": ""
             }
+          },
+          "70c7cead-9924-479e-bdd7-1a99a9026ec0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Bestelle bis zum 19.12.22 und erhalte dein Paket pünktlich bis Weihnachten,",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
           "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60",
-          "b0a5a088-681d-46fa-8fde-861d878b24f0"
+          "b0a5a088-681d-46fa-8fde-861d878b24f0",
+          "70c7cead-9924-479e-bdd7-1a99a9026ec0"
         ],
         "settings": {
         }
