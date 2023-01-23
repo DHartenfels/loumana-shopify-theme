@@ -44,7 +44,7 @@
 
             {% form 'customer' %}
                 {{ form.errors | default_errors }}
-              <p style="display:none;" id="testing">{{ 'general.newsletter_form.confirmation' | t }}</p>
+              <p style="display:none;" id="testing">{{ 'general.newsletter.success' | t }}</p>
                 {% if form.posted_successfully? %}
                     <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
                 {% else %}
