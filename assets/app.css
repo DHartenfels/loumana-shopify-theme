@@ -1847,6 +1847,10 @@ video {
   max-width: 36rem !important;
 }
 
+.twcss-max-w-\[940px\] {
+  max-width: 36rem !important;
+}
+
 .twcss-max-w-md {
   max-width: 28rem !important;
 }
