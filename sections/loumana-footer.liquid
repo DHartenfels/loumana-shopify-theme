@@ -44,9 +44,8 @@
 
             {% form 'customer' %}
                 {{ form.errors | default_errors }}
-              <p style="display:none;" id="testing">{{ 'newsletter.success' | t }}</p>
                 {% if form.posted_successfully? %}
-                    <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+                    <p>{{ 'newsletter.success' | t }}</p>
                 {% else %}
                     <input name="contact[tags]" type="hidden" value="newsletter">
                     <div class=" twcss-flex twcss-flex-row twcss-bg-white twcss-rounded-[20px] twcss-px-5 twcss-py-3 twcss-justify-between twcss-mt-5">
