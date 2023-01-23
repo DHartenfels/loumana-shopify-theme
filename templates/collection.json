@@ -39,17 +39,17 @@
         "padding_bottom": 36
       }
     },
+    "18f8e1bc-4931-4aea-9641-a1e41b533265": {
+      "type": "collectionAdditionalText",
+      "settings": {
+      }
+    },
     "1658777982cc67cac8": {
       "type": "loumana-collectionBar",
       "settings": {
         "textOne": "Schnelle Lieferung",
         "textTwo": "Vegan & Nachhaltig",
         "textThree": "Plastikfrei"
-      }
-    },
-    "18f8e1bc-4931-4aea-9641-a1e41b533265": {
-      "type": "collectionAdditionalText",
-      "settings": {
       }
     }
   },
@@ -58,7 +58,7 @@
     "e88dfb19-6e67-4ee7-90f8-7ab120fa235d",
     "banner",
     "product-grid",
-    "1658777982cc67cac8",
-    "18f8e1bc-4931-4aea-9641-a1e41b533265"
+    "18f8e1bc-4931-4aea-9641-a1e41b533265",
+    "1658777982cc67cac8"
   ]
 }
