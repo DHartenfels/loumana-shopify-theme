@@ -126,6 +126,7 @@
     },
     "1659628253c27a51a6": {
       "type": "loumana-sticky-atc",
+      "disabled": true,
       "settings": {
       }
     },
