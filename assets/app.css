@@ -3914,3 +3914,7 @@ progress {
 	margin-top: -23px;
 	z-index: 1;
 }
+.prod--featured--container{
+  padding-left:40px;
+  padding-right:40px;
+}
