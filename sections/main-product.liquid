@@ -33,29 +33,58 @@
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper"> 
+
+    <div class="product--top--slider">
       <div id="product--custom--slider" style="display:none;">
-        {%- if product.selected_or_first_available_variant.featured_media != null -%}
-          {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
-          <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
-            {%- assign media_position = 1 -%}
-            {% render 'product-thumbnail-second', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
-          </li>
-        {%- endif -%}
-        {%- for media in product.media -%}
-          {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-            <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
-              {%- liquid
-                assign media_position = media_position | default: 0 | plus: 1
-                assign lazy_load = false
-                if media_position > 1
-                  assign lazy_load = true
-                endif
-                render 'product-thumbnail-second', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
-              -%}
+          {%- if product.selected_or_first_available_variant.featured_media != null -%}
+            {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+            <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+              {%- assign media_position = 1 -%}
+              {% render 'product-thumbnail-second', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
             </li>
-          {%- endunless -%}
-        {%- endfor -%}
+          {%- endif -%}
+          {%- for media in product.media -%}
+            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+              <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
+                {%- liquid
+                  assign media_position = media_position | default: 0 | plus: 1
+                  assign lazy_load = false
+                  if media_position > 1
+                    assign lazy_load = true
+                  endif
+                  render 'product-thumbnail-second', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                -%}
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+        <div id="product--custom--slider-thumbnails" style="display:none;">
+          {%- if product.selected_or_first_available_variant.featured_media != null -%}
+            {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+            <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+              {%- assign media_position = 1 -%}
+              {% render 'product-thumbnail-second', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
+            </li>
+          {%- endif -%}
+          {%- for media in product.media -%}
+            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+              <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
+                {%- liquid
+                  assign media_position = media_position | default: 0 | plus: 1
+                  assign lazy_load = false
+                  if media_position > 1
+                    assign lazy_load = true
+                  endif
+                  render 'product-thumbnail-second', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                -%}
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
       </div>
+
+
+
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
