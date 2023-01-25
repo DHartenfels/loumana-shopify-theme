@@ -3922,3 +3922,10 @@ progress {
 #product-images-carousel-thumbnails .slick-current .product-image::after {
 	border: 2px solid rgb(51, 153, 153);
 }
+.product--top--slider {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 1023px){
+  #product-images-carousel-thumbnails {  display: none !important;  }
+}
