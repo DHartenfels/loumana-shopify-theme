@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-    console.log('test');
     if($('#product-images-carousel-main')){
         $('#product-images-carousel-main').slick({
             dots: false,
@@ -21,7 +20,7 @@ jQuery(document).ready(function(){
             ]
         });
     }
-/*
+
     var product_img_carousel = 5;
 
     $('#product-images-carousel-thumbnails').on('init', function(event, slick){        
@@ -45,5 +44,5 @@ jQuery(document).ready(function(){
             centerPadding: "0",
             asNavFor: '#product-images-carousel-main'
         });
-    }*/
+    }
 });
