@@ -35,8 +35,8 @@
     <div class="grid__item product__media-wrapper"> 
 
     <Div class="prod--featured--container">
-      <div class="product--top--slider">
-        <div id="product-images-carousel-main" style="display:none;">
+        <div class="product--top--slider">
+          <div id="product-images-carousel-main" style="display:none;">
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
               {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
               <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
@@ -53,35 +53,35 @@
                     if media_position > 1
                       assign lazy_load = true
                     endif
-                    render 'product-thumbnail-second', imgsize: 120x120, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                    render 'product-thumbnail-second', imgsize: master, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
                   -%}
                 </li>
               {%- endunless -%}
             {%- endfor -%}
           </div>
           <div id="product-images-carousel-thumbnails" thumbnailsCount="{{product.media.size}}" style="display:none;">
-            {%- if product.selected_or_first_available_variant.featured_media != null -%}
-              {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
-              <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
-                {%- assign media_position = 1 -%}
-                {% render 'product-thumbnail-second', imgsize: master, media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
-              </li>
-            {%- endif -%}
-            {%- for media in product.media -%}
-              {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-                <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {%- liquid
-                    assign media_position = media_position | default: 0 | plus: 1
-                    assign lazy_load = false
-                    if media_position > 1
-                      assign lazy_load = true
-                    endif
-                    render 'product-thumbnail-second', imgsize: 120x120, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
-                  -%}
+              {%- if product.selected_or_first_available_variant.featured_media != null -%}
+                {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+                <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+                  {%- assign media_position = 1 -%}
+                  {% render 'product-thumbnail-second', imgsize: master, media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
                 </li>
-              {%- endunless -%}
-            {%- endfor -%}
-          </div>
+              {%- endif -%}
+              {%- for media in product.media -%}
+                {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                  <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
+                    {%- liquid
+                      assign media_position = media_position | default: 0 | plus: 1
+                      assign lazy_load = false
+                      if media_position > 1
+                        assign lazy_load = true
+                      endif
+                      render 'product-thumbnail-second', imgsize: master, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                    -%}
+                  </li>
+                {%- endunless -%}
+              {%- endfor -%}
+            </div>
         </div>
       </Div>
 
