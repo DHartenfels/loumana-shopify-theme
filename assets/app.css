@@ -3829,3 +3829,57 @@ progress {
 #product-images-carousel-thumbnails img {
 	max-width: 100px;
 }
+.product-images-carousel-main {
+	margin-bottom: 24px;
+}
+#product-images-carousel-thumbnails .product-image {
+	width: 84px;
+	height: 84px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.product-image.product-image-thumbnail img {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+	object-position: center;
+	display: block;
+}
+#product-images-carousel-thumbnails .product-image::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #e8eaed;
+	display: block;
+}
+#product-images-carousel-thumbnails .slick-current .product-image::after{
+	border: 2px solid #00235f;
+}
+#product-images-carousel-thumbnails .slick-slide{
+	padding: 0 8px;
+}
+.center-items-manually .slick-track {
+	width: 100% !important;
+	transform: none !important;
+	display: flex;
+	justify-content: center;
+}
+.product--top--slider .slick-arrow {
+	background-color: transparent !important;
+	left: -71px !important;
+}
+.product--top--slider .slick-slider button.slick-arrow::after {
+	top: 16px;
+	border-left: 2px solid #00235F;
+	border-bottom: 2px solid #00235F;
+}
+.product--top--slider .slick-arrow.slick-next{
+	left: auto !important;
+	right: -71px !important;
+}
