@@ -1,8 +1,7 @@
-const $jq = jQuery.noConflict();
-$jq(document).ready(function(){
+jQuery(document).ready(function(){
     console.log('test');
-    if($jq('#product-images-carousel-main')){
-        $jq('#product-images-carousel-main').slick({
+    if($('#product-images-carousel-main')){
+        $('#product-images-carousel-main').slick({
             dots: false,
             arrows: true,
             infinite: true,
