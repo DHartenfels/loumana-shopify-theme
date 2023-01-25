@@ -3925,6 +3925,24 @@ progress {
 .product--top--slider {
 	margin-bottom: 30px;
 }
+ul.slick-dots li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 12px;
+	line-height: 1;
+	font-size: 0;
+}
+.slick-dots button {
+	background-color: rgb(51, 153, 153);
+	border: 0;
+	font-size: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0.2;
+	padding: 0;
+}
 
 @media (max-width: 1023px){
   #product-images-carousel-thumbnails {  display: none !important;  }
