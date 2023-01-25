@@ -3828,6 +3828,7 @@ progress {
 /* custom css */
 #product-images-carousel-thumbnails img {
 	max-width: 100px;
+  height:100%;
 }
 .product-images-carousel-main {
 	margin-bottom: 24px;
