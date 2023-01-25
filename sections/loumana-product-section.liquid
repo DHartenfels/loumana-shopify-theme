@@ -67,7 +67,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                       if media_position > 1
                         assign lazy_load = true
                       endif
-                      render 'product-thumbnail-second', imgsize: 120x120, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                      render 'product-thumbnail-second', imgsize: master, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
                     -%}
                   </li>
                 {%- endunless -%}
@@ -90,7 +90,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                         if media_position > 1
                           assign lazy_load = true
                         endif
-                        render 'product-thumbnail-second', imgsize: 120x120, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                        render 'product-thumbnail-second', imgsize: master, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
                       -%}
                     </li>
                   {%- endunless -%}
