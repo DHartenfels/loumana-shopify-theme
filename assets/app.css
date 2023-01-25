@@ -3962,4 +3962,5 @@ ul.slick-dots {
 
 @media (max-width: 1023px){
   #product-images-carousel-thumbnails {  display: none !important;  }
+  .prod--featured--container {   padding-left: 10px;    padding-right: 10px;  }
 }
