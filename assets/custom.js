@@ -21,7 +21,7 @@ jQuery(document).ready(function(){
         });
     }
 
-    var product_img_carousel = 5;
+    var product_img_carousel = 6;
 
     $('#product-images-carousel-thumbnails').on('init', function(event, slick){        
         var thisSliderCount = parseInt(jQuery('#product-images-carousel-thumbnails').attr('thumbnailsCount'));
