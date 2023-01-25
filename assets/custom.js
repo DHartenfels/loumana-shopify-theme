@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
             slidesToScroll: 1,
             centerMode: true,
             centerPadding: "0",
-         //   asNavFor: '#product-images-carousel-thumbnails',
+            asNavFor: '#product-images-carousel-thumbnails',
             responsive: [
                 {
                     breakpoint: 480,
