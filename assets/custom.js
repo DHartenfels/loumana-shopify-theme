@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
     if(jQuery('#product-images-carousel-main')){
-        jQuery('#product-images-carousel-main').slick({
+        $('#product-images-carousel-main').slick({
             dots: false,
             arrows: true,
             infinite: true,
@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
 
     var product_img_carousel = 5;
 
-    jQuery('#product-images-carousel-thumbnails').on('init', function(event, slick){        
+    $('#product-images-carousel-thumbnails').on('init', function(event, slick){        
         var thisSliderCount = parseInt(jQuery('#product-images-carousel-thumbnails').attr('thumbnailsCount'));
         if(thisSliderCount < product_img_carousel){
             jQuery('#product-images-carousel-thumbnails').addClass('center-items-manually');
@@ -31,7 +31,7 @@ jQuery(document).ready(function(){
     });
 
     if(jQuery('#product-images-carousel-thumbnails')){
-        jQuery('#product-images-carousel-thumbnails').slick({
+        $('#product-images-carousel-thumbnails').slick({
             dots: false,
             arrows: false,
             infinite: true,
