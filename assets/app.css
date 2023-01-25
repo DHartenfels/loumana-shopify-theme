@@ -3883,3 +3883,17 @@ progress {
 	left: auto !important;
 	right: -71px !important;
 }
+.slick-slider button.slick-arrow {
+	width: 47px;
+	height: 47px;
+	background-color: #0003;
+	border: 0;
+	border-radius: 50%;
+	font-size: 0;
+	cursor: pointer;
+	position: absolute;
+	padding: 0;
+	top: 50%;
+	margin-top: -23px;
+	z-index: 1;
+}
