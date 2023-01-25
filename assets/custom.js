@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
     console.log('test');
-    if(jQuery('#product-images-carousel-main')){
-        jQuery('#product-images-carousel-main').slick({
+    if($('#product-images-carousel-main')){
+        $('#product-images-carousel-main').slick({
             dots: false,
             arrows: true,
             infinite: true,
