@@ -3960,6 +3960,15 @@ ul.slick-dots {
 #product-images-carousel-main {
 	padding-bottom: 32px;
 }
+.slick-track {
+  display: flex;
+}
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 1023px){
   #product-images-carousel-thumbnails {  display: none !important;  }
