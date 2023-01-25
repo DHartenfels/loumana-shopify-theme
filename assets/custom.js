@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
-    if(jQuery('#product-images-carousel-main')){
+    console.log('test');
+    if($('#product-images-carousel-main')){
         $('#product-images-carousel-main').slick({
             dots: false,
             arrows: true,
@@ -9,7 +10,7 @@ jQuery(document).ready(function(){
             slidesToScroll: 1,
             centerMode: true,
             centerPadding: "0",
-            asNavFor: '#product-images-carousel-thumbnails',
+         //   asNavFor: '#product-images-carousel-thumbnails',
             responsive: [
                 {
                     breakpoint: 480,
@@ -20,7 +21,7 @@ jQuery(document).ready(function(){
             ]
         });
     }
-
+/*
     var product_img_carousel = 5;
 
     $('#product-images-carousel-thumbnails').on('init', function(event, slick){        
@@ -44,5 +45,5 @@ jQuery(document).ready(function(){
             centerPadding: "0",
             asNavFor: '#product-images-carousel-main'
         });
-    }
+    }*/
 });
