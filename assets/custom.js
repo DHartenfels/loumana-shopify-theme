@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
             asNavFor: '#product-images-carousel-thumbnails',
             responsive: [
                 {
-                    breakpoint: 1023,
+                    breakpoint: 1024,
                     settings: {
                         dots: true
                     }
