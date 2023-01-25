@@ -35,7 +35,7 @@
     <div class="grid__item product__media-wrapper"> 
 
     <div class="product--top--slider">
-      <div id="product--custom--slider" style="display:none;">
+      <div id="product-images-carousel-main" style="display:none;">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
             <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
