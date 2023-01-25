@@ -3893,8 +3893,8 @@ progress {
 }
 .product--top--slider .slick-slider button.slick-arrow::after {
 	top: 16px;
-	border-left: 2px solid #00235F;
-	border-bottom: 2px solid #00235F;
+	border-left: 2px solid rgb(51, 153, 153);
+	border-bottom: 2px solid rgb(51, 153, 153);
 }
 .product--top--slider .slick-arrow.slick-next{
 	left: auto !important;
@@ -3917,4 +3917,7 @@ progress {
 .prod--featured--container{
   padding-left:40px;
   padding-right:40px;
+}
+#product-images-carousel-thumbnails .slick-current .product-image::after {
+	border: 2px solid rgb(51, 153, 153);
 }
