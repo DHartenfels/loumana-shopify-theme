@@ -3872,7 +3872,7 @@ progress {
 }
 .product--top--slider .slick-arrow {
 	background-color: transparent !important;
-	left: -71px !important;
+	left: 0 !important;
 }
 .slick-slider button.slick-arrow::after {
 	content: "";
@@ -3898,7 +3898,7 @@ progress {
 }
 .product--top--slider .slick-arrow.slick-next{
 	left: auto !important;
-	right: -71px !important;
+	right: 0 !important;
 }
 .slick-slider button.slick-arrow {
 	width: 47px;
