@@ -3961,7 +3961,7 @@ ul.slick-dots {
 	padding-bottom: 32px;
 }
 .slick-track {
-  display: flex;
+  display: flex !important;
   align-items:center;
 }
 @media (max-width: 1023px){
