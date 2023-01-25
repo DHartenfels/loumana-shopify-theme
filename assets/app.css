@@ -3840,6 +3840,7 @@ progress {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+  overflow:hidden;
 }
 .product-image.product-image-thumbnail img {
 	width: 60px;
