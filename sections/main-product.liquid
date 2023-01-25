@@ -58,7 +58,7 @@
             {%- endunless -%}
           {%- endfor -%}
         </div>
-        <div id="product--custom--slider-thumbnails" style="display:none;">
+        <div id="product--custom--slider-thumbnails" thumbnailsCount="{{product.media.size}}" style="display:none;">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
             <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
