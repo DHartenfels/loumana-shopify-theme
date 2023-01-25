@@ -3874,6 +3874,23 @@ progress {
 	background-color: transparent !important;
 	left: -71px !important;
 }
+.slick-slider button.slick-arrow::after {
+	content: "";
+	width: 11px;
+	height: 11px;
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	position: absolute;
+	display: block;
+	transform: rotate(45deg);
+	top: 18px;
+	left: 20px;
+}
+.slick-slider button.slick-arrow.slick-next::after {
+	transform: rotate(-135deg);
+	top: 18px;
+	left: 16px;
+}
 .product--top--slider .slick-slider button.slick-arrow::after {
 	top: 16px;
 	border-left: 2px solid #00235F;
