@@ -3931,7 +3931,7 @@ progress {
 ul.slick-dots li {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 12px;
+	margin: 3px 8px;
 	line-height: 1;
 	font-size: 0;
 }
