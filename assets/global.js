@@ -785,6 +785,11 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant.featured_media) return;
 console.log(this.dataset.section);
 console.log(this.currentVariant.featured_media.id);
+
+if(jQuery('#product-images-carousel-thumbnails [data-media-id="'+this.dataset.section+'-'+this.currentVariant.featured_media.id+'"]').length){
+  jQuery('#product-images-carousel-thumbnails [data-media-id="'+this.dataset.section+'-'+this.currentVariant.featured_media.id+'"]').click();
+}
+
     const mediaGallery = document.getElementById(`MediaGallery-${this.dataset.section}`);
     mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
 
