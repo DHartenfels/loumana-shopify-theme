@@ -6,16 +6,39 @@
     <div style="display:none;">
 
       {% for block in section.blocks %}
-        {% if block.settings.heading != "" %}
-          {{ block.settings.heading }}
-        {% endif %}
-        {% if block.settings.iconOne != "" %}
-          <img src="{{ block.settings.iconOne | img_url: 'master' }}" />
-        {% endif %}
-        {{ block.settings.textOne }}
-        {% if block.settings.buttonurl != "" %}
-          {{ block.settings.buttonurl }}
-        {% endif %}
+        <div class="stickyContent">
+          <div class="leftSide">
+            <div>
+              {% if block.settings.heading != "" %}
+                <h2 class="twcss-font-extrabold twcss-font-noto twcss-text-[20px]">
+                  {{ block.settings.heading }}
+                </h2>
+              {% endif %}
+              <div class="twcss-font-light twcss-font-noto twcss-text-[16px]">
+                {{ block.settings.textOne }}
+              </div>
+              {% if block.settings.buttonurl != "" %}
+                <a class="mainButton" href="{{ block.settings.buttonurl }}">
+                  Mehr dazu
+                </a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="rightSide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0652/8296/5728/files/Group_13.png?v=1659527665"
+              width="auto"
+              height="auto"
+              class="dekoImg" />
+            {% if block.settings.iconOne != "" %}
+              <img
+                src="{{ block.settings.iconOne | img_url: 'master' }}"
+                width="auto"
+                height="auto"
+                class="snapImg" />
+            {% endif %}
+          </div>
+        </div>
       {% endfor %}
     </div>
     <div class="stickyContent">
@@ -55,7 +78,7 @@
           <p class="twcss-font-light twcss-font-noto twcss-text-[16px]">
             Rosen sind rot, Veilchen sind blau,
             ich schütze dein Haar, das weiß ich genau.
-                                                                                                                                  Mein Rosenduft macht dein Haarpflegeprogramm zu einem intensiven Erlebnis!
+                                                                                                                                              Mein Rosenduft macht dein Haarpflegeprogramm zu einem intensiven Erlebnis!
           </p>
           <a class="mainButton" href="/products/fester-conditioner-wild-rose">
             Mehr dazu
