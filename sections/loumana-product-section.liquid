@@ -14,6 +14,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 .shopify-payment-button__button--unbranded:hover:not([disabled]){background-color:#ACC5C7; }
 </style>
 
+{% comment %}
 <div class="swiper mySwiper lg:twcss-hidden">
   <div class="swiper-wrapper">
     {% for image in product.images %}
@@ -31,12 +32,12 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
       {% endfor %}
   </div>
 </div> 
-
+{% endcomment %}
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <div class="lg:twcss-flex lg:twcss-flex-row lg:twcss-max-w-[var(--page-width)] lg:twcss-m-auto">
-    <div class="lg:twcss-w-[50%] lg:twcss-flex lg:twcss-flex-col twcss-hidden twcss-relative">
+    <div class="lg:twcss-w-[50%] lg:twcss-flex lg:twcss-flex-col twcss-relative">
       {% comment %}
         {% for image in product.images %}
             <div class="twcss-mb-20 twcss-max-h-[70vh] twcss-w-auto twcss-flex twcss-justify-center twcss-items-center {% if product.metafields.custom.hasimagebg == true and forloop.first %} twcss-relative twcss-overflow-hidden {% endif %}" {% if product.metafields.custom.hasimagebg == true and forloop.first %} style="min-height: 70vh" {% endif %}>
