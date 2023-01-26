@@ -1,10 +1,10 @@
 <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-relative favoritecontainer">
 
-  <h1 class="twcss-font-extrabold twcss-font-noto twcss-text-[34px] twcss-mb-10 lg:twcss-mb-0">
-    Das sind unsere <br>
-    Loumana-Favourites:
-    {{ section.settings.titlebox }}
-  </h1>
+  {% if section.settings.titlebox != "" %}
+    <h1 class="twcss-font-extrabold twcss-font-noto twcss-text-[34px] twcss-mb-10 lg:twcss-mb-0">
+      {{ section.settings.titlebox }}
+    </h1>
+  {% endif %}
   <div class="containerOverflow-no">
 
     {% for block in section.blocks %}
