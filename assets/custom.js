@@ -46,8 +46,8 @@ jQuery(document).ready(function(){
         });
     }
 
-    jQuery(document).on('click', '.product--link', function(e){
+    /*jQuery(document).on('click', '.product--link', function(e){
         e.preventDefault();
         console.log('redirect now'); 
-    });
+    });*/
 });
