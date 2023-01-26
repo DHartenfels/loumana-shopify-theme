@@ -67,6 +67,19 @@
     },
     "165877866276276167": {
       "type": "our-favorites",
+      "blocks": {
+        "49dcc429-dd48-4cb0-8524-1d37e43962d8": {
+          "type": "text",
+          "settings": {
+            "iconOne": "shopify:\/\/shop_images\/Loumana_Fotocontent_1_u5mb_V2-6_jpg.jpg",
+            "heading": "Festes Shampoo: Pampelmousse",
+            "textOne": "<strong>With Grapefruit<\/strong> comes great responsibility. Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei."
+          }
+        }
+      },
+      "block_order": [
+        "49dcc429-dd48-4cb0-8524-1d37e43962d8"
+      ],
       "settings": {
         "textOne": ""
       }
