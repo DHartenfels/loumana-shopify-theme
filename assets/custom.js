@@ -47,6 +47,6 @@ jQuery(document).ready(function(){
     }
 
     jQuery('.product--link').on('click', function(){
-        console.log('redirect now');
+        console.log('redirect now'); 
     });
 });
