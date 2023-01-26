@@ -36,7 +36,7 @@
 
     <Div class="prod--featured--container">
         <div class="product--top--slider">
-          <div id="product-images-carousel-main" style="display:none;">
+          <div id="product-images-carousel-main" >
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
               {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
               <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
@@ -59,7 +59,7 @@
               {%- endunless -%}
             {%- endfor -%}
           </div>
-          <div id="product-images-carousel-thumbnails" thumbnailsCount="{{product.media.size}}" style="display:none;">
+          <div id="product-images-carousel-thumbnails" thumbnailsCount="{{product.media.size}}">
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                 <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
