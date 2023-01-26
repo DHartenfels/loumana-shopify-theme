@@ -46,7 +46,8 @@ jQuery(document).ready(function(){
         });
     }
 
-    jQuery('.product--link').on('click', function(){
+    jQuery('.product--link').on('click', function(e){
+        e.preventDefault();
         console.log('redirect now'); 
     });
 });
