@@ -74,7 +74,7 @@
             "iconOne": "shopify:\/\/shop_images\/Loumana_Fotocontent_1_u5mb_V2-6_jpg.jpg",
             "heading": "Festes Shampoo: Pampelmousse",
             "buttonurl": "https:\/\/loumana.de\/products\/festes-shampoo-pampelmousse",
-            "textOne": "<strong>With Grapefruit<\/strong> comes great responsibility. Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei."
+            "textOne": "With Grapefruit comes great responsibility. Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei."
           }
         },
         "c91daa7f-e4bc-4d3d-9f80-7eaa236727d1": {
@@ -85,11 +85,21 @@
             "buttonurl": "https:\/\/loumana.de\/products\/fester-conditioner-wild-rose",
             "textOne": "Rosen sind rot, Veilchen sind blau, ich schütze dein Haar, das weiß ich genau. Mein Rosenduft macht dein Haarpflegeprogramm zu einem intensiven Erlebnis!"
           }
+        },
+        "c0b45554-c3e7-4823-b8e3-b740ad45d3c9": {
+          "type": "text",
+          "settings": {
+            "iconOne": "shopify:\/\/shop_images\/Loumana_Fotocontent_1_u5mb_V2-6_jpg.jpg",
+            "heading": "Badekugel: Energy",
+            "buttonurl": "https:\/\/loumana.de\/products\/loumana-energy",
+            "textOne": "Sauer macht nicht nur lustig, sondern auch wach! Mit meinem belebenden Charakter bin ich genau richtig, um deinem müden Körper den richtigen Kick zu geben"
+          }
         }
       },
       "block_order": [
         "49dcc429-dd48-4cb0-8524-1d37e43962d8",
-        "c91daa7f-e4bc-4d3d-9f80-7eaa236727d1"
+        "c91daa7f-e4bc-4d3d-9f80-7eaa236727d1",
+        "c0b45554-c3e7-4823-b8e3-b740ad45d3c9"
       ],
       "settings": {
         "textOne": ""
