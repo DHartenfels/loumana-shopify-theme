@@ -45,4 +45,8 @@ jQuery(document).ready(function(){
             asNavFor: '#product-images-carousel-main'
         });
     }
+
+    jQuery('.product--link').on('click', function(){
+        console.log('redirect now');
+    });
 });
