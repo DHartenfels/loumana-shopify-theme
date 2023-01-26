@@ -3829,6 +3829,8 @@ progress {
 #product-images-carousel-thumbnails img {
 	max-width: 100px;
   height:100%;
+	object-fit: contain;
+	object-position: center;
 }
 .product-images-carousel-main {
 	margin-bottom: 24px;
@@ -3842,8 +3844,6 @@ progress {
 	justify-content: center;
 	cursor: pointer;
   overflow:hidden;
-	object-fit: contain;
-	object-position: center;
 }
 .product-image.product-image-thumbnail img {
 	width: 60px;
