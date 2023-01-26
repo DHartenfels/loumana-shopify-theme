@@ -3829,7 +3829,7 @@ progress {
 #product-images-carousel-thumbnails img {
 	max-width: 100px;
   height:100%;
-	object-fit: contain;
+	object-fit: cover;
 	object-position: center;
 }
 .product-images-carousel-main {
