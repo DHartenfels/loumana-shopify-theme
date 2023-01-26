@@ -3842,6 +3842,8 @@ progress {
 	justify-content: center;
 	cursor: pointer;
   overflow:hidden;
+	object-fit: contain;
+	object-position: center;
 }
 .product-image.product-image-thumbnail img {
 	width: 60px;
