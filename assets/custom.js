@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
         });
     }
 
-    jQuery('.product--link').on('click', function(e){
+    jQuery(document).on('click', '.product--link', function(e){
         e.preventDefault();
         console.log('redirect now'); 
     });
