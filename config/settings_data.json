@@ -127,8 +127,17 @@
           },
           "70c7cead-9924-479e-bdd7-1a99a9026ec0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Jetzt einmalig 22% Rabatt auf deine gesamte Bestellung! Code: Winter22",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "a973685b-c59a-4091-843b-5ff023c72f4e": {
+            "type": "announcement",
+            "settings": {
+              "text": "Nur bis zum 14.02.2023! Spare 15% mit dem Code: Valentinstag",
               "color_scheme": "accent-1",
               "link": ""
             }
@@ -137,7 +146,8 @@
         "block_order": [
           "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60",
           "b0a5a088-681d-46fa-8fde-861d878b24f0",
-          "70c7cead-9924-479e-bdd7-1a99a9026ec0"
+          "70c7cead-9924-479e-bdd7-1a99a9026ec0",
+          "a973685b-c59a-4091-843b-5ff023c72f4e"
         ],
         "settings": {
         }
