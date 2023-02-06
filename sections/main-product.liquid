@@ -135,8 +135,10 @@
               <div class="product__description rte quick-add-hidden">
                 {{ product.description }}
               </div>
+            {%- endif -%}
 
-              {% if product.metafields.custom.inhaltsstoffe != '' %}
+          {%- when 'ingredients' -%}
+            {% if product.metafields.custom.inhaltsstoffe != '' %}
               <div class="ingredient--seciton">
                 <div class="lg:twcss-mt-12 twcss-mt-10">
                   <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
@@ -208,8 +210,6 @@
                 </div>
               </div>     
               {% endif  %}
-              
-            {%- endif -%}
               
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
