@@ -136,6 +136,8 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+            {%- when 'ingredietns' -%}
+              <div class="inging"></div>
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -623,6 +625,11 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "ingredients",
+      "name": "t:sections.main-product.blocks.ingredients.name",
       "limit": 1
     },
     {
