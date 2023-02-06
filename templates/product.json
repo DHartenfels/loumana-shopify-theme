@@ -60,6 +60,11 @@
           "settings": {
           }
         },
+        "51035a07-8abf-43b8-8dec-3de6a439cef2": {
+          "type": "ingredients",
+          "settings": {
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -124,6 +129,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "51035a07-8abf-43b8-8dec-3de6a439cef2",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
