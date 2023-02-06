@@ -135,7 +135,75 @@
               <div class="product__description rte quick-add-hidden">
                 {{ product.description }}
               </div>
-              <div class="inging"></div>
+
+              <div class="ingredient--seciton">
+                <div class="lg:twcss-mt-12 twcss-mt-10">
+                  <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
+                  <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                    {{ product.metafields.custom.inhaltsstoffe }}
+                  </div>
+
+                  <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Anwendung</button>
+                  <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                    {{ product.metafields.custom.anwendung }}
+                  
+                  </div>
+                    <style>
+                    /* Style the buttons that are used to open and close the accordion panel */
+                    .accordion {
+                    cursor: pointer;
+                    padding: 10px 0;
+                    width: 100%;
+                    text-align: left;
+                    outline: none;
+                    transition: 0.4s;
+                    border-top: 1px solid #ACC5C7;
+                    }
+
+                    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+                    /* Style the accordion panel. Note: hidden by default */
+                </style>
+                    <style>
+                    .panel {                        
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        margin-bottom: 10px;
+                    }
+                    .accordion:after {
+                        content: '\02795'; /* Unicode character for "plus" sign (+) */
+                        font-size: 13px;
+                        color: #777;
+                        float: right;
+                        margin-left: 5px;
+                        transition: transform 0.2s ease-in;
+                        transform: rotate(0deg); /* Unicode character for "minus" sign (-) */
+                    }
+                    .active:after {
+                        content: "\02795";
+                        transition: transform 0.2s ease-in;
+                        transform: rotate(45deg); /* Unicode character for "minus" sign (-) */
+                    }
+                </style>
+                    <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+                    
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                            } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+                </div>
+              </div>            
             {%- endif -%}
               
           {%- when 'custom_liquid' -%}
