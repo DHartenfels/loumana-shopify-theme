@@ -136,6 +136,7 @@
                 {{ product.description }}
               </div>
 
+              {% if product.metafields.custom.inhaltsstoffe != '' %}
               <div class="ingredient--seciton">
                 <div class="lg:twcss-mt-12 twcss-mt-10">
                   <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
@@ -203,7 +204,9 @@
                     }
                 </script>
                 </div>
-              </div>            
+              </div>     
+              {% endif  %}
+              
             {%- endif -%}
               
           {%- when 'custom_liquid' -%}
