@@ -141,16 +141,20 @@
             {% if product.metafields.custom.inhaltsstoffe != blank  %}
               <div class="ingredient--seciton">
                 <div class="lg:twcss-mt-12 twcss-mt-10">
-                  <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
-                  <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
-                    {{ product.metafields.custom.inhaltsstoffe }}
-                  </div>
+                  {% if product.metafields.custom.inhaltsstoffe != blank  %}
+                    <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Inhaltsstoffe</button>
+                    <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                      {{ product.metafields.custom.inhaltsstoffe }}
+                    </div>
+                  {% endif %}
 
-                  <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Anwendung</button>
-                  <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
-                    {{ product.metafields.custom.anwendung }}
-                  
-                  </div>
+                  {% if product.metafields.custom.anwendung != blank  %}
+                    <button class="accordion twcss-font-noto twcss-font-light lg:twcss-text-text">Anwendung</button>
+                    <div class="panel twcss-font-noto twcss-font-light lg:twcss-text-text">
+                      {{ product.metafields.custom.anwendung }}                    
+                    </div>
+                  {% endif %}
+
                     <style>
                     /* Style the buttons that are used to open and close the accordion panel */
                     .accordion {
