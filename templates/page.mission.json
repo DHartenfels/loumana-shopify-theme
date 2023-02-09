@@ -54,8 +54,18 @@
         "direction": "col"
       }
     },
+    "da149f0d-6fb0-42ed-af4c-f07260c65abc": {
+      "type": "loumana-fiftyfiftyHero",
+      "settings": {
+        "subHeading": "",
+        "heading": "<p>Pascal Brodersen - Founder & CEO<\/p>",
+        "text": "<p>Ich bin quasi schon seit ich denken kann im Einzelhandel tätig. Mit dieser Erfahrung wollte ich schon immer ein Produkt erschaffen, das nicht nur qualitativ gut ist, sondern auch etwas Gutes für die Umwelt tut. Als ich Loumana gegründet habe war mein erstes Ziel: Pflege ohne Plastik. <br\/>Aus diesem Ziel ist nun ein “waschechtes” Unternehmen geworden mit tollen natürlichen Produkten.<br\/>Ich bin gespannt, wohin die Reise noch geht und freue mich über jeden, der uns auf unserem Weg begleitet!<\/p>",
+        "imageHero": "shopify:\/\/shop_images\/Image.jpg"
+      }
+    },
     "1658778232118bc74a": {
       "type": "team-slider",
+      "disabled": true,
       "settings": {
         "memberImageOne": "shopify:\/\/shop_images\/pascal.png",
         "personOneName": "Pascal Brodersen - Founder & CEO",
@@ -141,24 +151,15 @@
       "settings": {
         "titlebox": "Das sind unsere <br>\nLoumana-Favourites:"
       }
-    },
-    "da149f0d-6fb0-42ed-af4c-f07260c65abc": {
-      "type": "loumana-fiftyfiftyHero",
-      "settings": {
-        "subHeading": "",
-        "heading": "<p>Pascal Brodersen - Founder & CEO<\/p>",
-        "text": "<p>Ich bin quasi schon seit ich denken kann im Einzelhandel tätig. Mit dieser Erfahrung wollte ich schon immer ein Produkt erschaffen, das nicht nur qualitativ gut ist, sondern auch etwas Gutes für die Umwelt tut. Als ich Loumana gegründet habe war mein erstes Ziel: Pflege ohne Plastik. <br\/>Aus diesem Ziel ist nun ein “waschechtes” Unternehmen geworden mit tollen natürlichen Produkten.<br\/>Ich bin gespannt, wohin die Reise noch geht und freue mich über jeden, der uns auf unserem Weg begleitet!<\/p>",
-        "imageHero": "shopify:\/\/shop_images\/Image.jpg"
-      }
     }
   },
   "order": [
     "main",
     "16587781665032831e",
     "1658778178964a0ae4",
+    "da149f0d-6fb0-42ed-af4c-f07260c65abc",
     "1658778232118bc74a",
     "ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e",
-    "165877866276276167",
-    "da149f0d-6fb0-42ed-af4c-f07260c65abc"
+    "165877866276276167"
   ]
 }
