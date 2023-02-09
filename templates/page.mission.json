@@ -129,18 +129,28 @@
             "button_label": "Button label",
             "button_link": ""
           }
+        },
+        "639f288b-9c13-4b41-a148-956d490cadad": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-0",
         "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-1",
-        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-2"
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-2",
+        "639f288b-9c13-4b41-a148-956d490cadad"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image.jpg",
+        "image": "shopify:\/\/shop_images\/pascal.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -148,6 +158,13 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "140fd7b0-4dce-4bfd-8f65-3d4d41aa7d0c": {
+      "type": "our-favorites",
+      "disabled": true,
+      "settings": {
+        "titlebox": ""
       }
     }
   },
@@ -157,6 +174,7 @@
     "1658778178964a0ae4",
     "1658778232118bc74a",
     "165877866276276167",
-    "ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e"
+    "ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e",
+    "140fd7b0-4dce-4bfd-8f65-3d4d41aa7d0c"
   ]
 }
