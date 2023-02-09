@@ -104,6 +104,51 @@
       "settings": {
         "titlebox": "Das sind unsere <br>\nLoumana-Favourites:"
       }
+    },
+    "ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pascal Brodersen - Founder & CEO",
+            "heading_size": "h1"
+          }
+        },
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ich bin quasi schon seit ich denken kann im Einzelhandel tätig. Mit dieser Erfahrung wollte ich schon immer ein Produkt erschaffen, das nicht nur qualitativ gut ist, sondern auch etwas Gutes für die Umwelt tut. Als ich Loumana gegründet habe war mein erstes Ziel: Pflege ohne Plastik. <br\/>Aus diesem Ziel ist nun ein “waschechtes” Unternehmen geworden mit tollen natürlichen Produkten.<br\/>Ich bin gespannt, wohin die Reise noch geht und freue mich über jeden, der uns auf unserem Weg begleitet!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-0",
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-1",
+        "template--16326382715104__ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e-16759478436511b7c4-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -111,6 +156,7 @@
     "16587781665032831e",
     "1658778178964a0ae4",
     "1658778232118bc74a",
-    "165877866276276167"
+    "165877866276276167",
+    "ba34bb1c-6d0a-4ab0-8f5f-9ed31d7c0f7e"
   ]
 }
