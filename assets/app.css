@@ -3974,3 +3974,12 @@ ul.slick-dots {
   #product-images-carousel-thumbnails {  display: none !important;  }
   .prod--featured--container {   padding-left: 10px;    padding-right: 10px;  }
 }
+
+.center--heading {
+	position: absolute;
+	width: 900px;
+	margin-top: 149px;
+	text-align: center;
+	margin-left: -450px;
+	left: 50%;
+}
