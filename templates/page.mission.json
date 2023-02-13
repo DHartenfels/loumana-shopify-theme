@@ -149,7 +149,7 @@
         "c0b45554-c3e7-4823-b8e3-b740ad45d3c9"
       ],
       "settings": {
-        "titlebox": "<h4>Das sind unsere <br>\nLoumana-Favourites:<\/h4>"
+        "titlebox": "<h4 class=\"twcss-font-extrabold twcss-font-noto \">Das sind unsere <br>\nLoumana-Favourites:<\/h4>"
       }
     }
   },
