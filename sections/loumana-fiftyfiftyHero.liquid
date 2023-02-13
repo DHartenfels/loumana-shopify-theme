@@ -1,64 +1,81 @@
 <style>
-    .header-wrapper { position: relative!important;}
-    #shopify-section-header{
-        z-index: 200;
-    }
+  .header-wrapper {
+    position: relative !important;
+  }
+  #shopify-section-header {
+    z-index: 200;
+  }
 </style>
 
 <div class="twcss-flex twcss-flex-col lg:twcss-flex-row lg:twcss-max-w-full twcss-content-between twcss-overflow-hidden twcss-border-b twcss-border-[#ACC5C7]">
-    <div class="twcss-relative  lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center  twcss-w-full lg:twcss-w-1/2 twcss-order-2 lg:twcss-order-1">
-        <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center lg:twcss-ml-8 twcss-z-50  twcss-p-5 twcss-py-[3.5rem] lg:twcss-py-5 lg:twcss-pl-20">
-            <div class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline twcss-font-inco twcss-relative twcss-max-w-lg twcss-m-auto lg:twcss-max-w-none lg:twcss-ml-0 lg:twcss-mr-auto">
-                {{ section.settings.subHeading }}
-            </div>
-            <h1 class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[34px] lg:twcss-text-[48px] twcss-relative twcss-max-w-lg twcss-m-auto twcss-mt-8 lg:twcss-mt-0 lg:twcss-max-w-none lg:twcss-ml-0 lg:twcss-mr-auto">
-                {{ section.settings.heading }}
-            </h1>
-            <div class="twcss-font-noto twcss-z-50 twcss-font-light twcss-text-[16px] twcss-relative twcss-max-w-lg twcss-m-auto lg:twcss-max-w-none">
-                {{ section.settings.text }}
-            </div>
-            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseRight.svg' | asset_url }}" width="auto" height="auto" loading="eager" class=" twcss-absolute -lg:twcss-right-24 twcss-right-0 lg:twcss-bottom-0 twcss-bottom-[-124px] twcss-z-30 twcss-w-60 twcss-h-full lg:twcss-h-auto">
-            <img alt="Ziereleemnt Unsere Mission" src="{{ 'ElipseLeft.svg' | asset_url }}" width="150" height="200" loading="eager" class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-30 twcss-w-32 twcss-h-96">
-        </div>
+  <div class="twcss-relative  lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center  twcss-w-full lg:twcss-w-1/2 twcss-order-2 lg:twcss-order-1">
+    <div class="lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-center lg:twcss-ml-8 twcss-z-50  twcss-p-5 twcss-py-[3.5rem] lg:twcss-py-5 lg:twcss-pl-20">
+      <div class="twcss-uppercase twcss-font-light twcss-text-[#CDAC79] twcss-z-50 twcss-text-subline twcss-font-inco twcss-relative twcss-max-w-lg twcss-m-auto lg:twcss-max-w-none lg:twcss-ml-0 lg:twcss-mr-auto">
+        {{ section.settings.subHeading }}
+      </div>
+      <h1 class="twcss-font-noto twcss-z-50 twcss-font-extrabold twcss-text-[34px] lg:twcss-text-[48px] twcss-relative twcss-max-w-lg twcss-m-auto twcss-mt-8 lg:twcss-mt-0 lg:twcss-max-w-none lg:twcss-ml-0 lg:twcss-mr-auto">
+        {{ section.settings.heading }}
+      </h1>
+      <div class="twcss-font-noto twcss-z-50 twcss-font-light twcss-text-[16px] twcss-relative twcss-max-w-lg twcss-m-auto lg:twcss-max-w-none">
+        {{ section.settings.text }}
+      </div>
+      <img
+        alt="Ziereleemnt Unsere Mission"
+        src="{{ 'ElipseRight.svg' | asset_url }}"
+        width="auto"
+        height="auto"
+        loading="eager"
+        class=" twcss-absolute -lg:twcss-right-24 twcss-right-0 lg:twcss-bottom-0 twcss-bottom-[-124px] twcss-z-30 twcss-w-60 twcss-h-full lg:twcss-h-auto">
+      <img
+        alt="Ziereleemnt Unsere Mission"
+        src="{{ 'ElipseLeft.svg' | asset_url }}"
+        width="150"
+        height="200"
+        loading="eager"
+        class=" twcss-absolute twcss-left-0 twcss-top-0 twcss-z-30 twcss-w-32 twcss-h-96">
     </div>
+  </div>
 
-    <div class="lg:twcss-w-1/2 twcss-z-50 twcss-order-1 lg:twcss-z-0 lg:twcss-order-2">
-        <img alt="{{ section.settings.imageHero.alt }}" src="{{ section.settings.imageHero | img_url: 'master' }}" width="auto" height="auto" loading="eager" class="twcss-ml-auto lg:twcss-w-full lg:twcss-h-auto"/>
-    </div>
+  <div class="lg:twcss-w-1/2 twcss-z-50 twcss-order-1 lg:twcss-z-0 lg:twcss-order-2">
+    <img
+      alt="{{ section.settings.imageHero.alt }}"
+      src="{{ section.settings.imageHero | img_url: 'master' }}"
+      width="auto"
+      height="auto"
+      loading="eager"
+      class="twcss-ml-auto lg:twcss-w-full lg:twcss-h-auto" />
+  </div>
 </div>
 
 
 {% schema %}
-{
+  {
     "name": "Loumana Fifty Fifty Hero",
-     "settings": [
-       {
-        "type": "text",
+    "settings": [
+      {
+        "type": "html",
         "id": "subHeading",
         "label": "Subheading",
-        "default": "Unsere Mission",    
+        "default": "Unsere Mission",
         "placeholder": "Unsere Mission"
-       },
-      {
+      }, {
         "type": "richtext",
         "id": "heading",
         "label": "Überschrift"
-      },
-       {
+      }, {
         "type": "richtext",
         "id": "text",
         "label": "Unterüberschrift"
-      },
-     {
+      }, {
         "type": "image_picker",
         "id": "imageHero",
         "label": "Hero Image"
-     }
+      }
     ],
     "presets": [
-        {
-            "name":"Loumana Fifty Fifty Hero"
-        }
+      {
+        "name": "Loumana Fifty Fifty Hero"
+      }
     ]
-}
+  }
 {% endschema %}
