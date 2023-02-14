@@ -3991,6 +3991,7 @@ ul.slick-dots {
 
 @media (max-width:990px){
   .center--heading { position: static;   width: 100%;   margin-top: 65px; margin-left: 0; left: 0; font-size: 24px;  padding-left: 20px;   padding-right: 20px; }
+  .section--with--heading { padding-top: 0; }
 }
 @media (max-width:767px){
   .center--heading{margin-top:120px;}
