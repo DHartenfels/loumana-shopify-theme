@@ -40,7 +40,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/vegan_1.png",
-            "heading": "<h3>Vegan<\/h3>",
+            "heading": "Vegan",
             "textOne": "Tierwohl ist uns wichtig. Daher verzichten wir auf Tierversuche und tierische Inhaltsstoffe."
           }
         }
