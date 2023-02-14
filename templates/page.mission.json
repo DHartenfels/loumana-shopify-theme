@@ -119,7 +119,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/festes-shampoo-grapefruit-loumana.webp",
-            "heading": "<h4 class=\"twcss-font-extrabold twcss-font-noto twcss-text-[20px]\">Festes Shampoo: Grapefruit<\/h4>",
+            "heading": "<p class=\"twcss-font-extrabold twcss-font-noto twcss-text-[20px]\">Festes Shampoo: Grapefruit<\/p>",
             "buttonurl": "https:\/\/loumana.de\/products\/festes-shampoo-pampelmousse",
             "textOne": "With Grapefruit comes great responsibility. Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei."
           }
@@ -149,7 +149,7 @@
         "c0b45554-c3e7-4823-b8e3-b740ad45d3c9"
       ],
       "settings": {
-        "titlebox": "<h2 class=\"twcss-font-extrabold twcss-font-noto \">Das sind unsere <br>\nLoumana-Favourites:<\/h2>"
+        "titlebox": "<h4 class=\"twcss-font-extrabold twcss-font-noto \">Das sind unsere <br>\nLoumana-Favourites:<\/h4>"
       }
     }
   },
