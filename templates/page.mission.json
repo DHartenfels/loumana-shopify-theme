@@ -24,7 +24,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/nachhaltig_1.png",
-            "heading": "<h3>Nachhaltig<\/h3>",
+            "heading": "<p>Nachhaltig<\/p>",
             "textOne": "Bei unseren Verpackungen setzen wir auf erneuerbare Ressourcen.  Wir setzen auf Papier, statt Plastik."
           }
         },
