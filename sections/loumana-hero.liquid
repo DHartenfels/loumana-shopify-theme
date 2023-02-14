@@ -7,7 +7,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 
 
 
-            <div class="lg:twcss-relative lg:twcss-min-h-screen lg:twcss-overflow-hidden twcss-relative twcss-min-h-screen twcss-overflow-hidden">
+<div class="lg:twcss-relative lg:twcss-min-h-screen lg:twcss-overflow-hidden twcss-relative twcss-min-h-screen twcss-overflow-hidden {% if section.settings.sectionheadline != blank %}section--with--heading{% endif %}">
 
                 {% if section.settings.sectionheadline != blank %}
                     <h1 class="center--heading twcss-font-extrabold twcss-uppercase lg:twcss-text-heading twcss-font-noto">{{ section.settings.sectionheadline }}</h1>
