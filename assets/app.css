@@ -3978,11 +3978,15 @@ ul.slick-dots {
 .center--heading {
 	position: absolute;
 	width: 900px;
-	margin-top: 105px;
+	margin-top: 0;
 	text-align: center;
 	margin-left: -450px;
 	left: 50%;
-  font-size:48px !important;
+	font-size: 48px !important;
+	top: 120px;
+}
+.section--with--heading {
+	padding-top: 230px;
 }
 
 @media (max-width:990px){
