@@ -3982,6 +3982,7 @@ ul.slick-dots {
 	text-align: center;
 	margin-left: -450px;
 	left: 50%;
+  font-size:48px !important;
 }
 
 @media (max-width:990px){
