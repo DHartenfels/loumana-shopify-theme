@@ -136,6 +136,7 @@
           },
           "a973685b-c59a-4091-843b-5ff023c72f4e": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Nur bis zum 14.02.2023! Spare 15% mit dem Code: Valentinstag",
               "color_scheme": "accent-1",
