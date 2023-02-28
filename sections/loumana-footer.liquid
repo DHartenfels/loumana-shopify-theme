@@ -40,8 +40,9 @@
       <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
         Newsletter
       </p>
-      {% if settings.footer_newsletter_txt != blank %}
-        {{ settings.footer_newsletter_txt }}
+      {% if section.settings.footer_newsletter_txt != blank %}
+        <Div style="display:none;">
+          {{ section.settings.footer_newsletter_txt }}</Div>
       {% endif %}
       <p class="testing twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
         Du willst immer auf dem Laufenden bleiben über Angebote, und Aktionen? Dann abonniere jetzt unseren Newsletter und sei auf der sauberen Seite.
