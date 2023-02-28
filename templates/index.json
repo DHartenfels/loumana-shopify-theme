@@ -65,6 +65,7 @@
     },
     "af5e38f8-7c38-48a4-8027-710d8151f7ce": {
       "type": "loumana-fullColorBG",
+      "disabled": true,
       "blocks": {
         "69ce7c09-4b67-4620-85c3-229c7474eb75": {
           "type": "image",
@@ -189,8 +190,8 @@
         "fdb9db1a-700d-4ada-a05a-882981ea6e63"
       ],
       "settings": {
-        "heading": "Dein Kontakt zu uns",
-        "textarea": "Fragen ist natürlich. So wie unsere Produkte. Daher freuen wir uns über das, was du zu sagen hast - schieß los!",
+        "heading": "Kontaktiere uns",
+        "textarea": "Wenn du Fragen oder Anregungen hast, kannst du dich jederzeit bei uns melden. Wir freuen uns auf dich!",
         "phone": "04102 8910996",
         "mail": "info@loumana.de"
       }
