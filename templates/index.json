@@ -63,6 +63,25 @@
         "direction": "row"
       }
     },
+    "af5e38f8-7c38-48a4-8027-710d8151f7ce": {
+      "type": "loumana-fullColorBG",
+      "blocks": {
+        "69ce7c09-4b67-4620-85c3-229c7474eb75": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/dermatest-logo-loumana.png"
+          }
+        }
+      },
+      "block_order": [
+        "69ce7c09-4b67-4620-85c3-229c7474eb75"
+      ],
+      "settings": {
+        "heading": "Zertifikat von Dermatest",
+        "textarea": "Wir haben unsere Pflegeprodukte vom unabhängigen dermatologischen Institut Dermatest GmbH auf die Hautverträglichkeit untersucht und prüfen lassen. Nur so kann gewährleistet werden, dass die Anwendung mit unseren Pflegeprodukten sicher und wirksam ist. Wir haben den Qualitätsnachweis von Dermatest erhalten und unsere Produkte wurden aus klinisch-dermatologischer Sicht mit der Note \"sehr gut\" ausgezeichnet.",
+        "url": ""
+      }
+    },
     "165876755643147e47": {
       "type": "loumana-landing-products",
       "blocks": {
@@ -181,6 +200,7 @@
     "1658767540cc609873",
     "165876750802a27207",
     "16587647711b85b31d",
+    "af5e38f8-7c38-48a4-8027-710d8151f7ce",
     "165876755643147e47",
     "1658767615c4425f99",
     "16587676356fc31b0a"
