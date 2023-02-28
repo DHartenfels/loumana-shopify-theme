@@ -1,91 +1,113 @@
 <div class="twcss-bg-[#ACC5C7] twcss-w-full twcss-min-h-[329px]">
-    <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between lg:twcss-px-0 twcss-py-14">
-        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
-            <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
-                Kontakt
-            </p>
-            <p class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
-                Telefon: 04102 8910996
-                <br>
-                E-Mail: info@loumana.de
-            </p>
-        </div>
-        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
-            <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
-                Entdecken
-            </p>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
-                <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/collections/badekugeln">Produkte</a><br>
-                <a href="/pages/mission"class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white"> Über Uns </a>
-            </p>
-        </div>
-        <div class="lg:twcss-max-w-[25%] twcss-mb-10">
-            <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
-                Allgemeines
-            </p>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
-                <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/legal-notice">Impressum
-                </a><br>
-                <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/privacy-policy">Datenschutz
-                    </a><br>
-                
-                    <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/terms-of-service">Allgemeine Geschäftsbedingungen 
-                    </a><br>
-                <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/pages/faq">Hilfe & FAQ</a>
-            </p>
-        </div>
-        <div class="lg:twcss-max-w-[25%]">
-            <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
-                Newsletter
-            </p>
-            <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
-                Du willst immer auf dem Laufenden bleiben über Angebote, und Aktionen? Dann abonniere jetzt unseren Newsletter und sei auf der sauberen Seite.
-            </p>
-
-            {% form 'customer' %}
-                {{ form.errors | default_errors }}
-                {% if form.posted_successfully? %}
-                    <p>{{ 'newsletter.success' | t }}</p>
-                {% else %}
-                    <input name="contact[tags]" type="hidden" value="newsletter">
-                    <div class=" twcss-flex twcss-flex-row twcss-bg-white twcss-rounded-[20px] twcss-px-5 twcss-py-3 twcss-justify-between twcss-mt-5">
-                        <input type="email" name="contact[email]" id="Email" value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" placeholder="E-Mail Adresse" autocorrect="off" autocapitalize="off">
-                        <button id="Subscribe" name="commit" type="submit">
-                            <span>
-                                <img src="{{ 'ArrowLearnMore.svg' | asset_url }}" alt=""/>
-                            </span>
-                        </button>
-                    </div>
-                {% endif %}
-            {% endform %}
-        </div>
+  <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between lg:twcss-px-0 twcss-py-14">
+    <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+      <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+        Kontakt
+      </p>
+      <p class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+        Telefon: 04102 8910996
+        <br>
+        E-Mail: info@loumana.de
+      </p>
     </div>
-    <div class="twcss-border-t twcss-border-t-white twcss-flex twcss-flex-col ">
-        <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto lg:twcss-m-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-px-8 twcss-py-10"">
-            <div class="twcss-ml-0 twcss-mr-auto  twcss-flex twcss-flex-row lg:twcss-order-2">
-               
-                <a href="https://www.instagram.com/loumana.care/" target="_blank" ><img alt="" class="twcss-mr-5" src="{{'instagram.svg' | asset_url }}"></a>
-
-            </div>
-            <div class="twcss-mt-10 lg:twcss-mt-0 lg:twcss-order-2">
-                <p class=" twcss-font-noto twcss-font-light twcss-text-[12px] twcss-text-white ">© 2022 Loumana GmbH – Alle Rechte vorbehalten</p>
-            </div>
-        </div>
-
-
+    <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+      <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+        Entdecken
+      </p>
+      <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+        <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/collections/badekugeln">Produkte</a><br>
+        <a href="/pages/mission" class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+          Über Uns
+        </a>
+      </p>
     </div>
+    <div class="lg:twcss-max-w-[25%] twcss-mb-10">
+      <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+        Allgemeines
+      </p>
+      <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+        <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/legal-notice">Impressum
+        </a><br>
+        <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/privacy-policy">Datenschutz
+        </a><br>
+
+        <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/policies/terms-of-service">Allgemeine Geschäftsbedingungen
+        </a><br>
+        <a class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white" href="/pages/faq">Hilfe & FAQ</a>
+      </p>
+    </div>
+    <div class="lg:twcss-max-w-[25%]">
+      <p class=" twcss-font-noto twcss-font-semibold twcss-text-text twcss-text-white twcss-mb-3">
+        Newsletter
+      </p>
+      <p class=" twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+        Du willst immer auf dem Laufenden bleiben über Angebote, und Aktionen? Dann abonniere jetzt unseren Newsletter und sei auf der sauberen Seite.
+      </p>
+
+      {% form 'customer' %}
+        {{ form.errors | default_errors }}
+        {% if form.posted_successfully? %}
+          <p>{{ 'newsletter.success' | t }}</p>
+        {% else %}
+          <input
+            name="contact[tags]"
+            type="hidden"
+            value="newsletter">
+          <div class=" twcss-flex twcss-flex-row twcss-bg-white twcss-rounded-[20px] twcss-px-5 twcss-py-3 twcss-justify-between twcss-mt-5">
+            <input
+              type="email"
+              name="contact[email]"
+              id="Email"
+              value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+              placeholder="E-Mail Adresse"
+              autocorrect="off"
+              autocapitalize="off">
+            <button
+              id="Subscribe"
+              name="commit"
+              type="submit">
+              <span>
+                <img src="{{ 'ArrowLearnMore.svg' | asset_url }}" alt="" />
+              </span>
+            </button>
+          </div>
+        {% endif %}
+      {% endform %}
+    </div>
+  </div>
+  <div class="twcss-border-t twcss-border-t-white twcss-flex twcss-flex-col ">
+    <div class="lg:twcss-max-w-[var(--page-width)] twcss-max-w-lg twcss-m-auto lg:twcss-m-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-px-8 twcss-py-10" ">
+      <div class="twcss-ml-0 twcss-mr-auto  twcss-flex twcss-flex-row lg:twcss-order-2">
+
+        <a href="https://www.instagram.com/loumana.care/" target="_blank"><img
+            alt=""
+            class="twcss-mr-5"
+            src="{{'instagram.svg' | asset_url }}"></a>
+
+      </div>
+      <div class="twcss-mt-10 lg:twcss-mt-0 lg:twcss-order-2">
+        <p class=" twcss-font-noto twcss-font-light twcss-text-[12px] twcss-text-white ">© 2022 Loumana GmbH – Alle Rechte vorbehalten</p>
+      </div>
+    </div>
+
+
+  </div>
 </div>
 
 
 {% schema %}
-{
-   "name": "Loumana Footer",
-  "settings": [
-   {
-    "type": "link_list",
-    "id": "menuOne",
-    "label": "Footer Menü #1"
-   }
-  ]
-}
+  {
+    "name": "Loumana Footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menuOne",
+        "label": "Footer Menü #1"
+      }, {
+        "type": "textarea",
+        "id": "footer_newsletter_txt",
+        "label": "Footer Newsletter text"
+      }
+    ]
+  }
 {% endschema %}
