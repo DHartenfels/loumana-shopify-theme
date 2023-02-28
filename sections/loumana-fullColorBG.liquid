@@ -21,9 +21,11 @@
       {% endfor %}
     </div>
 
-    <a class="mainButtonInverted twcss-uppercase test2" href="{{ section.settings.url }}">
-      Mehr erfahren
-    </a>
+    {% if section.settings.url != blank %}
+      <a class="mainButtonInverted twcss-uppercase" href="{{ section.settings.url }}">
+        Mehr erfahren
+      </a>
+    {% endif %}
   </div>
 
 </div>
