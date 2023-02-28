@@ -41,12 +41,10 @@
         Newsletter
       </p>
       {% if section.settings.footer_newsletter_txt != blank %}
-        <Div style="display:none;">
-          {{ section.settings.footer_newsletter_txt }}</Div>
+        <div class="twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
+          {{ section.settings.footer_newsletter_txt }}
+        </div>
       {% endif %}
-      <p class="testing twcss-font-noto twcss-font-light twcss-text-[14px] twcss-text-white">
-        Du willst immer auf dem Laufenden bleiben über Angebote, und Aktionen? Dann abonniere jetzt unseren Newsletter und sei auf der sauberen Seite.
-      </p>
 
       {% form 'customer' %}
         {{ form.errors | default_errors }}
