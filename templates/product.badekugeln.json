@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "disabled": true,
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1658771829ddd58c8a": {
+      "type": "loumana-product-section",
+      "settings": {
+      }
+    },
+    "1659628253c27a51a6": {
+      "type": "loumana-sticky-atc",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1658773263e589a807": {
+      "type": "loumana-pdp-video",
+      "settings": {
+        "headline": "Solide Leistung:Unsere LOUMANA Solid Shampoos.",
+        "textarea": "Kein Wischiwaschi: Denn unsere festen Shampoos kommen komplett ohne Plastik, Silikone und Parabene aus. Damit kannst du ca. 60-mal dein Haar reinigen, pflegen und beleben."
+      }
+    },
+    "1658773272ec1e67e5": {
+      "type": "loumana-fullColorBG",
+      "blocks": {
+        "cba8af64-b4ec-4101-adab-ba6ef31b2393": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/vegan.png"
+          }
+        },
+        "1ff38b74-bec4-4c27-b897-da5f663b2024": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/co2-neutral.png"
+          }
+        },
+        "e95b3b72-6d62-4a11-afeb-5ae70e3b572a": {
+          "type": "image",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/nachhaltig.png"
+          }
+        }
+      },
+      "block_order": [
+        "cba8af64-b4ec-4101-adab-ba6ef31b2393",
+        "1ff38b74-bec4-4c27-b897-da5f663b2024",
+        "e95b3b72-6d62-4a11-afeb-5ae70e3b572a"
+      ],
+      "settings": {
+        "heading": "Vorteile unserer Shampoos",
+        "textarea": "Unsere Shampoos sind nicht nur ein Fest für die Sinne, sondern auch für die Umwelt, denn: Sie sind vegan sowie frei von unnötigen Parabenen, sinnlosen Silikonen und umweltschädlichem Plastik. Aber das ist noch nicht alles! Wir gleichen den CO2-Gehalt deines Badegangs aus, indem wir mit jedem verkauften Shampoo einen wunderschönen Baum in die Welt pflanzen – eine runde Sache.",
+        "url": "shopify:\/\/pages\/faq"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658771829ddd58c8a",
+    "1659628253c27a51a6",
+    "1658773263e589a807",
+    "1658773272ec1e67e5",
+    "product-recommendations",
+    "loox-product-reviews-app-section"
+  ]
+}
