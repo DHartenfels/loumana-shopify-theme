@@ -3997,6 +3997,8 @@ ul.slick-dots {
 .shopify-policy__title h1 {
   font-family: "Noto Sans", sans-serif !important;
   font-size:48px;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
 @media (max-width:990px){
