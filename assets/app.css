@@ -4257,6 +4257,16 @@ ul.slick-dots {
 	padding-left: 0;
 	list-style-position: inside;
 }
+.post_content ul {
+	list-style: disc;
+	list-style-position: inside;
+	margin-bottom: 20px;
+}
+.post_content ol{
+  list-style: decimal;
+	list-style-position: inside;
+	margin-bottom: 20px;
+}
 .post_content img {
 	max-width: 100%;
 	height: auto;
