@@ -1,0 +1,200 @@
+{% assign has_meta_fields = false %}
+{% if template == 'article' and article.metafields.articles.related_articles_ids != blank %}
+  {% assign has_meta_fields = true %}{% endif %}
+
+{% assign show_section = true %}
+{% if template == 'product' or has_meta_fields == true %}
+
+  {% if template == 'product' %}
+    {% assign article_tags = product.metafields.related.related_article_tags.value %}
+    {% assign article_items = product.metafields.articles.related_articles_ids.value %}
+  {% else %}
+    {% assign article_tags = article.metafields.related.related_article_tags.value %}
+    {% assign article_items = article.metafields.articles.related_articles_ids.value %}
+  {% endif %}
+
+  {% assign show_section = false %}
+
+  {% if article_items != blank or article_tags != blank %}
+    {% assign show_section = true %}
+  {% endif %}
+
+{% endif %}
+
+{% if show_section == true %}
+
+  <div class="collection-blogposts-module">
+    <div class="container">
+
+      <div
+        class="collection-blogposts-top clearfix">
+
+        {% if section.settings.title != blank %}
+          {% if template contains 'product' %}
+            <p class="h2">{{ section.settings.title }}</p>
+          {% else %}
+            <h2>{{ section.settings.title }}</h2>
+          {% endif %}
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="description">{{ section.settings.description }}</div>
+        {% endif %}
+
+      </div>
+
+      <div class="collection-blogposts-list clearfix">
+        <ul class="as-blogposts-list">
+
+          {% if section.blocks.size > 0 and section.blocks.first.settings.article != blank %}
+
+            {% for block in section.blocks %}
+
+              {% assign article_handle = block.settings['article'] %}
+              {% assign article_item = articles[article_handle] %}
+
+              {% render 'as-blog-item-design', article_item: article_item, class: "item_collection", button_class: "text-button" %}
+
+            {% endfor %}
+
+          {% else %}
+
+            {% if template == 'article' and has_meta_fields != true %}
+
+              {% assign counter = 0 %}
+              {% assign skip_articles = "" %}
+              {% for related_article in blog.articles %}
+                {% if related_article.handle != article.handle %}
+
+                  {% if skip_articles == "" %}
+
+                    {% assign skip_articles = skip_articles | append: related_article.handle %}
+
+                  {% else %}
+
+                    {% assign skip_articles = skip_articles | append: "|" | append: related_article.handle %}
+
+                  {% endif %}
+
+                {% endif %}
+              {% endfor %}
+
+              {% assign all_related = skip_articles | split: "|" | uniq %}
+
+              {% for single_related in all_related limit: 2 %}
+                {% assign related_article_1 = articles[single_related] %}
+                {% render 'as-blog-item-design', article_item: related_article_1, class: "item_collection", button_class: "text-button" %}
+              {% endfor %}
+
+
+            {% endif %}
+
+            {% if template == 'product' or has_meta_fields == true %}
+
+              {% assign articles_counter = 0 %}
+              {% assign tags_string = '' %}
+              {% assign articles_string = '' %}
+
+              {% assign atgs = '' %}
+
+              {% if article_tags != blank %}
+
+                {% for article_tag in article_tags %}
+                  {% assign tags_string = tags_string | append: "," | append: article_tag %}
+                {% endfor %}
+                {% assign tags_string = tags_string | remove_first: "," %}
+
+                {% for article in blogs.news.articles %}
+
+                  {% assign write_post = false %}
+
+                  {% for tag in article.tags %}
+                    {% if tags_string contains tag %}
+                      {% assign write_post = true %}{% endif %}
+                  {% endfor %}
+
+                  {% if write_post == true %}
+                    {% render 'as-blog-item-design', article_item: article, class: "item_collection", button_class: "text-button" %}
+                    {% assign articles_counter = articles_counter | plus: 1 %}
+                  {% endif %}
+
+                  {% if articles_counter == 2 %}
+                    {% break %}{% endif %}
+
+                {% endfor %}
+
+              {% else %}
+
+                {% for article_item in article_items %}
+                  {% assign articles_string = articles_string | append: "," | append: article_item %}
+                {% endfor %}
+                {% assign articles_string = articles_string | remove_first: "," %}
+
+                {% for article in blogs.news.articles %}
+                  {% if articles_string contains article.id %}
+                    {% render 'as-blog-item-design', article_item: article, class: "item_collection", button_class: "text-button" %}
+                    {% assign articles_counter = articles_counter | plus: 1 %}
+                  {% endif %}
+
+                  {% if articles_counter == 2 %}
+                    {% break %}{% endif %}
+
+                {% endfor %}
+
+              {% endif %}
+
+
+            {% endif %}
+
+          {% endif %}
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "AS - Collection Blogposts",
+    "max_blocks": 3,
+    "class": "collection-blogposts-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Blog post",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Article"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "AS - Collection Blogposts",
+        "category": "Artesian spas",
+        "blocks": [
+          {
+            "type": "select"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
