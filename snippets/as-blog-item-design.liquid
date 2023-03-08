@@ -1,0 +1,47 @@
+{% assign articles_tags_list = "" %}
+
+{% for tag in article_item.tags %}
+  {% assign articles_tags_list = articles_tags_list | append: "," | append: tag %}
+{% endfor %}
+
+{% assign articles_tags_array = articles_tags_list | remove_first: "," %}
+
+<li class="as-blogpost-item {{class}}" post_filters="{{ articles_tags_array }}">
+
+  <div class="blogpost-image lazy-background" data-bg="{{ article_item.image.src | img_url: 'master', scale: 2 }}">
+    <a
+      href="{{article_item.url}}"
+      title="{{article_item.title}}"
+      class="anchor_overlay"></a>
+  </div>
+
+  <div class="blogpost-item-content">
+    <div>
+
+      <div
+        class="blog-item-badge"></div>
+
+      <div class="post_date">{{ article_item.published_at | date: "%b %d, %Y" }}</div>
+
+      <div class="post_title">
+        <a href="{{article_item.url}}" title="{{article_item.title}}">{{ article_item.title }}</a>
+      </div>
+
+      <div class="post_excerpt">
+        {% if article_item.excerpt == blank %}
+          {{ article_item.content | strip_html | truncate: 121 }}
+        {% else %}
+          {{ article_item.excerpt }}
+        {% endif %}
+      </div>
+
+      <div class="button-container">
+        <a class="as-button {{button_class}}" href="{{article_item.url}}">
+          <span>Mehr erfahren</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</li>
