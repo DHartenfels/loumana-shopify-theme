@@ -10,7 +10,7 @@
       "settings": {
         "sectionheadline": "Nachhaltige Pflege mit Naturprodukten von Loumana",
         "subline": "MADE TO CARE",
-        "headline": "<h2 class=\"twcss-font-extrabold twcss-font-noto twcss-text-[28px] \">Pflege, die sich gewaschen hat<\/h2>",
+        "headline": "<h2 class=\"twcss-font-extrabold twcss-font-noto twcss-text-[34px] \">Pflege, die sich gewaschen hat<\/h2>",
         "textarea": "Tauche ein in die Welt von Loumana:\nEntdecke unser Sortiment an natürlichen und\nveganen Pflegeprodukten. Frei von jeglichem Schnickschnack, auch keine lästigen Plastikverpackungen, voll mit toll.\nHergestellt in Deutschland.",
         "btnURL": "shopify:\/\/collections\/badekugeln",
         "heroImage": "shopify:\/\/shop_images\/Group_12.png"
@@ -119,7 +119,7 @@
         "cbdd6c54-a94a-4111-9e53-d0e3e1c0fdfb"
       ],
       "settings": {
-        "featuredProductsHeading": "<h2 class=\"twcss-text-center lg:twcss-max-w-2xl twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10 lg:twcss-text-[34px] twcss-text-[24px]\">Waschechte Pflege auf natürlicher Basis:  Gut für die Umwelt &amp; gut für dich<\/h2>"
+        "featuredProductsHeading": "<h2 class=\"twcss-text-center lg:twcss-max-w-2xl twcss-font-extrabold twcss-font-noto twcss-leading-tight twcss-mb-10 lg:twcss-text-[28px] twcss-text-[24px]\">Waschechte Pflege auf natürlicher Basis:  Gut für die Umwelt &amp; gut für dich<\/h2>"
       }
     },
     "1658767615c4425f99": {
