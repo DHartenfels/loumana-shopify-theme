@@ -4036,8 +4036,9 @@ ul.slick-dots {
 	border-bottom: 1px solid #e8eaed;
 	position: relative;
 }
-.blog-module-filters ul li.active{
-	border-color: rgba(18, 18, 18, 0.75);
+.blog-module-filters ul li.active {
+	border-color: #698e92;
+	color: #698e92;
 }
 .as-product-list.small_product_list {
 	gap: 12px;
