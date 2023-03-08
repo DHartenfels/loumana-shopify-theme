@@ -1,0 +1,171 @@
+{% layout none %}
+{% assign real_item_count = 0 %}
+{% assign articles_tags_list = "" %}
+{% assign featured_post_slug = "" %}
+{% assign ppp = 8 %}
+{% if section.settings.posts_per_page != blank %}
+  {% assign ppp = section.settings.posts_per_page %}
+{% endif %}
+
+{% paginate blogs.news.articles by 1000 %}
+
+  {% for article in blogs.news.articles %}
+
+    {% if article.metafields.blogs.featured_blogpost == true %}
+      {% assign featured_post_slug = article %}
+      {% break %}
+    {% endif %}
+
+  {% endfor %}
+
+  {% capture results %}
+
+    {% for article in blogs.news.articles %}
+
+      {% if featured_post_slug.handle != article.handle %}
+        {% assign real_item_count = real_item_count | plus: 1 %}
+        {% unless real_item_count == 1 %},{% endunless %}
+        {
+        "title" : {{ article.title | json }},
+        "url": {{ article.url | json }},
+        "image": {{ article.image.src | img_url: 'master', scale: 2 | json }},
+        "date": {{ article.published_at | date: "%b %d, %Y" | json }},
+        "excerpt": {{ article.excerpt | json }},
+        "tags": {{ article.tags | json }}
+        }
+      {% endif %}
+
+      {% for tag in article.tags %}
+        {% assign articles_tags_list = articles_tags_list | append: "," | append: tag %}
+      {% endfor %}
+
+    {% endfor %}
+
+  {% endcapture %}
+
+{% endpaginate %}
+
+{% assign articles_tags_array = articles_tags_list | remove_first: "," | split: "," | uniq %}
+
+<div class="as-blog-module-row">
+
+  <div class="blog-module-top">
+    <div class="container">
+
+      {% include 'as-breadcrumbs' %}
+      {% if section.settings.title != blank %}
+        <div class="bc-text-container">
+
+          <h1>{{ section.settings.title }}</h1>
+
+          {% if section.settings.description_html != blank %}
+            <div class="as-simple-text-row">
+              <div class="description">{{ section.settings.description_html }}</div>
+            </div>
+          {% else %}
+            <div class="description">{{ section.settings.description }}</div>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+      <div class="blog-module-filters">
+
+        <ul>
+          <li tag_slug="*" class="active">Alle Beiträge</li>
+          {% for tag_filter in articles_tags_array %}
+            <li tag_slug="{{tag_filter}}">{{ tag_filter }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="lds-dual-ring filter_loading"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="blog-module-list">
+    <div class="container">
+
+      <div class="blog-featured-post">{% render 'as-blog-item-design', article_item: featured_post_slug, class: "item_collection_featured", button_class: "big-button" %}</div>
+
+      <div class="blog-module-list-items">
+
+        {%- paginate blogs.news.articles by ppp -%}
+
+          <ul>
+            {% for article in blogs.news.articles %}
+              {% if featured_post_slug.handle != article.handle %}
+                {% render 'as-blog-item-design', article_item: article, button_class: "text-button" %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          <div
+            class="as-blog-pagination"
+            pages_size="{{paginate.pages}}"
+            posts_per_page="{{paginate.page_size}}">
+
+            <div class="as-blog-pagination-inner">
+              <div class="pagination-buttons">
+
+                <div class="as-button paginate-button paginate_prev_btn inactive">vorige</div>
+
+                <ol class="as-paginate-numbers">
+                  {% for ps in paginate.parts %}
+                    <li page_go_to="{{ps.title}}" class="{% if ps.is_link == false %}active{% endif %}">{{ ps.title }}</li>
+                  {% endfor %}
+                </ol>
+
+                <div class="as-button paginate-button paginate_next_btn">nächste</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        {%- endpaginate -%}
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="articles_json_container" style="display: none;">{"result_count": {{ real_item_count }},"results": [{{ results }}]}</div>
+<div class="articles_json_container_bkp" style="display: none;">{"result_count": {{ real_item_count }},"results": [{{ results }}]}</div>
+
+{% schema %}
+  {
+    "name": "Loumana - Blog Module",
+    "class": "blog-module-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      }, {
+        "type": "html",
+        "id": "description_html",
+        "label": "Description HTML",
+        "info": "This will replace the description field above."
+      }, {
+        "type": "text",
+        "id": "posts_per_page",
+        "label": "Posts Per Page"
+      }
+    ],
+    "presets": [
+      {
+        "name": "AS - Blog Module",
+        "category": "Artesian spas"
+      }
+    ]
+  }
+{% endschema %}
