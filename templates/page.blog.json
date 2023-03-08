@@ -8,14 +8,18 @@
         "padding_bottom": 28
       }
     },
-    "bf8bd053-b6cc-48df-a8db-77ff9a079bd1": {
-      "type": "loumana-collection-grid",
+    "07f59132-b9bb-420b-8b35-559678d5de84": {
+      "type": "as-blog-module",
       "settings": {
+        "title": "",
+        "description": "",
+        "description_html": "",
+        "posts_per_page": ""
       }
     }
   },
   "order": [
     "main",
-    "bf8bd053-b6cc-48df-a8db-77ff9a079bd1"
+    "07f59132-b9bb-420b-8b35-559678d5de84"
   ]
 }
