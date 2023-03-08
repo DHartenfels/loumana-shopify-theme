@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-article",
+      "disabled": true,
       "blocks": {
         "featured_image": {
           "type": "featured_image",
@@ -23,7 +24,9 @@
           }
         },
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -31,10 +34,18 @@
         "title",
         "share",
         "content"
-      ]
+      ],
+      "settings": {
+      }
+    },
+    "eba2f547-5c41-4c22-9188-c2e8346844a0": {
+      "type": "as-article-content",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "eba2f547-5c41-4c22-9188-c2e8346844a0"
   ]
 }
