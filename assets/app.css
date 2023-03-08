@@ -4306,6 +4306,23 @@ ul.slick-dots {
 .blogpost-item-content .as-button.text-button {
 	color: #00235F;
 }
+.as-button, .customer button {
+	background-color: #acc5c7;
+	color: #fff;
+	border-radius: 28px;
+	min-width: 214px;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 14px 38px 14px 24px;
+	box-sizing: border-box;
+	position: relative;
+	border: 2px solid #acc5c7;
+	cursor: pointer;
+	text-align: left;
+	max-width: 100%;
+}
 
 
 /* End blogpage */
