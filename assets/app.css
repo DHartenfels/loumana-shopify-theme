@@ -3994,6 +3994,11 @@ ul.slick-dots {
 	width: auto;
 	max-width: 150px;
 }
+.shopify-policy__title h1 {
+  font-family: "Noto Sans", sans-serif !important;
+  font-size:48px;
+}
+
 @media (max-width:990px){
   .center--heading { position: static;   width: 100%;   margin-top: 65px; margin-left: 0; left: 0; font-size: 24px !important;  padding-left: 20px;   padding-right: 20px; }
   .section--with--heading { padding-top: 0; }
