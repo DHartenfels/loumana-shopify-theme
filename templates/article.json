@@ -42,10 +42,29 @@
       "type": "as-article-content",
       "settings": {
       }
+    },
+    "59ee8d72-e7b8-4153-bb0c-4e1673cd73f0": {
+      "type": "as-collection-blogposts",
+      "blocks": {
+        "template--16218545422560__59ee8d72-e7b8-4153-bb0c-4e1673cd73f0-167828325576ff58ba-0": {
+          "type": "select",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16218545422560__59ee8d72-e7b8-4153-bb0c-4e1673cd73f0-167828325576ff58ba-0"
+      ],
+      "settings": {
+        "title": "",
+        "description": ""
+      }
     }
   },
   "order": [
     "main",
-    "eba2f547-5c41-4c22-9188-c2e8346844a0"
+    "eba2f547-5c41-4c22-9188-c2e8346844a0",
+    "59ee8d72-e7b8-4153-bb0c-4e1673cd73f0"
   ]
 }
