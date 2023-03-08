@@ -4279,6 +4279,13 @@ ul.slick-dots {
 .post_content {
 	margin-bottom: 45px;
 }
+.as-blogposts-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
 .as-blogpost-item {
 	width: calc(50% - 6px);
 	display: block;
