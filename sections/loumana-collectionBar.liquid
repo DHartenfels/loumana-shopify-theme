@@ -1,42 +1,46 @@
 <style>
-    .header-wrapper{
-        position: relative;
-    }
+  .header-wrapper {
+    position: relative;
+  }
 </style>
 
 <div class="twcss-flex twcss-flex-row twcss-w-full twcss-bg-[#ACC5C7] twcss-py-3 twcss-px-28 lg:twcss-justify-between twcss-justify-center">
-    <div class="lg:twcss-w-1/3 twcss-text-white twcss-font-noto twcss-text-text twcss-uppercase twcss-text-center"> {{ section.settings.textOne }} </div>
-    <div class="twcss-hidden lg:twcss-block twcss-w-1/3 twcss-text-white twcss-font-noto twcss-text-text twcss-uppercase twcss-text-center twcss-border-l-2 twcss-border-r-2 twcss-border-r-white twcss-border-l-white"> {{ section.settings.textTwo }} </div>
-    <div class="twcss-hidden lg:twcss-block twcss-w-1/3 twcss-text-white twcss-font-noto twcss-text-text twcss-uppercase twcss-text-center"> {{ section.settings.textThree }} </div>
+  <div class="lg:twcss-w-1/3 twcss-text-white  twcss-text-text twcss-uppercase twcss-text-center">
+    {{ section.settings.textOne }}
+  </div>
+  <div class="twcss-hidden lg:twcss-block twcss-w-1/3 twcss-text-white  twcss-text-text twcss-uppercase twcss-text-center twcss-border-l-2 twcss-border-r-2 twcss-border-r-white twcss-border-l-white">
+    {{ section.settings.textTwo }}
+  </div>
+  <div class="twcss-hidden lg:twcss-block twcss-w-1/3 twcss-text-white  twcss-text-text twcss-uppercase twcss-text-center">
+    {{ section.settings.textThree }}
+  </div>
 
 </div>
 
 
 {% schema %}
-{
-   "name": "Loumana CollectionBar",
-  "settings": [
-   {
-    "type": "text",
-    "id": "textOne",
-    "label": "Erster Text"
-   },
   {
-    "type": "text",
-    "id": "textTwo",
-    "label": "Zweiter Text"
-  },
-  {
-    "type": "text",
-    "id": "textThree",
-    "label": "Dritter Text"
-  }
-  ],
- "presets": [
-    {
+    "name": "Loumana CollectionBar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "textOne",
+        "label": "Erster Text"
+      }, {
+        "type": "text",
+        "id": "textTwo",
+        "label": "Zweiter Text"
+      }, {
+        "type": "text",
+        "id": "textThree",
+        "label": "Dritter Text"
+      }
+    ],
+    "presets": [
+      {
         "category": "header",
-        "name":"Loumana CollectionBar"
-    }
- ]
-}
+        "name": "Loumana CollectionBar"
+      }
+    ]
+  }
 {% endschema %}
