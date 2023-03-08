@@ -4323,7 +4323,21 @@ ul.slick-dots {
 	text-align: left;
 	max-width: 100%;
 }
-
+.as-button::after, .customer button::after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	position: absolute;
+	top: 18px;
+	right: 25px;
+	display: block;
+	transform: rotate(-135deg);
+}
+.as-button.big-button::after, .customer form button.big-button::after {
+	top: 22px;
+}
 
 /* End blogpage */
 @media (max-width:990px){
