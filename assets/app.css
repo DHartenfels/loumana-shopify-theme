@@ -4308,7 +4308,7 @@ ul.slick-dots {
 	color: rgba(18, 18, 18, 0.75);
 }
 .as-button, .customer button {
-	background-color: #acc5c7;
+	background-color: #698e92;
 	color: #fff;
 	border-radius: 28px;
 	min-width: 214px;
@@ -4319,7 +4319,7 @@ ul.slick-dots {
 	padding: 14px 38px 14px 24px;
 	box-sizing: border-box;
 	position: relative;
-	border: 2px solid #acc5c7;
+	border: 2px solid #698e92;
 	cursor: pointer;
 	text-align: left;
 	max-width: 100%;
