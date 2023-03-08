@@ -3865,7 +3865,7 @@ progress {
 	display: block;
 }
 #product-images-carousel-thumbnails .slick-current .product-image::after{
-	border: 2px solid #00235f;
+	border: 2px solid rgba(18, 18, 18, 0.75);
 }
 #product-images-carousel-thumbnails .slick-slide{
 	padding: 0 8px;
@@ -4027,7 +4027,7 @@ ul.slick-dots {
 	cursor: pointer;
 	font-size: 15px;
 	line-height: 1.6;
-	color: #00235f;
+	color: rgba(18, 18, 18, 0.75);
 	font-weight: 700;
 	padding-bottom: 25px;
 	border-bottom: 2px solid transparent;
@@ -4037,7 +4037,7 @@ ul.slick-dots {
 	position: relative;
 }
 .blog-module-filters ul li.active{
-	border-color: #00235f;
+	border-color: rgba(18, 18, 18, 0.75);
 }
 .as-product-list.small_product_list {
 	gap: 12px;
@@ -4101,7 +4101,7 @@ ul.slick-dots {
 	min-width: 80px;
 	padding: 11px 12px;
 	background-color: transparent;
-	color: #00235f;
+	color: rgba(18, 18, 18, 0.75);
 	text-align: center;
 }
 .as-button.paginate-button::after{
@@ -4132,7 +4132,7 @@ ul.slick-dots {
 	font-size: 13px;
 	font-weight: 700;
 	text-align: center;
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 	margin: 0 12px;
 	vertical-align: middle;
 	cursor: pointer;
@@ -4175,8 +4175,8 @@ ul.slick-dots {
 	height: 40px;
 	margin: 0;
 	border-radius: 50%;
-	border: 3px solid #00235F;
-	border-color: #00235F transparent #00235F transparent;
+	border: 3px solid rgba(18, 18, 18, 0.75);
+	border-color: rgba(18, 18, 18, 0.75) transparent rgba(18, 18, 18, 0.75) transparent;
 	animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -4216,7 +4216,7 @@ ul.slick-dots {
 .post_content h6 {
 	font-size: 24px;
 	line-height: 1.33;
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 	font-weight: 700;
 	margin: 0 0 16px 0;
 }
@@ -4234,14 +4234,14 @@ ul.slick-dots {
 }
 .post_content p {
 	font-size: 16px;
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 	line-height: 1.5;
 	margin: 0 0 16px;
 	letter-spacing: 0;
 }
 .post_content li{
 	font-size: 16px;
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 	line-height: 1.5;
 	letter-spacing: 0;
 }
@@ -4289,7 +4289,7 @@ ul.slick-dots {
 	line-height: 1;
 }
 .post_title {
-	color: #00235f;
+	color: rgba(18, 18, 18, 0.75);
 	font-size: 24px;
 	line-height: 1.33;
 	margin-bottom: 16px;
@@ -4297,14 +4297,14 @@ ul.slick-dots {
 	padding-right: 5px;
 }
 .post_excerpt {
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0;
 	margin-bottom: 24px;
 }
 .blogpost-item-content .as-button.text-button {
-	color: #00235F;
+	color: rgba(18, 18, 18, 0.75);
 }
 .as-button, .customer button {
 	background-color: #acc5c7;
