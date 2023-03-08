@@ -30,7 +30,7 @@
             <div class="twcss-w-full twcss-min-h-[208px] twcss-bg-contain twcss-bg-center twcss-bg-no-repeat twcss-rounded-[20px]" style="background-image: url({{ recommendation.featured_image  | img_url: 'master' }}) ;">
             </div>
             <div class="twcss-mt-5">
-              <h3 class="twcss-font-noto twcss-uppercase twcss-font-semibold twcss-text-subline twcss-mt-10 twcss-mb-10 twcss-text-[24px]">{{recommendation.title}} </h3>
+              <h3 class="twcss-font-noto twcss-uppercase twcss-font-semibold  twcss-mt-10 twcss-mb-10 twcss-text-[24px]">{{recommendation.title}} </h3>
               {% comment %}}<p class="twcss-font-noto twcss-font-light twcss-text-text"> {{recommendation.description}} </p> {% endcomment %}
               <div class="twcss-flex twcss-flex-row twcss-justify-between twcss-align-center ">
                 <a href="{{recommendation.url}}" class="mainButton twcss-uppercase"> Mehr dazu </a> <span class="twcss-font-inco lg:twcss-leading-[88px] twcss-leading-[91px]">{{ recommendation.price |  money }}</span>
