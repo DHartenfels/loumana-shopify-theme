@@ -4072,6 +4072,9 @@ ul.slick-dots {
 	background-size: contain;
 	display: none !important;
 }
+.blog-featured-post {
+	margin-bottom: 48px;
+}
 .as-button.big-button,
 .customer button.big-button {
 	padding: 18px 38px 18px 24px;
