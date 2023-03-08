@@ -1,0 +1,74 @@
+<div class="as-article-content-module">
+
+  <div class="as-single-article-image lazy-background" data-bg="{{ article.image.src | img_url: 'master', scale: 2 }}">
+    <div class="container">{% include 'as-breadcrumbs' %}</div>
+  </div>
+
+  <div class="as-article-content-container">
+    <div>
+
+      <div class="post_date">{{ article.published_at | date: "%b %d, %Y" }}</div>
+
+      <h1 class="post_title">{{ article.title }}</h1>
+
+      <div class="post_content">
+        {{ article.content }}</div>
+
+      {% assign full_url = request.host | append: request.path | prepend: 'https://' %}
+
+      <div class="post_share">
+        <div class="inner_post_share">
+
+          <div class="share-links-title">Teilen</div>
+          <ul class="share-links-list">
+
+            <li>
+              <a
+                title="Facebook Share"
+                href="https://www.facebook.com/sharer/sharer.php?u={{ full_url }}"
+                target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                title="Twitter Share"
+                href="http://twitter.com/share?text={{article.title}}&url={{ full_url }}"
+                target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                title="Pinterest Share"
+                href="https://pinterest.com/pin/create/button/?url={{ full_url }}&media={{ article.image.src | img_url: 'master', scale: 2 }}&description={{article.title}}"
+                target="_blank">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+{% schema %}
+  {
+    "name": "AS - Blog Article content",
+    "class": "as-article-content-section",
+    "settings": [],
+    "presets": [
+      {
+        "name": "AS - Blog Article content",
+        "category": "Artesian spas"
+      }
+    ]
+  }
+{% endschema %}
