@@ -51,3 +51,42 @@ jQuery(document).ready(function(){
         console.log('redirect now'); 
     });*/
 });
+
+function check_if_in_view_OneWay() {
+
+    var lazy_elements = jQuery('.lazy-background,.lazy-image');
+    var window_height = jQuery(window).height();
+    var window_top_position = jQuery(window).scrollTop();
+    var halfscreen =  (window_height / 2);
+
+    if(jQuery(window).width() < 768 ){
+        var top_extra = 10; 
+    }else{    
+        var top_extra = 300; 
+    }
+
+    var window_bottom_position = window_top_position + window_height + top_extra;
+
+    jQuery.each(lazy_elements, function() {
+        var element = jQuery(this);
+        var element_height = element.outerHeight();
+        var element_top_position = element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+        if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+            
+            if(element.hasClass('lazy-image')){
+            
+            var img = element.attr('data-src');
+            element.attr('src',img);
+            
+            }else{
+            
+            var bg = element.attr('data-bg');
+            element.css('background-image','url('+bg+')');
+            
+            }
+            
+        }
+    });
+  
+}
