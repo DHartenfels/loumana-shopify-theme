@@ -119,7 +119,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/festes-grapefruit-shampoo-mellow-hair-favoriten-loumana.jpg",
-            "heading": "<p class=\"twcss-font-extrabold twcss-font-noto twcss-text-[20px]\">Festes Shampoo: Grapefruit<\/p>",
+            "heading": "<p class=\"twcss-font-extrabold  twcss-text-[20px]\">Festes Shampoo: Grapefruit<\/p>",
             "buttonurl": "https:\/\/loumana.de\/products\/festes-shampoo-pampelmousse",
             "textOne": "With Grapefruit comes great responsibility. Deswegen bin ich gut für deine Kopfhaut, dein Haar UND die Umwelt! Alles an mir ist plastik-, silikon- und parabenfrei."
           }
@@ -128,7 +128,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/feste-rosen-spuelung-smooth-hair-favoriten-loumana.jpg",
-            "heading": "<p class=\"twcss-font-extrabold twcss-font-noto twcss-text-[20px]\">Feste Spülung: Rose<\/p>",
+            "heading": "<p class=\"twcss-font-extrabold  twcss-text-[20px]\">Feste Spülung: Rose<\/p>",
             "buttonurl": "https:\/\/loumana.de\/products\/fester-conditioner-wild-rose",
             "textOne": "Rosen sind rot, Veilchen sind blau, ich schütze dein Haar, das weiß ich genau. Mein Rosenduft macht dein Haarpflegeprogramm zu einem intensiven Erlebnis!"
           }
@@ -137,7 +137,7 @@
           "type": "text",
           "settings": {
             "iconOne": "shopify:\/\/shop_images\/limetten-badekugel-energy-favoriten-loumana.jpg",
-            "heading": "<p class=\"twcss-font-extrabold twcss-font-noto twcss-text-[20px]\">Limetten Badekugel: Energy<\/p>",
+            "heading": "<p class=\"twcss-font-extrabold  twcss-text-[20px]\">Limetten Badekugel: Energy<\/p>",
             "buttonurl": "https:\/\/loumana.de\/products\/loumana-energy",
             "textOne": "Sauer macht nicht nur lustig, sondern auch wach! Mit meinem belebenden Charakter bin ich genau richtig, um deinem müden Körper den richtigen Kick zu geben"
           }
