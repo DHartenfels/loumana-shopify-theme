@@ -4223,6 +4223,7 @@ ul.slick-dots {
 	color: rgba(18, 18, 18, 0.75);
 	font-weight: 700;
 	margin: 0 0 16px 0;
+  font-family: "Noto Sans", sans-serif !important;
 }
 .post_content h2{
 	font-size: 28px;
