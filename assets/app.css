@@ -4261,6 +4261,53 @@ ul.slick-dots {
 .post_content {
 	margin-bottom: 45px;
 }
+.as-blogpost-item {
+	width: calc(50% - 6px);
+	display: block;
+	background-color: #fff;
+}
+.blogpost-image {
+	display: block;
+	width: 100%;
+	height: 24vw;
+	background-size: cover;
+	background-position: center center;
+	max-height: 444px;
+	position: relative;
+}
+.blogpost-item-content {
+	padding: 48px;
+}
+.post_date {
+	font-size: 12px;
+	line-height: 1.33;
+	margin-bottom: 16px;
+	color: #313338;
+}
+.post_title a{
+	color: inherit;
+	line-height: 1;
+}
+.post_title {
+	color: #00235f;
+	font-size: 24px;
+	line-height: 1.33;
+	margin-bottom: 16px;
+	font-weight: 700;
+	padding-right: 5px;
+}
+.post_excerpt {
+	color: #00235F;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0;
+	margin-bottom: 24px;
+}
+.blogpost-item-content .as-button.text-button {
+	color: #00235F;
+}
+
+
 /* End blogpage */
 @media (max-width:990px){
   .center--heading { position: static;   width: 100%;   margin-top: 65px; margin-left: 0; left: 0; font-size: 24px !important;  padding-left: 20px;   padding-right: 20px; }
