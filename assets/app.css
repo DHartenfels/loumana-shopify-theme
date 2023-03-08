@@ -4088,7 +4088,7 @@ ul.slick-dots {
 	flex-flow: wrap;
 }
 .blog-module-list-items {
-	padding-top: 48px;
+	padding-top: 0;
 }
 .as-blog-pagination {
 	padding-top: 48px;
