@@ -4391,6 +4391,10 @@ ul.slick-dots {
 .share-links-list li a{
 	color: #698e92;
 }
+.share-links-list svg {
+	width: 30px !important;
+	height: 30px;
+}
 
 /* End blogpage */
 @media (max-width:990px){
