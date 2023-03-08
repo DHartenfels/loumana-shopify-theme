@@ -58,7 +58,7 @@
       "type": "loumana-fiftyfiftyHero",
       "settings": {
         "subHeading": "",
-        "heading": "<h2 class=\"twcss-font-noto  twcss-font-extrabold\">Pascal Brodersen - Founder &amp; CEO<\/h2>",
+        "heading": "<h2 class=\"twcss-font-noto  twcss-font-extrabold twcss-text-[28px] \">Pascal Brodersen - Founder &amp; CEO<\/h2>",
         "text": "<p>Ich bin quasi schon seit ich denken kann im Einzelhandel tätig. Mit dieser Erfahrung wollte ich schon immer ein Produkt erschaffen, das nicht nur qualitativ gut ist, sondern auch etwas Gutes für die Umwelt tut. Als ich Loumana gegründet habe war mein erstes Ziel: Pflege ohne Plastik. <br>Aus diesem Ziel ist nun ein “waschechtes” Unternehmen geworden mit tollen natürlichen Produkten.<br>Ich bin gespannt, wohin die Reise noch geht und freue mich über jeden, der uns auf unserem Weg begleitet!<\/p>",
         "imageHero": "shopify:\/\/shop_images\/Image.jpg"
       }
