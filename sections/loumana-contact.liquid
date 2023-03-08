@@ -1,92 +1,100 @@
 <div class="twcss-max-w-lg lg:twcss-max-w-[var(--page-width)] twcss-m-auto twcss-flex  twcss-flex-col lg:twcss-flex-row twcss-justify-between twcss-mb-6">
-    <div class="lg:twcss-max-w-lg twcss-flex twcss-flex-col twcss-content-around">
-        <h3 class="twcss-font-noto twcss-font-extrabold twcss-mb-3 twcss-text-[24px]">{{ section.settings.heading }}</h3>
-        <p class="twcss-font-noto twcss-font-light twcss-text-text twcss-mb-10">
-            {{ section.settings.textarea }}</p>
+  <div class="lg:twcss-max-w-lg twcss-flex twcss-flex-col twcss-content-around">
+    <h3 class="twcss-font-noto twcss-font-extrabold twcss-mb-3 twcss-text-[24px]">{{ section.settings.heading }}</h3>
+    <p class=" twcss-font-light twcss-text-text twcss-mb-10">
+      {{ section.settings.textarea }}</p>
 
-        <p class="twcss-font-noto twcss-text-text twcss-font-semibold twcss-leading-5 twcss-text-black">Kontakt</p>
-        <p class="twcss-font-noto twcss-text-text twcss-font-light twcss-mt-3">
-            Telefon:
-            <a href="tel:{{ section.settings.phone }}">
-                {{ section.settings.phone }}</a>
-        </p>
+    <p class=" twcss-text-text twcss-font-semibold twcss-leading-5 twcss-text-black">Kontakt</p>
+    <p class=" twcss-text-text twcss-font-light twcss-mt-3">
+      Telefon:
+      <a href="tel:{{ section.settings.phone }}">
+        {{ section.settings.phone }}</a>
+    </p>
 
-        <p class="twcss-font-noto twcss-text-text twcss-font-light twcss-mb-10">
-            E-Mail:
-            <a href="mailto:{{ section.settings.mail }}">{{ section.settings.mail }}</a>
-        </p>
-    </div>
+    <p class=" twcss-text-text twcss-font-light twcss-mb-10">
+      E-Mail:
+      <a href="mailto:{{ section.settings.mail }}">{{ section.settings.mail }}</a>
+    </p>
+  </div>
 
-    <div class=" twcss-grid lg:twcss-gap-4 twcss-grid-cols-1 twcss-grid-rows-3 lg:twcss-grid-cols-3 lg:twcss-grid-rows-1 lg:twcss-max-w-none lg:twcss-items-end twcss-mb-7">
-        {% for block in section.blocks %}
-            <div class="lg:twcss-flex lg:twcss-flex-col twcss-mb-7">
-                <a href="{{ block.settings.url }}" > <img alt="{{ block.settings.linkText }}" src="{{ block.settings.cardImage | image_url }}" width="auto" height="auto" loading="lazy" class=" twcss-aspect-video lg:twcss-aspect-square twcss-rounded-xl twcss-shadow-sm twcss-mb-4"/></a>
-                <a href="{{ block.settings.url }}" class="twcss-text-[12px] twcss-font-light twcss-font-noto twcss-flex twcss-flex-row">
-                    {{ block.settings.linkText }}
-                    <img src="{{ 'Arrow.svg' | asset_url }}" alt="Arrow Right" loading="lazy" width="auto" height="auto" class="twcss-ml-1">
-                    <div class="twcss-hidden lg:twcss-flex-row-reverse"></div>
-                </a>
-            </div>
-        {% endfor %}
+  <div class=" twcss-grid lg:twcss-gap-4 twcss-grid-cols-1 twcss-grid-rows-3 lg:twcss-grid-cols-3 lg:twcss-grid-rows-1 lg:twcss-max-w-none lg:twcss-items-end twcss-mb-7">
+    {% for block in section.blocks %}
+      <div class="lg:twcss-flex lg:twcss-flex-col twcss-mb-7">
+        <a href="{{ block.settings.url }}">
+          <img
+            alt="{{ block.settings.linkText }}"
+            src="{{ block.settings.cardImage | image_url }}"
+            width="auto"
+            height="auto"
+            loading="lazy"
+            class=" twcss-aspect-video lg:twcss-aspect-square twcss-rounded-xl twcss-shadow-sm twcss-mb-4" /></a>
+        <a href="{{ block.settings.url }}" class="twcss-text-[12px] twcss-font-light twcss-font-noto twcss-flex twcss-flex-row">
+          {{ block.settings.linkText }}
+          <img
+            src="{{ 'Arrow.svg' | asset_url }}"
+            alt="Arrow Right"
+            loading="lazy"
+            width="auto"
+            height="auto"
+            class="twcss-ml-1">
+          <div class="twcss-hidden lg:twcss-flex-row-reverse"></div>
+        </a>
+      </div>
+    {% endfor %}
 
-    </div>
+  </div>
 </div>
 
 
 {% schema %}
-{
-   "name": "Loumana Kontakt",
-   "tag": "section",
-  "settings": [
-    {
+  {
+    "name": "Loumana Kontakt",
+    "tag": "section",
+    "settings": [
+      {
         "type": "text",
         "id": "heading",
         "label": "Überschrift"
-    },
-    {
+      }, {
         "type": "textarea",
         "id": "textarea",
         "label": "Fließtext"
-    },
-    {
+      }, {
         "type": "text",
         "id": "phone",
         "label": "Telefonnummer"
-    },
-    {
+      }, {
         "type": "text",
         "id": "mail",
         "label": "E-Mail Adresse"
-    }
-  ],
+      }
+    ],
     "blocks": [
-        {
-            "name": "Linkkarte",
-            "type": "image",
-           "settings": [
-           {
+      {
+        "name": "Linkkarte",
+        "type": "image",
+        "settings": [
+          {
             "type": "image_picker",
             "id": "cardImage",
             "label": "Kartenbild"
-           },
-          {
+          }, {
             "type": "url",
             "id": "url",
             "label": "Linkziel"
-          },
-         {
+          }, {
             "type": "text",
             "id": "linkText",
             "label": "Linktext"
-         }
-           ]
-        }
+          }
+        ]
+      }
     ],
- "presets": [
-    {
-        
-        "name":"Loumana Kontakt"
-    }
- ]
-}
+    "presets": [
+      {
+
+        "name": "Loumana Kontakt"
+      }
+    ]
+  }
 {% endschema %}
