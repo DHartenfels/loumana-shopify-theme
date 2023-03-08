@@ -4225,13 +4225,16 @@ ul.slick-dots {
 	margin: 0 0 16px 0;
 }
 .post_content h2{
-	font-size: 26px;
+	font-size: 28px;
+}
+.post_content h3{
+	font-size: 24px;
 }
 .post_content h4{
-	font-size: 22px;
+	font-size: 20px;
 }
 .post_content h5{
-	font-size: 20px;
+	font-size: 19px;
 }
 .post_content h6{
 	font-size: 18px;
