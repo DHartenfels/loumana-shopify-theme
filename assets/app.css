@@ -4338,6 +4338,12 @@ ul.slick-dots {
 .as-button.big-button::after, .customer form button.big-button::after {
 	top: 22px;
 }
+.as-button.text-button, button.text-button {
+	padding: 0 0 10px;
+	min-width: auto;
+	background-color: transparent;
+	border: 0;
+}
 
 /* End blogpage */
 @media (max-width:990px){
