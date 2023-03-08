@@ -1,51 +1,56 @@
 <div class="twcss-relative">
-    <img src="{{ 'Faqlinks.svg' | asset_url}}" class="twcss-absolute twcss-left-0 twcss-top-0 twcss-max-w-[200px] -twcss-z-10" alt="">
-    <img src="{{ 'faqrechts.svg' | asset_url}}" class="twcss-absolute twcss-bottom-36 twcss-right-0" alt="">
-    <div class="twcss-flex lg:twcss-h-[40vh] lg:twcss-flex-row twcss-flex-col twcss-max-w-lg twcss-m-auto twcss-mt-40 twcss-border-b lg:twcss-max-w-[var(--page-width)] twcss-border-[#ACC5C7] twcss-pb-10">
-        <div class="twcss-flex twcss-flex-col lg:twcss-w-1/2 lg:twcss-inline-block">
-            <p class="twcss-font-inco twcss-font-light twcss-text-text twcss-uppercase twcss-mb-5">{{ section.settings.subheading }}</p>
-            <h1 class="twcss-font-noto twcss-font-extrabold twcss-text-[34px] lg:twcss-text-[48px] twcss-uppercase">{{ section.settings.heading }}</h1>
-        </div>
-        <div class="twcss-mt-10 lg:twcss-w-1/2 lg:twcss-inline-block">
-            <p class=" twcss-font-noto twcss-font-light twcss-text-text twcss-z-50 lg:twcss-max-w-xl"> {{ section.settings.btnheading}} </p>
-            <a href="mailto:info@loumana.de" class="mainButton twcss-max-w-[300px]">Nachricht schreiben</a>
-        </div>
+  <img
+    src="{{ 'Faqlinks.svg' | asset_url}}"
+    class="twcss-absolute twcss-left-0 twcss-top-0 twcss-max-w-[200px] -twcss-z-10"
+    alt="">
+  <img
+    src="{{ 'faqrechts.svg' | asset_url}}"
+    class="twcss-absolute twcss-bottom-36 twcss-right-0"
+    alt="">
+  <div class="twcss-flex lg:twcss-h-[40vh] lg:twcss-flex-row twcss-flex-col twcss-max-w-lg twcss-m-auto twcss-mt-40 twcss-border-b lg:twcss-max-w-[var(--page-width)] twcss-border-[#ACC5C7] twcss-pb-10">
+    <div class="twcss-flex twcss-flex-col lg:twcss-w-1/2 lg:twcss-inline-block">
+      <p class="twcss-font-inco twcss-font-light twcss-text-text twcss-uppercase twcss-mb-5">{{ section.settings.subheading }}</p>
+      <h1 class="twcss-font-noto twcss-font-extrabold twcss-text-[34px] lg:twcss-text-[48px] twcss-uppercase">{{ section.settings.heading }}</h1>
     </div>
+    <div class="twcss-mt-10 lg:twcss-w-1/2 lg:twcss-inline-block">
+      <p class="  twcss-font-light twcss-text-text twcss-z-50 lg:twcss-max-w-xl">
+        {{ section.settings.btnheading }}
+      </p>
+      <a href="mailto:info@loumana.de" class="mainButton twcss-max-w-[300px]">Nachricht schreiben</a>
+    </div>
+  </div>
 </div>
 
 
 {% schema %}
-{
-   "name": "FAQ Header",
-  "settings": [
-   {
-    "type": "text",
-    "id": "subheading",
-    "label": "Subheading",
-    "placeholder": "Hilfe/Faq"
-   },
   {
-    "type": "text",
-    "id": "heading",
-    "label": "Überschrift",
-    "placeholder": "Fragen zu uns oder unseren Produkten?"
-  },
- {
-    "type": "text",
-    "id": "btnheading",
-    "label": "Kontakttext",
-    "placeholder": "Du findest deine Frage nicht in der Liste? Schreib uns gerne eine Nachricht"
- },
-   {
-    "type": "url",
-    "id": "btnURl",
-    "label": "Button Ziel"
-   }
-  ],
- "presets": [
-    {     
-        "name":"FAQ Header"
-    }
- ]
-}
+    "name": "FAQ Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "placeholder": "Hilfe/Faq"
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "Überschrift",
+        "placeholder": "Fragen zu uns oder unseren Produkten?"
+      }, {
+        "type": "text",
+        "id": "btnheading",
+        "label": "Kontakttext",
+        "placeholder": "Du findest deine Frage nicht in der Liste? Schreib uns gerne eine Nachricht"
+      }, {
+        "type": "url",
+        "id": "btnURl",
+        "label": "Button Ziel"
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Header"
+      }
+    ]
+  }
 {% endschema %}
