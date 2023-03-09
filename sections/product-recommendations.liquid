@@ -20,6 +20,8 @@
   }
 {%- endstyle -%}
 
+{% if product.metafields.related_products.related_products_ids == blank %}
+
 <div class="color-{{ section.settings.color_scheme }} gradient twcss-mb-20">
   <product-recommendations class="product-recommendations lg:twcss-max-w-[var(--page-width)]  twcss-max-w-[36rem] twcss-m-auto section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
     {% if recommendations.performed and recommendations.products_count > 0 %}
@@ -43,6 +45,11 @@
     {% endif %}
   </product-recommendations>
 </div>
+
+{% else %}
+
+{% endif %}
+
 
 {% javascript %}
   class ProductRecommendations extends HTMLElement {
@@ -79,6 +86,7 @@
 
   customElements.define('product-recommendations', ProductRecommendations);
 {% endjavascript %}
+
 
 {% schema %}
 {
