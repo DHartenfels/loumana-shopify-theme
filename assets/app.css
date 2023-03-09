@@ -4409,6 +4409,12 @@ ul.slick-dots {
 }
 @media (max-width:1240px){
   .blog-module-filters ul {  display: block;    text-align: left;    overflow: auto;    white-space: nowrap;  }
+  .as-blogpost-item.item_collection_featured .blogpost-image {   height: auto;    max-height: none;  }
+  .as-single-article-image {max-height: 35vw;}
+	.as-article-content-container {padding-top: 24px;padding-bottom: 48px;}
+	.post_content {margin-bottom: 32px;}
+	.share-links-list li {line-height: 1;}
+	.post_content img {margin: 32px 0;}
 }
 @media (max-width:990px){
   .center--heading { position: static;   width: 100%;   margin-top: 65px; margin-left: 0; left: 0; font-size: 24px !important;  padding-left: 20px;   padding-right: 20px; }
@@ -4417,4 +4423,23 @@ ul.slick-dots {
 @media (max-width:767px){
   .center--heading{margin-top:120px;}
   .shopify-policy__title h1{font-size:40px;}
+  .blog-featured-post {margin-left: -3vw;margin-right: -3vw;}
+	.as-blogpost-item.item_collection_featured .blogpost-item-content {width: 100%;display: block;}
+	.as-blogpost-item.item_collection_featured {width: 100%;display: block;}
+	.as-blogpost-item.item_collection_featured .blogpost-image {height: 45vw;}
+	.as-blogpost-item.item_collection_featured .blogpost-item-content {padding: 24px 3%;position: static;}
+	.as-blogpost-item.item_collection_featured .as-button.big-button {padding: 15px 38px 15px 24px;	min-width: 192px;}
+  .blogpost-item-content {padding: 24px 16px;}
+	.as-blogpost-item .blogpost-item-content {padding: 24px 16px;}
+	.as-blogpost-item .post_excerpt {font-size: 14px;margin-bottom: 12px;}
+	.as-blog-pagination-inner ol {margin: 0;padding: 0 5px;}
+	.as-paginate-numbers li {margin: 0 7px;}
+}
+
+@media (max-width:479px){
+  .as-blogpost-item.item_collection_featured .blogpost-image {height: 67vw;}
+	.blogpost-image {height: 60vw;}
+	.as-paginate-numbers li {width: 30px;line-height: 26px;font-size: 11px;margin: 0 2px;}
+	.as-button.paginate-button {font-size: 11px;width: auto;min-width: auto;padding: 7px 10px;background-color: transparent;color: #00235f;text-align: center;}
+	.as-single-article-image {max-height: 67vw;}
 }
