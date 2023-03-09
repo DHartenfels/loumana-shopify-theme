@@ -47,6 +47,29 @@
 </div>
 
 {% else %}
+{% assign related_product_list = product.metafields.related_products.related_products_ids.value  %}
+
+<div class="color-{{ section.settings.color_scheme }} gradient twcss-mb-20">
+  <div class="product-recommendations lg:twcss-max-w-[var(--page-width)]  twcss-max-w-[36rem] twcss-m-auto section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+      <p class="product-recommendations__heading twcss-text-[28px] twcss-max-w-lg twcss-font-noto twcss-font-extrabold twcss-mb-10 twcss-m-auto lg:twcss-max-w-[var(--page-width)] twcss-text-center">{{ section.settings.heading | escape }}</p>
+      <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down twcss-max-w-lg twcss-m-auto lg:twcss-max-w-[var(--page-width)]" role="list">
+        {% for related_slug in related_product_list %}
+          <div class="twcss-w-full lg:twcss-w-[30%] twcss-inline-block lg:twcss-px-9 {% if forloop.first %} lg:twcss-pl-0 {% endif%} ">
+            <div class="twcss-w-full twcss-min-h-[208px] twcss-bg-contain twcss-bg-center twcss-bg-no-repeat twcss-rounded-[20px]" style="background-image: url({{ related_slug.featured_image | img_url: 'master' }}) ;">
+            </div>
+            <div class="twcss-mt-5">
+              <h3 class="twcss-font-noto twcss-uppercase twcss-font-semibold  twcss-mt-10 twcss-mb-10 twcss-text-[24px]">{{related_slug.title}} </h3>
+              {% comment %}}<p class="twcss-font-noto twcss-font-light twcss-text-text"> {{recommendation.description}} </p> {% endcomment %}
+              <div class="twcss-flex twcss-flex-row twcss-justify-between twcss-align-center ">
+                <a href="{{related_slug.url}}" class="mainButton twcss-uppercase"> Mehr dazu </a> <span class="twcss-font-inco lg:twcss-leading-[88px] twcss-leading-[91px]">{{ related_slug.price |  money }}</span>
+              </div>
+              
+            </div>
+          </div>
+        {% endfor %}
+      </ul>
+  </div>
+</div>
 
 {% endif %}
 
