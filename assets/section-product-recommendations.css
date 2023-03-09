@@ -9,5 +9,6 @@
 
 .product-recommendations__heading {
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  color:rgb(var(--color-foreground));
 }
