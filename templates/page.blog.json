@@ -11,8 +11,8 @@
     "07f59132-b9bb-420b-8b35-559678d5de84": {
       "type": "as-blog-module",
       "settings": {
-        "title": "Magazine",
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <\/p>",
+        "title": "Loumana-Blog – Tipps & iNfos rund um Naturkosmetik",
+        "description": "",
         "description_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor massa quis odio sagittis, sit amet aliquet tortor consequat. Nullam facilisis nisi orci, sed ultrices velit venenatis nec. Nunc mattis magna sit amet mollis molestie. Curabitur quis consectetur nunc, id pulvinar magna.",
         "posts_per_page": "5"
       }
