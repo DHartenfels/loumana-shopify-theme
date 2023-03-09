@@ -4402,6 +4402,10 @@ ul.slick-dots {
 	width: 30px !important;
 	height: 30px;
 }
+.product--extradetails *{
+  color:#fff;
+}
+
 
 /* End blogpage */
 @media (max-width:1380px){
