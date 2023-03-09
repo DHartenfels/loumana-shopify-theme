@@ -4409,6 +4409,7 @@ ul.slick-dots {
 }
 @media (max-width:1240px){
   .blog-module-filters ul {  display: block;    text-align: left;    overflow: auto;    white-space: nowrap;  }
+  .blog-module-filters ul li{margin-left:0;}
   .as-blogpost-item.item_collection_featured .blogpost-image {   height: auto;    max-height: none;  }
   .as-single-article-image {max-height: 35vw;}
 	.as-article-content-container {padding-top: 24px;padding-bottom: 48px;}
