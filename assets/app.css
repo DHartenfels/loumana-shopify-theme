@@ -4410,6 +4410,10 @@ ul.slick-dots {
 	margin-left: auto;
 	margin-right: auto;
 }
+.jdgm-rev-widg{
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
 
 /* End blogpage */
 @media (max-width:1380px){
