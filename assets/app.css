@@ -4434,6 +4434,7 @@ ul.slick-dots {
 	.as-blogpost-item .post_excerpt {font-size: 14px;margin-bottom: 12px;}
 	.as-blog-pagination-inner ol {margin: 0;padding: 0 5px;}
 	.as-paginate-numbers li {margin: 0 7px;}
+  .as-blogpost-item {  width: 100%;  }
 }
 
 @media (max-width:479px){
