@@ -4439,6 +4439,8 @@ ul.slick-dots {
 	.as-paginate-numbers li {margin: 0 7px;}
   .as-blogpost-item {  width: 100%;  }
   .as-blog-pagination{padding-bottom:30px;}
+  .as-blogposts-list {flex-direction: column;  row-gap: 20px;  }
+  .collection-blogposts-list {  padding-bottom: 40px;    padding-top: 40px;  }
 }
 
 @media (max-width:479px){
