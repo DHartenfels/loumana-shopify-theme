@@ -1,0 +1,167 @@
+<div class="best-sellers-module {% if section.settings.show_product_prices %}{{" show_product_prices" }}{% endif %}">
+    <div class="container">
+  
+      <div class="best-sellers-top clearfix">
+  
+        <div class="best-sellers-column">
+  
+          {% if section.settings.title != blank %}
+            {% if template contains 'product' %}
+              <p class="h2">{{ section.settings.title }}</p>
+            {% else %}
+              <h2>{{ section.settings.title }}</h2>
+            {% endif %}
+          {% endif %}
+  
+          {% if section.settings.mobile_description != blank %}
+            <div class="description mobile_description" style="display: none;">{{ section.settings.mobile_description }}</div>
+          {% endif %}
+  
+        </div>
+  
+        <div class="best-sellers-column">
+  
+          <div class="button-container">
+            {% if section.settings.section_button_url_1 and section.settings.section_button_1 %}
+              <a class="as-button text-button" href="{{section.settings.section_button_url_1}}" target="{{section.settings.button_target_1}}">
+                <span>{{section.settings.section_button_1}}</span>
+              </a>
+            {% endif %}
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="best-sellers-product-list clearfix">
+  
+        {% if template == 'product' or article.metafields.related_products.related_products_ids != blank  %}
+          <span style="display:none">hidden</span>
+          <ul class="as-product-list small_product_list">
+  
+            {% if product.metafields.related_products.related_products_ids == blank and article.metafields.related_products.related_products_ids == blank %}
+  
+              {% assign current_product = product %}
+              {% for product_new in collections.all.products %}
+                {% unless product_new.handle == current_product.handle %}
+                  {% unless same_vendor and current_product.vendor != product_new.vendor %}
+                    {% unless same_type and current_product.type != product_new.type %}
+                      {% render 'as-product-item-design', product: product_new, class: "", button_class:"big-button" %}
+                      {% assign counter = counter | plus: 1 %}
+                      {% if counter == 4 %}
+                        {% break %}
+                      {% endif %}
+                    {% endunless %}
+                  {% endunless %}
+                {% endunless %}
+              {% endfor %}
+  
+            {% else %}
+  
+              {% assign related_product_list = product.metafields.related_products.related_products_ids.value  %}
+              {% if template == 'article' %}
+                {% assign related_product_list = article.metafields.related_products.related_products_ids.value  %}
+              {% endif %}
+  
+              {% for related_slug in related_product_list %}
+  
+                {% render 'as-product-item-design', product: related_slug, class: "", button_class:"big-button" %}
+  
+              {% endfor %}
+  
+            {% endif %}
+  
+          </ul>
+  
+        {% else %}
+  
+          <ul class="as-product-list {% if section.blocks.size == 4 %}small_product_list{% endif %}">
+            {% for block in section.blocks %}
+              {% assign product_handle = block.settings['product-handle'] %}
+              {% assign selected_product = all_products[product_handle] %}
+              {% render 'as-product-item-design', product: selected_product, class: "", button_class:"big-button" %}
+            {% endfor %}
+          </ul>
+  
+        {% endif %}
+  
+      </div>
+  
+    </div>
+  </div>
+  
+  {% schema %}
+    {
+      "name": "AS - Best Sellers",
+      "max_blocks": 4,
+      "class": "best-sellers-section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "mobile_description",
+          "label": "Mobile description"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "section_button_1",
+          "label": "Button text"
+        }, {
+          "type": "url",
+          "id": "section_button_url_1",
+          "label": "Button URL"
+        }, {
+          "type": "select",
+          "id": "button_target_1",
+          "label": "Button target",
+          "options": [
+            {
+              "value": "_self",
+              "label": "Same window"
+            }, {
+              "value": "_blank",
+              "label": "New tab"
+            }
+          ],
+          "default": "_self"
+        }, {
+          "type": "checkbox",
+          "id": "show_product_prices",
+          "default": false,
+          "label": "Show Product Prices"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "select",
+          "name": "Add Product",
+          "settings": [
+            {
+              "type": "product",
+              "id": "product-handle",
+              "label": "Select Product"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "AS - Best Sellers",
+          "category": "Artesian spas",
+          "blocks": [
+            {
+              "type": "select"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
