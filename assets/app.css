@@ -4441,6 +4441,6 @@ ul.slick-dots {
   .as-blogpost-item.item_collection_featured .blogpost-image {height: 67vw;}
 	.blogpost-image {height: 60vw;}
 	.as-paginate-numbers li {width: 30px;line-height: 26px;font-size: 11px;margin: 0 2px;}
-	.as-button.paginate-button {font-size: 11px;width: auto;min-width: auto;padding: 7px 10px;background-color: transparent;color: #00235f;text-align: center;}
+	.as-button.paginate-button {font-size: 11px;width: auto;min-width: auto;padding: 7px 10px;background-color: transparent;text-align: center;}
 	.as-single-article-image {max-height: 67vw;}
 }
