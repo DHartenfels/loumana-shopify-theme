@@ -149,6 +149,37 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                     
                       <product-form>
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+
+                        <div style="display:none;">
+
+                        {%- unless product.has_only_default_variant -%}
+                        
+                          <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                            {%- for option in product.options_with_values -%}
+                                <fieldset class="js product-form__input">
+                                  <legend class="form__label">{{ option.name }}</legend>
+                                  {%- for value in option.values -%}
+                                    <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                          name="{{ option.name }}"
+                                          value="{{ value | escape }}"
+                                          form="{{ product_form_id }}"
+                                          {% if option.selected_value == value %}checked{% endif %}
+                                    >
+                                    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                      {{ value }}
+                                    </label>
+                                  {%- endfor -%}
+                                </fieldset>
+                            {%- endfor -%}
+                            <script type="application/json">
+                              {{ product.variants | json }}
+                            </script>
+                          </variant-radios>
+                        
+                      {%- endunless -%}
+
+                        </div>
+
                         <div class="twcss-flex twcss-justify-center">
                         <quantity-input class="quantity twcss-m-auto twcss-mr-auto twcss-ml-0  lg:twcss-max-w-none twcss-max-w-[35%]" style="min-height: 35px;  max-height: 40px;">
                             <button class="quantity__button no-js-hidden" name="minus" type="button" style="min-height: 35px;  max-height: 40px;">
