@@ -147,6 +147,32 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                 <div class="quick-add twcss-flex twcss-flex-col twcss-justify-between">
                     {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
                     variations here
+
+                    {%- unless product.has_only_default_variant -%}
+                      <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                        {%- for option in product.options_with_values -%}
+                            <fieldset class="js product-form__input">
+                              <legend class="form__label">{{ option.name }}</legend>
+                              {%- for value in option.values -%}
+                                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                      name="{{ option.name }}"
+                                      value="{{ value | escape }}"
+                                      form="{{ product_form_id }}"
+                                      {% if option.selected_value == value %}checked{% endif %}
+                                >
+                                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                  {{ value }}
+                                </label>
+                              {%- endfor -%}
+                            </fieldset>
+                        {%- endfor -%}
+                        <script type="application/json">
+                          {{ product.variants | json }}
+                        </script>
+                      </variant-radios>
+                  {%- endunless -%}
+
+
                       <product-form>
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                         <div class="twcss-flex twcss-justify-center">
