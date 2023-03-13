@@ -638,6 +638,8 @@ reviews here
   </script>
 </section>
 
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
+
 {% if product.metafields.custom.extra_details  != blank %}
 <div class="product--extradetails" style="">
   <div class="twcss-w-full twcss-bg-[#ACC5C7] twcss-py-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-rounded-3xl twcss-mb-28 twcss-mt-20">
@@ -1128,4 +1130,3 @@ reviews here
   ]
 }
 {% endschema %}
-{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
