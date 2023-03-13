@@ -136,6 +136,26 @@
                 {{ form | payment_terms }}
               {%- endform -%}
             </div>
+            
+            <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
+                    <img src="{{ 'truck.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Versand in 2-3 Werktagen
+                    </span>
+                </div>
+                <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-3">
+                    <img src="{{ 'rotate-left.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Kostenloser Rückversand
+                    </span>
+                </div>
+                <div class="twcss-flex twcss-flex-row twcss-items-center twcss-mb-5">
+                    <img src="{{ 'credit-card.svg' | asset_url }}" loading="eager" alt="" width="25" height="20">
+                    <span class="twcss-text-noto twcss-text-[12px] twcss-font-light twcss-ml-3">
+                        Einfache Bezahlung über PayPal oder Klarna
+                    </span>
+                </div>
+
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte quick-add-hidden">
