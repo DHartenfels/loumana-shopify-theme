@@ -4418,7 +4418,8 @@ ul.slick-dots {
   height:35px;
 }
 .variable--prod--addtocart{
-  width:100%;
+  width:100% !important;
+  color:#fff;
 }
 .var--prod--container{
   max-width:100% !important;
