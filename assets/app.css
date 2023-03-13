@@ -4417,7 +4417,9 @@ ul.slick-dots {
 .qty-variable{
   height:35px;
 }
-
+.variable--prod--addtocart{
+  width:100%;
+}
 
 /* End blogpage */
 @media (max-width:1380px){
