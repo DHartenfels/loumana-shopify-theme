@@ -273,7 +273,7 @@
                   <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                   {% render 'icon-minus' %}
                 </button>
-                <input class="quantity__input"
+                <input class="quantity__input qty-variable"
                     type="number"
                     name="quantity"
                     id="Quantity-{{ section.id }}"
