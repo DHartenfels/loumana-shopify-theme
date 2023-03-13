@@ -4414,6 +4414,10 @@ ul.slick-dots {
   padding-left:0 !important;
   padding-right:0 !important;
 }
+.qty-variable{
+  height:45px;
+}
+
 
 /* End blogpage */
 @media (max-width:1380px){
