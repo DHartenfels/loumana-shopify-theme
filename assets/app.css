@@ -4420,6 +4420,9 @@ ul.slick-dots {
 .variable--prod--addtocart{
   width:100%;
 }
+.var--prod--container{
+  max-width:100% !important;
+}
 
 /* End blogpage */
 @media (max-width:1380px){
