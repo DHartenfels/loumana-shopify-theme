@@ -4421,6 +4421,7 @@ ul.slick-dots {
   width:100% !important;
   color:#fff;
   background-color:#acc5c7;
+  margin-top:10px !important;
 }
 .var--prod--container{
   max-width:100% !important;
