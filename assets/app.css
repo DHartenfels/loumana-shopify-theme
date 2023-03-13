@@ -4426,6 +4426,11 @@ ul.slick-dots {
 .var--prod--container{
   max-width:100% !important;
 }
+.var--product-cont .price__container {
+	color: rgba(18, 18, 18, 0.75);
+	font-size: 20px;
+}
+
 
 /* End blogpage */
 @media (max-width:1380px){
