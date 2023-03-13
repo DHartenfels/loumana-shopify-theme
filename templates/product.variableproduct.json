@@ -184,7 +184,6 @@
     },
     "1658773272ec1e67e5": {
       "type": "loumana-fullColorBG",
-      "disabled": true,
       "blocks": {
         "cba8af64-b4ec-4101-adab-ba6ef31b2393": {
           "type": "image",
