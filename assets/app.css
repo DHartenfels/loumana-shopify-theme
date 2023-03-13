@@ -4423,8 +4423,8 @@ ul.slick-dots {
   background-color:#acc5c7;
   margin-top:10px !important;
 }
-.var--prod--container{
-  max-width:100% !important;
+.var--prod--container, .var--product-cont .product-form {
+  max-width:380px !important;
 }
 .var--product-cont .price__container {
 	color: rgba(18, 18, 18, 0.75);
