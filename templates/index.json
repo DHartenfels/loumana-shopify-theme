@@ -2,13 +2,14 @@
   "sections": {
     "1658767540cc609873": {
       "type": "loumana-video",
+      "disabled": true,
       "settings": {
       }
     },
     "165876750802a27207": {
       "type": "loumana-hero",
       "settings": {
-        "sectionheadline": "Nachhaltige Pflege mit Naturprodukten von Loumana",
+        "sectionheadline": "",
         "subline": "MADE TO CARE",
         "headline": "<h2 class=\"twcss-font-extrabold twcss-font-noto twcss-text-[28px] \">Pflege, die sich gewaschen hat<\/h2>",
         "textarea": "Tauche ein in die Welt von Loumana:\nEntdecke unser Sortiment an natürlichen und\nveganen Pflegeprodukten. Frei von jeglichem Schnickschnack, auch keine lästigen Plastikverpackungen, voll mit toll.\nHergestellt in Deutschland.",
