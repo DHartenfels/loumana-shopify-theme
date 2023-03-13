@@ -144,6 +144,7 @@
     },
     "1658771829ddd58c8a": {
       "type": "loumana-product-section-variable",
+      "disabled": true,
       "settings": {
         "extradetails": ""
       }
