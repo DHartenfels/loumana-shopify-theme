@@ -343,19 +343,17 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-
-                          <div style="display:none;">
                           {% assign option_image = nil %}
                           {% for variant in product.variants %}
                           {% if variant.title contains value %}
-                          {% assign option_image = variant.image %}
-                          {{variant.featured_media.id}}
+                          {% assign option_image = variant.featured_media.id %}
                           {% endif %}
                           {% endfor %}
-                         </div>
+                          <label class="variant--{{ option_image }}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                            {{ value }}
+                          </label>
+
+                          
 
                         {%- endfor -%}
                       </fieldset>
