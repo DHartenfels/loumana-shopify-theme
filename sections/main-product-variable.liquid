@@ -347,13 +347,15 @@
                             {{ value }}
                           </label>
 
+                          <div style="display:none;">
                           {% assign option_image = nil %}
                           {% for variant in product.variants %}
                           {% if variant.title contains value %}
                           {% assign option_image = variant.image %}
+                          {{variant | json}}
                           {% endif %}
                           {% endfor %}
-                          <div style="display:none;">{{option_image}}</div>
+                         </div>
 
                         {%- endfor -%}
                       </fieldset>
