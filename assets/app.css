@@ -3467,6 +3467,9 @@ progress {
   .lg\:twcss-max-w-4xl {
     max-width: 56rem !important;
   }
+  .lg\:twcss-max-w-6xl {
+    max-width: 70rem !important;
+  }
 
   .lg\:twcss-max-w-2xl {
     max-width: 42rem !important;
