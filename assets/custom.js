@@ -34,7 +34,6 @@ jQuery(document).ready(function(){
     $('#product-images-carousel-thumbnails').on('afterChange', function(event, slick, currentSlide, nextSlide){        
        var dataId = $(slick.$slides[currentSlide]).find('li').attr('mediaid');
        
-       console.log(dataId); 
        if($('.variant--'+dataId).length){
             $('.variant--'+dataId).trigger('click');
        }
