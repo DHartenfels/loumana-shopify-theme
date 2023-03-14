@@ -30,6 +30,11 @@ jQuery(document).ready(function(){
         }
     });
 
+    
+    $('#product-images-carousel-thumbnails').on('afterChange', function(event, slick, currentSlide, nextSlide){        
+       console.log('change now');
+    });
+
     if(jQuery('#product-images-carousel-thumbnails')){
         $('#product-images-carousel-thumbnails').slick({
             dots: false,
