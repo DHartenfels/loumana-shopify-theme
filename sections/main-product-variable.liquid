@@ -346,9 +346,10 @@
                           <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
+                          <Div style="display:none;">{{value|json}}</Div>
                         {%- endfor -%}
                       </fieldset>
-                      <Div style="display:none;">{{option|json}}</Div>
+                      
 
                   {%- endfor -%}
                   <script type="application/json">
