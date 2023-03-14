@@ -33,6 +33,7 @@ jQuery(document).ready(function(){
     
     $('#product-images-carousel-thumbnails').on('afterChange', function(event, slick, currentSlide, nextSlide){        
        console.log('change now');
+       console.log(event.currentTarget);
     });
 
     if(jQuery('#product-images-carousel-thumbnails')){
