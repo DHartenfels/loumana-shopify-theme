@@ -4448,6 +4448,9 @@ ul.slick-dots {
 	font-family: Noto Sans,sans-serif !important;
 	margin-bottom: 20px;
 }
+.product--extradetails p {
+	margin-bottom: 20px;
+}
 
 
 /* End blogpage */
