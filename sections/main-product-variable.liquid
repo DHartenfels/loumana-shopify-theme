@@ -638,7 +638,6 @@
   </script>
 </section>
 
-{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
 
 {% if product.metafields.custom.extra_details  != blank %}
 <div class="product--extradetails" style="">
@@ -649,6 +648,8 @@
   </div>
 </div>
 {% endif %}
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
 
 {% schema %}
 {
