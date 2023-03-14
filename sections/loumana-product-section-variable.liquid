@@ -89,7 +89,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
                 {%- endif -%}
                 {%- for media in product.media -%}
                   {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-                    <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}">
+                    <li id="Slide-{{ section.id }}-{{ media.id }}" class="" data-media-id="{{ section.id }}-{{ media.id }}" mediaid="{{ media.id }}">
                       {%- liquid
                         assign media_position = media_position | default: 0 | plus: 1
                         assign lazy_load = false
