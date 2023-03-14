@@ -4451,6 +4451,9 @@ ul.slick-dots {
 .product--extradetails p {
 	margin-bottom: 20px;
 }
+.prod--description strong {
+	font-weight: 600;
+}
 
 
 /* End blogpage */
