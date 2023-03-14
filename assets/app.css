@@ -3832,10 +3832,11 @@ progress {
 
 /* custom css */
 #product-images-carousel-thumbnails img {
-	max-width: initial;
-  height:100%;
-	object-fit: cover;
-	object-position: center;
+  max-width: initial;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  min-height: 100%;
 }
 .product-images-carousel-main {
 	margin-bottom: 24px;
