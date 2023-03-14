@@ -4430,6 +4430,24 @@ ul.slick-dots {
 	color: rgba(18, 18, 18, 0.75);
 	font-size: 20px;
 }
+.product--extradetails h2 {
+	font-size: 28px;
+	font-weight: 800;
+	font-family: Noto Sans,sans-serif !important;
+	margin-bottom: 20px;
+}
+.product--extradetails h3 {
+	font-size: 24px;
+	font-weight: 800;
+	font-family: Noto Sans,sans-serif !important;
+	margin-bottom: 20px;
+}
+.product--extradetails h4 {
+	font-size: 20px;
+	font-weight: 800;
+	font-family: Noto Sans,sans-serif !important;
+	margin-bottom: 20px;
+}
 
 
 /* End blogpage */
