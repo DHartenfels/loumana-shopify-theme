@@ -82,7 +82,7 @@ href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
             <div id="product-images-carousel-thumbnails" thumbnailsCount="{{product.media.size}}" >
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                   {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
-                  <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+                  <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="" mediaid="{{ featured_media.id }}" data-media-id="{{ section.id }}-{{ featured_media.id }}">
                     {%- assign media_position = 1 -%}
                     {% render 'product-thumbnail-second', imgsize: master, media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
                   </li>
