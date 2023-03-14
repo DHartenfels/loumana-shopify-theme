@@ -348,6 +348,8 @@
                           </label>
                         {%- endfor -%}
                       </fieldset>
+                      <Div style="display:none;">{{option|json}}</Div>
+
                   {%- endfor -%}
                   <script type="application/json">
                     {{ product.variants | json }}
