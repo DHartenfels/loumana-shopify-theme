@@ -781,7 +781,6 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
-    console.log('testing');
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 console.log(this.dataset.section);
