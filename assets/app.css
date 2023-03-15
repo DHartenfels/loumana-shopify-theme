@@ -4458,7 +4458,19 @@ ul.slick-dots {
 .prod--description strong {
 	font-weight: 600;
 }
-
+.product--extradetails ol {
+	list-style-type: decimal;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.product--extradetails ul {
+	list-style-type: disc;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.product--extradetails li {
+	margin-bottom: 10px;
+}
 
 /* End blogpage */
 @media (max-width:1380px){
