@@ -391,6 +391,7 @@
       }
     {% endstyle %}
 
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'app.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
