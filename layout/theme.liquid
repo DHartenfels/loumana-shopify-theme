@@ -391,6 +391,9 @@
       }
     {% endstyle %}
 
+
+{% render 'css-fonts' %}
+
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'app.css' | asset_url | stylesheet_tag }}
@@ -431,7 +434,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    {% render 'css-fonts' %}
     <!--
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
