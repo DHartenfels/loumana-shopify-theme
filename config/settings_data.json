@@ -142,13 +142,22 @@
               "color_scheme": "accent-1",
               "link": ""
             }
+          },
+          "26ca0b7f-f5ac-40f6-a884-f2eecc340b36": {
+            "type": "announcement",
+            "settings": {
+              "text": "Spare mit dem Code: Ostern 10% auf das Sortiment",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
           "3edae4d6-2caf-4ffd-9324-0d8b04e0dc60",
           "b0a5a088-681d-46fa-8fde-861d878b24f0",
           "70c7cead-9924-479e-bdd7-1a99a9026ec0",
-          "a973685b-c59a-4091-843b-5ff023c72f4e"
+          "a973685b-c59a-4091-843b-5ff023c72f4e",
+          "26ca0b7f-f5ac-40f6-a884-f2eecc340b36"
         ],
         "settings": {
         }
