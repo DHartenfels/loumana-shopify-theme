@@ -145,6 +145,7 @@
           },
           "26ca0b7f-f5ac-40f6-a884-f2eecc340b36": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Spare mit dem Code: Ostern 10% auf das Sortiment",
               "color_scheme": "accent-1",
