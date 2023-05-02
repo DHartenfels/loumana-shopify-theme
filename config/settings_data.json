@@ -154,6 +154,7 @@
           },
           "b25309be-9ce6-426d-a9b8-57517db2def0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Nutze den Code: 1.Mai und spare 10%.  Nur am 01.05.2023.",
               "color_scheme": "accent-1",
