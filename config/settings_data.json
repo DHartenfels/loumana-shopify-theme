@@ -160,6 +160,14 @@
               "color_scheme": "accent-1",
               "link": ""
             }
+          },
+          "d1926bdc-ac8d-4ce1-8cd7-b610a500b5b3": {
+            "type": "announcement",
+            "settings": {
+              "text": "Spare 5,00 auf einem Einkaufswert von 30,00. Code : Muttertag",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
@@ -168,7 +176,8 @@
           "70c7cead-9924-479e-bdd7-1a99a9026ec0",
           "a973685b-c59a-4091-843b-5ff023c72f4e",
           "26ca0b7f-f5ac-40f6-a884-f2eecc340b36",
-          "b25309be-9ce6-426d-a9b8-57517db2def0"
+          "b25309be-9ce6-426d-a9b8-57517db2def0",
+          "d1926bdc-ac8d-4ce1-8cd7-b610a500b5b3"
         ],
         "settings": {
         }
